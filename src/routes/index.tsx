@@ -72,7 +72,7 @@ function Home() {
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 backdrop-blur-md px-8 py-4 text-sm font-bold text-white transition-all hover:bg-white/20 hover:border-white/60 hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-navy-deep shadow-xl transition-all hover:scale-105 hover:-translate-y-1 hover:bg-white/90"
                 >
                   Falar Connosco
                 </Link>

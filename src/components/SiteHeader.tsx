@@ -34,9 +34,9 @@ export function SiteHeader() {
       <div className="container-x flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
           <img 
-            src="https://www.sonamet.com/images/logo.png" 
+            src="https://strapi-cms.sonangol.co.ao/uploads/sonamet_logo_2f91198dd8.png" 
             alt="Sonamet Logo" 
-            className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105"
             onError={(e) => {
               // Fallback se a imagem oficial não carregar
               e.currentTarget.style.display = 'none';
