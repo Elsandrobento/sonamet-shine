@@ -18,12 +18,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const projects = [
-  { title: "Estruturas Subsea Águas Profundas", client: "Cliente Major Internacional", scope: "Fabricação", year: "2023", image: heroYard },
-  { title: "Manifolds & PLETs", client: "Operadora Offshore", scope: "Engenharia & Fabricação", year: "2022", image: yardAerial },
-  { title: "Suction Piles & Anchors", client: "Projeto FPSO", scope: "Fabricação", year: "2022", image: welder },
-  { title: "Spool Pieces & Jumpers", client: "EPCI Águas Profundas", scope: "EPCI", year: "2021", image: team },
-  { title: "Plataformas Modulares", client: "Sonangol", scope: "EPC", year: "2020", image: yardAerial },
-  { title: "Estruturas Topside", client: "Major Oil & Gas", scope: "Fabricação", year: "2019", image: heroYard },
+  { title: "Mafumeira Sul PPP Jacket (5 350 mT)", client: "Chevron", scope: "Fabricação", year: "2015", image: heroYard },
+  { title: "CLOV Subsea Structures", client: "TotalEnergies", scope: "Fabricação", year: "2014", image: yardAerial },
+  { title: "Kizomba Satellites Phase 2", client: "ExxonMobil", scope: "Fabricação & EPC", year: "2015", image: welder },
+  { title: "Block 15/06 East Hub Spools", client: "Eni", scope: "Fabricação", year: "2016", image: team },
+  { title: "Block 31 SPS Structures", client: "BP", scope: "EPC", year: "2013", image: yardAerial },
+  { title: "Plataformas Modulares Sonangol", client: "Sonangol", scope: "EPC", year: "2020", image: heroYard },
 ];
 
 function Projects() {

@@ -16,11 +16,11 @@ export const Route = createFileRoute("/about")({
 });
 
 const milestones = [
-  { year: "1998", title: "Fundação", desc: "Sonamet é estabelecida na Baía do Lobito como joint venture entre Sonangol e Subsea 7." },
-  { year: "2005", title: "Expansão do Estaleiro", desc: "Ampliação significativa das capacidades de fabricação para águas profundas." },
-  { year: "2011", title: "Certificação ISO 9001:2008", desc: "Sistema de Gestão da Qualidade certificado internacionalmente." },
-  { year: "2015", title: "Unidade EPC/EPCI Luanda", desc: "Abertura da unidade de negócio de projetos integrados em Luanda." },
-  { year: "Hoje", title: "2 500+ Colaboradores", desc: "Capacidade de 3 milhões de horas-homem produtivas, maioria angolana." },
+  { year: "1998", title: "Fundação", desc: "A Sonamet é estabelecida na Baía do Lobito como uma parceria estratégica para o desenvolvimento da indústria offshore em Angola." },
+  { year: "2005", title: "Liderança em Águas Profundas", desc: "Início da fabricação de estruturas complexas para os grandes blocos de águas profundas no offshore angolano." },
+  { year: "2011", title: "Qualidade Certificada", desc: "Certificação do Sistema de Gestão da Qualidade de acordo com a norma ISO 9001." },
+  { year: "2018", title: "Excelência HSEQ", desc: "Conquista das certificações ISO 45001:2018 (Saúde e Segurança) e ISO 14001:2015 (Ambiente)." },
+  { year: "Hoje", title: "Referência Regional", desc: "Com mais de 25 anos de história, a Sonamet é o contratante de eleição para projetos EPC/EPCI em Angola." },
 ];
 
 function About() {

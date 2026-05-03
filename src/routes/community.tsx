@@ -31,7 +31,7 @@ function Community() {
             title="Investimento contínuo em educação, saúde e sustentabilidade"
             description="Os numerosos projetos sociais conduzidos e financiados pela Sonamet têm contribuído para melhorar a educação e a saúde em toda a província."
           />
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[
               { icon: GraduationCap, title: "Educação", desc: "Apoio a escolas, bolsas de estudo e formação técnica para jovens angolanos." },
               { icon: HeartPulse, title: "Saúde", desc: "Programas e infraestruturas de saúde para a comunidade de Benguela." },
@@ -45,6 +45,29 @@ function Community() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="bg-secondary rounded-3xl p-8 md:p-12 border border-border overflow-hidden relative">
+            <div className="max-w-3xl relative z-10">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Programa de Controle da Malária (MCP)</h3>
+              <p className="text-foreground/80 leading-relaxed mb-6">
+                Estabelecido em colaboração com o Instituto de Pesquisa para o Desenvolvimento (IRD) de França, o MCP da Sonamet é um modelo de excelência reconhecido pela Organização Mundial da Saúde (OMS). 
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Redução drástica da incidência de malária no estaleiro e áreas circundantes",
+                  "Vigilância epidemiológica constante e diagnóstico rápido",
+                  "Distribuição de mosquiteiros e campanhas de sensibilização",
+                  "Referência internacional em saúde ocupacional africana",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3 items-start text-sm">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-gold shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-gold/5 blur-3xl" />
           </div>
         </div>
       </section>

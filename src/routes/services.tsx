@@ -16,11 +16,11 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   { icon: Cpu, title: "Engenharia", desc: "Talentos e software de análise avançado para garantir a melhor engenharia em todas as fases.", points: ["Engenharia conceptual e detalhada", "Análise estrutural avançada", "Software especializado", "Equipa multidisciplinar residente"] },
-  { icon: Wrench, title: "Fabricação", desc: "Aço para águas rasas e profundas com toda a tipologia de materiais soldados.", points: ["Carbon Steel", "Stainless / Duplex / SuperDuplex", "Inconel & Clad", "Estruturas offshore complexas"] },
+  { icon: Wrench, title: "Fabricação", desc: "Fabricação em aço para águas rasas e profundas em oficinas especializadas (incluindo 'White Workshops').", points: ["Jackets e Decks", "Estruturas Subsea (PLEMs, PLETs)", "Suction Piles", "Oficinas Brancas (Stainless/Duplex)"] },
   { icon: Anchor, title: "EPC / EPCI", desc: "Projetos integrados de Engenharia, Procurement, Construção e Instalação em Luanda e Lobito.", points: ["Gestão integrada de projeto", "Procurement internacional", "Construção e comissionamento", "Instalação offshore"] },
-  { icon: Ship, title: "Operações no Estaleiro", desc: "Estaleiro de classe mundial na Baía do Lobito com capacidade portuária dedicada.", points: ["Cais de carga pesada", "Pórticos e gruas de grande capacidade", "Áreas de pré-fabricação", "Logística marítima"] },
-  { icon: HardHat, title: "Construção", desc: "Equipas multidisciplinares com capacidade para 3M de horas-homem produtivas.", points: ["Montagem e assemblagem", "Soldadura certificada", "Pintura industrial", "Testes e inspeção"] },
-  { icon: FileCheck, title: "QA/QC e Inspeção", desc: "Sistema de qualidade certificado ISO 9001 com END e inspeção integrados.", points: ["END (radiografia, ultrassons)", "Inspeção dimensional", "Documentação completa", "Trace­ability total"] },
+  { icon: Ship, title: "Operações no Estaleiro", desc: "Estaleiro de 80 hectares na Baía do Lobito com infraestrutura portuária de carga pesada.", points: ["80 Hectares de área total", "12 000m² de oficinas cobertas", "Dois cais (6 000 mT loadout)", "Logística marítima integrada"] },
+  { icon: HardHat, title: "Construção", desc: "Capacidade anual de 3 milhões de horas-homem produtivas com foco em excelência.", points: ["Soldadura certificada", "Pintura industrial (5 000m²)", "Montagem de grandes estruturas", "Testes de pressão e carga"] },
+  { icon: FileCheck, title: "QA/QC e Inspeção", desc: "Sistema de qualidade certificado ISO 9001 com END e inspeção integrados.", points: ["END (radiografia, ultrassons)", "Inspeção dimensional", "Documentação completa", "Traceability total"] },
 ];
 
 function Services() {

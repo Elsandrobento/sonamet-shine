@@ -6,6 +6,8 @@ import welder from "@/assets/welder.jpg";
 import team from "@/assets/team.jpg";
 import { SectionHeader } from "@/components/Section";
 
+import { ClientLogoCloud } from "@/components/LogoCloud";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -17,10 +19,10 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { value: "1998", label: "Fundada" },
-  { value: "2 500+", label: "Colaboradores" },
+  { value: "80ha", label: "Área do Estaleiro" },
+  { value: "12 000m²", label: "Oficinas Cobertas" },
+  { value: "6 000mT", label: "Capacidade Cais" },
   { value: "3M", label: "Horas-Homem/ano" },
-  { value: "25+", label: "Anos de Excelência" },
 ];
 
 const services = [
@@ -124,6 +126,7 @@ function Home() {
               Conheça a nossa história
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
+            <ClientLogoCloud />
           </div>
         </div>
       </section>

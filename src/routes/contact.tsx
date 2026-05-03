@@ -33,10 +33,12 @@ function Contact() {
             <h2 className="text-3xl font-bold mb-8">Informações de contacto</h2>
             <div className="space-y-6">
               {[
-                { icon: MapPin, label: "Estaleiro Lobito", value: "Baía do Lobito, Província de Benguela, Angola" },
-                { icon: MapPin, label: "Escritório Luanda", value: "Luanda, Angola" },
-                { icon: Phone, label: "Telefone", value: "+244 272 220 000" },
-                { icon: Mail, label: "Email", value: "info@sonamet.com" },
+                { icon: MapPin, label: "Estaleiro Lobito", value: "Rua 1° de Dezembro, Lobito, Benguela (CP 479)" },
+                { icon: MapPin, label: "Escritório Luanda", value: "Rua Domingos Tchekahanga, n°18, Ingobotas" },
+                { icon: Phone, label: "Lobito", value: "(+244) 225 400 001 / 2" },
+                { icon: Phone, label: "Luanda", value: "(+244) 225 400 003" },
+                { icon: Mail, label: "Geral", value: "info@sonamet.com" },
+                { icon: Mail, label: "Recrutamento", value: "recrutamento@sonamet.com" },
                 { icon: Clock, label: "Horário", value: "Segunda a Sexta, 08:00 — 17:00" },
               ].map((c) => (
                 <div key={c.label} className="flex gap-4 items-start">

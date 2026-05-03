@@ -53,26 +53,36 @@ function HSEQ() {
             <SectionHeader eyebrow="Certificações" title="Padrões internacionais auditados." />
             <div className="space-y-4">
               {[
-                { code: "ISO 9001", name: "Sistema de Gestão da Qualidade", year: "Certificada desde 2011" },
-                { code: "ISO 14001", name: "Sistema de Gestão Ambiental", year: "" },
-                { code: "ISO 45001", name: "Saúde e Segurança no Trabalho", year: "" },
+                { code: "ISO 9001", name: "Sistema de Gestão da Qualidade", year: "ISO 9001:2015" },
+                { code: "ISO 14001", name: "Sistema de Gestão Ambiental", year: "ISO 14001:2015" },
+                { code: "ISO 45001", name: "Saúde e Segurança no Trabalho", year: "ISO 45001:2018" },
               ].map((c) => (
                 <div key={c.code} className="flex gap-5 items-center bg-card border border-border rounded-xl p-5">
                   <div className="font-display font-bold text-2xl text-gold w-24">{c.code}</div>
                   <div>
                     <div className="font-semibold">{c.name}</div>
-                    {c.year && <div className="text-sm text-muted-foreground">{c.year}</div>}
+                    <div className="text-sm text-muted-foreground">{c.year}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           <div className="bg-gradient-navy text-white rounded-2xl p-10 shadow-elegant">
-            <div className="text-gold text-xs uppercase tracking-[0.25em] mb-3">O nosso compromisso</div>
-            <blockquote className="text-2xl font-display leading-snug">
-              "A segurança das nossas pessoas e a proteção do ambiente são valores absolutos — nunca comprometidos pela produção ou prazo."
-            </blockquote>
-            <div className="mt-6 text-sm text-white/70">— Política HSEQ Sonamet</div>
+            <div className="text-gold text-xs uppercase tracking-[0.25em] mb-4">Programas HSEQ</div>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-bold text-gold mb-1">Programa CARE</h4>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  Compromisso com uma Atitude Respeitosa com o Ambiente. Focado na redução de resíduos e impacto ecológico.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-gold mb-1">9 Regras de Ouro</h4>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  As nossas regras inegociáveis de segurança que salvam vidas em todas as operações do estaleiro.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
