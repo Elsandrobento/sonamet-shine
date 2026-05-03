@@ -33,12 +33,24 @@ export function SiteHeader() {
     >
       <div className="container-x flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-gold shadow-gold transition-transform group-hover:scale-105">
-            <span className="font-display text-lg font-bold text-navy-deep">S</span>
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-lg font-bold text-white">SONAMET</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-gold">Made in Angola</div>
+          <img 
+            src="https://www.sonamet.com/images/logo.png" 
+            alt="Sonamet Logo" 
+            className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            onError={(e) => {
+              // Fallback se a imagem oficial não carregar
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          <div className="hidden items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-gold shadow-gold transition-transform group-hover:scale-105">
+              <span className="font-display text-lg font-bold text-navy-deep">S</span>
+            </div>
+            <div className="leading-tight">
+              <div className="font-display text-lg font-bold text-white">SONAMET</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-gold">Made in Angola</div>
+            </div>
           </div>
         </Link>
 

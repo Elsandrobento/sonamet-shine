@@ -64,12 +64,15 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { QuickAssist } from "@/components/QuickAssist";
+
 function RootComponent() {
   return (
     <>
       <SiteHeader />
       <Outlet />
       <SiteFooter />
+      <QuickAssist />
     </>
   );
 }
