@@ -1,14 +1,16 @@
 import React from "react";
 
 const clients = [
-  "Sonangol",
-  "Subsea 7",
   "TotalEnergies",
-  "Chevron",
-  "BP",
-  "Eni",
+  "Chevron / CABGOC",
   "ExxonMobil",
-  "Equinor",
+  "Azule Energy",
+  "Sonangol P&P",
+  "TechnipFMC",
+  "Subsea 7",
+  "SLB OneSubsea",
+  "Baker Hughes",
+  "Hanwha Ocean",
 ];
 
 export function ClientLogoCloud() {

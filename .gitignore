@@ -16,6 +16,10 @@ dist-ssr
 .nitro
 *.local
 
+# Reference raw assets folder (>2.6GB)
+Mudanças/
+mudanças/
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars

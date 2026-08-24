@@ -1,6 +1,8 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { QuickAssist } from "@/components/QuickAssist";
+import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 
 import appCss from "../styles.css?url";
 
@@ -31,17 +33,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sonamet — Construção, Fabricação e EPC/EPCI em Angola" },
-      { name: "description", content: "Joint venture Sonangol & Subsea 7. Líder em fabricação offshore e projetos EPC/EPCI na Baía do Lobito, Angola, desde 1998." },
-      { name: "author", content: "Sonamet" },
-      { property: "og:title", content: "Sonamet — Construção, Fabricação e EPC/EPCI em Angola" },
-      { property: "og:description", content: "Joint venture Sonangol & Subsea 7. Líder em fabricação offshore e projetos EPC/EPCI na Baía do Lobito, Angola, desde 1998." },
+      { title: "Sonamet Industrial S.A. — Made in Angola • Built for the World" },
+      { name: "description", content: "Joint venture Sonangol (40%) & Subsea 7 (60%). Líder em fabricação offshore e projetos EPC/EPCI na Baía do Lobito, Angola, desde 1998." },
+      { name: "author", content: "Sonamet Industrial S.A." },
+      { property: "og:title", content: "Sonamet Industrial S.A." },
+      { property: "og:description", content: "Joint venture Sonangol (40%) & Subsea 7 (60%). Líder em fabricação offshore e projetos EPC/EPCI na Baía do Lobito, Angola, desde 1998." },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Sonamet — Construção, Fabricação e EPC/EPCI em Angola" },
-      { name: "twitter:description", content: "Joint venture Sonangol & Subsea 7. Líder em fabricação offshore e projetos EPC/EPCI na Baía do Lobito, Angola, desde 1998." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e989a04f-2759-4362-ac28-2c1214fdbbd9/id-preview-cb3152bf--a902ed75-8d0e-4c26-a603-e0afaa2fa919.lovable.app-1777836247995.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e989a04f-2759-4362-ac28-2c1214fdbbd9/id-preview-cb3152bf--a902ed75-8d0e-4c26-a603-e0afaa2fa919.lovable.app-1777836247995.png" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
@@ -57,14 +55,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Scripts />
       </body>
     </html>
   );
 }
-
-import { QuickAssist } from "@/components/QuickAssist";
 
 function RootComponent() {
   return (
