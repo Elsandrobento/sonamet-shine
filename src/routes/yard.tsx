@@ -12,12 +12,15 @@ import {
   Truck, 
   ShieldCheck, 
   Sparkles,
-  Compass
+  Compass,
+  Download,
+  Eye
 } from "lucide-react";
 import yardHero from "@/assets/foto-yard.jpg";
 import yardAerial from "@/assets/yard-dji-0489.jpg";
 import yardSection from "@/assets/yard-section-3.jpg";
 import whiteWorkshopImg from "@/assets/qhse-white-workshop.png";
+import yardLayoutImg from "@/assets/yard-general-layout.png";
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -183,7 +186,7 @@ function Yard() {
   return (
     <>
       <PageHero
-        eyebrow={lang === "pt" ? "INSTALAÇÕES & INFRAESTRUTURAS" : "FACILITIES & INFRASTRUCTURE"}
+        eyebrow={lang === "pt" ? "O NOSSO ESTALEIRO" : "OUR YARD"}
         title={lang === "pt" ? "BAÍA DO LOBITO: UMA PORTA ESTRATÉGICA NO ATLÂNTICO" : "LOBITO BAY: A STRATEGIC ATLANTIC GATEWAY"}
         description={lang === "pt"
           ? "O estaleiro da Sonamet situa-se junto ao Porto do Lobito, um dos portos mais profundos e estrategicamente posicionados da África Ocidental devido à sua localização geográfica, extensão e calado natural."
@@ -191,15 +194,15 @@ function Yard() {
         image={yardHero}
       />
 
-      {/* OVERVIEW SECTION */}
-      <section className="py-24 bg-background">
+      {/* OVERVIEW SECTION WITH OFFICIAL LAYOUT & PDF DOWNLOAD */}
+      <section className="py-20 bg-background">
         <div className="container-x">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {lang === "pt" ? "O ESTALEIRO" : "THE YARD"}
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-foreground mb-6 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-foreground mb-6 leading-tight">
                 {lang === "pt" ? "80 HECTARES DE ENGENHARIA DE CLASSE MUNDIAL" : "80 HECTARES OF WORLD-CLASS ENGINEERING"}
               </h2>
               <p className="text-foreground/85 text-base leading-relaxed mb-8">
@@ -208,7 +211,7 @@ function Yard() {
                   : "The yard covers approximately 80 hectares, including 12,000 m² of covered workshops and two quaysides with water depths of up to 10 meters, divided into three main operational areas: Yard 1, Yard 2, and Yard 3."}
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {yardAreas.map((y) => (
                   <div key={y.name} className="bg-card border border-border rounded-3xl p-6 hover:border-gold transition-all shadow-sm">
                     <div className="flex items-center justify-between mb-2">
@@ -221,7 +224,7 @@ function Yard() {
                       </span>
                     </div>
                     <div className="text-xs font-bold uppercase text-gold mb-2">{y.subtitle}</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{y.desc}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">{y.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {y.highlights.map((h) => (
                         <span key={h} className="text-[11px] font-semibold uppercase bg-secondary text-navy-deep px-2.5 py-1 rounded-md">
@@ -234,33 +237,56 @@ function Yard() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="relative">
-                <img
-                  src={yardAerial}
-                  alt="Vista aérea do Estaleiro Sonamet no Lobito"
-                  loading="lazy"
-                  width={1280}
-                  height={800}
-                  className="rounded-3xl shadow-elegant w-full object-cover aspect-[4/3]"
-                />
-                <div className="absolute bottom-4 left-4 right-4 bg-navy-deep/90 backdrop-blur-md text-white p-4 rounded-xl text-xs border border-white/10">
-                  <span className="font-bold text-gold uppercase">{lang === "pt" ? "BAÍA DO LOBITO:" : "LOBITO BAY:"}</span>{" "}
-                  {lang === "pt"
-                    ? "Acesso marítimo direto com calado de 10m e proteção natural da restinga."
-                    : "Direct ocean access with 10m draft and natural sandspit shelter."}
+            {/* Official General Layout Diagram & PDF Action */}
+            <div className="bg-card border-2 border-border rounded-3xl p-6 md:p-8 shadow-elegant space-y-6">
+              <div className="flex items-center justify-between border-b border-border pb-4">
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-gold font-bold">
+                    {lang === "pt" ? "PLANTA OFICIAL" : "OFFICIAL DRAWING"}
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold uppercase text-foreground">
+                    SONAMET GENERAL LAYOUT & SURFACE TABLE
+                  </h3>
                 </div>
+                <span className="text-[10px] font-extrabold uppercase px-2.5 py-1 bg-gold/15 text-navy border border-gold/30 rounded-full">
+                  DWG • HD
+                </span>
               </div>
 
-              <div className="relative">
+              <div className="relative group rounded-2xl overflow-hidden border border-border bg-white shadow-inner">
                 <img
-                  src={yardSection}
-                  alt="Operações de montagem no Cais Sonamet"
+                  src={yardLayoutImg}
+                  alt="Planta e Layout Geral do Estaleiro Sonamet - Yard 1, Yard 2 e Yard 3"
                   loading="lazy"
-                  width={1280}
-                  height={800}
-                  className="rounded-3xl shadow-elegant w-full object-cover aspect-[4/3]"
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
+                <a
+                  href="/documents/Sonamet_General_Yard_Layout.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 bg-navy-deep/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-xs"
+                >
+                  <Eye size={18} />
+                  <span>{lang === "pt" ? "VER LAYOUT AMPLIADO" : "VIEW FULL LAYOUT"}</span>
+                </a>
+              </div>
+
+              <div className="space-y-3">
+                <a
+                  href="/documents/Sonamet_General_Yard_Layout.png"
+                  target="_blank"
+                  download="Sonamet_General_Yard_Layout.png"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 w-full rounded-2xl bg-gradient-gold px-6 py-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-navy-deep shadow-gold hover:scale-[1.02] transition-all text-center"
+                >
+                  <Download size={18} />
+                  <span>{lang === "pt" ? "DESCARREGAR LAYOUT DO ESTALEIRO (HD / PDF)" : "DOWNLOAD YARD LAYOUT (HD / PDF)"}</span>
+                </a>
+                <p className="text-center text-[11px] text-muted-foreground uppercase font-semibold">
+                  {lang === "pt"
+                    ? "Documento técnico com tabela de áreas e demarcação dos Yard 1, 2 e 3"
+                    : "Technical surface table with perimeters for Yard 1, 2 & 3"}
+                </p>
               </div>
             </div>
           </div>
@@ -274,7 +300,7 @@ function Yard() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "ESPECIFICAÇÕES TÉCNICAS" : "TECHNICAL SPECIFICATIONS"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "CAPACIDADES DETALHADAS DE FABRICAÇÃO & CAIS" : "DETAILED FABRICATION & QUAYSIDE SPECS"}
             </h2>
           </div>
@@ -327,7 +353,7 @@ function Yard() {
               <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-4 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
                 {lang === "pt" ? "INSTALAÇÃO ÚNICA NA ÁFRICA OCIDENTAL" : "EXCLUSIVE WEST AFRICAN FACILITY"}
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold uppercase mb-6 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-extrabold uppercase mb-6 leading-tight">
                 SONAMET SPOOL BASE: <br />
                 <span className="text-gold">1.039 METROS</span>
               </h2>
@@ -398,7 +424,7 @@ function Yard() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "APOIO AOS PROJETOS" : "PROJECT SUPPORT"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "SERVIÇOS DEDICADOS AO CLIENTE" : "DEDICATED CLIENT SERVICES"}
             </h2>
           </div>

@@ -130,7 +130,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "CERTIFICAÇÕES INTERNACIONAIS" : "INTERNATIONAL CERTIFICATIONS"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "SISTEMA DE GESTÃO INTEGRADO" : "INTEGRATED MANAGEMENT SYSTEM"}
             </h2>
           </div>
@@ -175,7 +175,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "DIFERENCIADOR COMPETITIVO" : "COMPETITIVE DIFFERENTIATOR"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-navy">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-navy">
               {lang === "pt" ? "VANTAGEM EM SUPER DUPLEX & QUALIDADE" : "SUPER DUPLEX & QUALITY ADVANTAGE"}
             </h2>
           </div>
@@ -265,7 +265,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
               {lang === "pt" ? "PROGRAMAS HSE" : "HSE PROGRAMMES"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "REGRAS DE OURO & PROGRAMA C.A.R.E." : "GOLDEN RULES & C.A.R.E. PROGRAMME"}
             </h2>
           </div>
@@ -412,7 +412,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "CENTRO DE DOCUMENTAÇÃO" : "DOCUMENTATION CENTER"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "POLÍTICAS CORPORATIVAS & CERTIFICADOS OFICIAIS" : "CORPORATE POLICIES & OFFICIAL CERTIFICATES"}
             </h2>
           </div>

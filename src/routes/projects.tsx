@@ -256,7 +256,7 @@ function Projects() {
               <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {lang === "pt" ? "PORTFÓLIO DE PROJETOS" : "PROJECT PORTFOLIO"}
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-foreground">
+              <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-foreground">
                 {lang === "pt" ? "PROJETOS EM DESTAQUE" : "FEATURED PROJECTS"}
               </h2>
             </div>

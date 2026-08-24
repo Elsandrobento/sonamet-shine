@@ -38,7 +38,7 @@ function HomeAbout() {
   const { lang } = useLanguage();
 
   const stats = [
-    { value: "80 HA", label: lang === "pt" ? "ÁREA DO ESTALEIRO" : "FACILITY AREA" },
+    { value: "28 ANOS", label: lang === "pt" ? "DE EXPERIÊNCIA OFFSHORE" : "OF OFFSHORE EXPERIENCE" },
     { value: "12.000 M²", label: lang === "pt" ? "OFICINAS COBERTAS" : "COVERED WORKSHOPS" },
     { value: "6.000 MT", label: lang === "pt" ? "CAPACIDADE DE CAIS" : "QUAYSIDE CAPACITY" },
     { value: "105", label: lang === "pt" ? "MANIFOLDS ENTREGUES" : "MANIFOLDS DELIVERED" },
@@ -77,7 +77,6 @@ function HomeAbout() {
 
   const promises = [
     {
-      step: lang === "pt" ? "PROMESSA 1" : "PROMISE 1",
       title: lang === "pt" ? "SEGURANÇA (SAFETY)" : "SAFETY",
       desc: lang === "pt"
         ? "Executar o trabalho sem incidentes para as nossas pessoas, os nossos parceiros/clientes e as nossas comunidades."
@@ -85,7 +84,6 @@ function HomeAbout() {
       icon: Shield,
     },
     {
-      step: lang === "pt" ? "PROMESSA 2" : "PROMISE 2",
       title: lang === "pt" ? "QUALIDADE (QUALITY)" : "QUALITY",
       desc: lang === "pt"
         ? "Entregar produtos de alta qualidade e precisão que cumprem rigorosamente os mais altos padrões internacionais."
@@ -93,7 +91,6 @@ function HomeAbout() {
       icon: Award,
     },
     {
-      step: lang === "pt" ? "PROMESSA 3" : "PROMISE 3",
       title: lang === "pt" ? "NO PRAZO (ON SCHEDULE)" : "ON SCHEDULE",
       desc: lang === "pt"
         ? "Concluir o trabalho atempadamente e em estrita conformidade com o cronograma e as expectativas do cliente."
@@ -190,8 +187,8 @@ function HomeAbout() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "QUEM SOMOS" : "WHO WE ARE"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-foreground mb-6 leading-tight">
-              {lang === "pt" ? "LIDERANÇA E SOLUÇÕES INTEGRADAS OFFSHORE" : "LEADERSHIP & INTEGRATED OFFSHORE SOLUTIONS"}
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-foreground mb-6 leading-tight">
+              {lang === "pt" ? "MADE IN ANGOLA. CONSTRUÍDO PARA O MUNDO." : "MADE IN ANGOLA. BUILT FOR THE WORLD."}
             </h2>
             <div className="space-y-4 text-foreground/85 leading-relaxed text-base text-justify">
               <p>
@@ -225,7 +222,7 @@ function HomeAbout() {
 
           <div className="relative">
             <img
-              src={yardAerial}
+              src={heroYard}
               alt="Estaleiro Sonamet na Baía do Lobito"
               loading="lazy"
               width={1280}
@@ -233,18 +230,18 @@ function HomeAbout() {
               className="rounded-3xl shadow-elegant w-full object-cover aspect-[4/3]"
             />
             <div className="absolute -bottom-6 -left-6 bg-gradient-navy border border-white/10 text-white rounded-2xl p-6 shadow-elegant hidden sm:block max-w-xs">
-              <div className="font-display text-3xl font-bold text-gold">80 HA</div>
+              <div className="font-display text-2xl font-bold text-gold">28 ANOS</div>
               <div className="text-xs uppercase tracking-widest text-white/80 mt-1">
-                {lang === "pt" ? "ESTALEIRO ESTRATÉGICO NO ATLÂNTICO" : "STRATEGIC ATLANTIC GATEWAY"}
+                {lang === "pt" ? "DE EXCELÊNCIA INDUSTRIAL" : "OF INDUSTRIAL EXCELLENCE"}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* JOINT VENTURE SECTION - OFFICIAL IMAGE */}
-      <section className="py-24 bg-secondary border-y border-border">
-        <div className="container-x grid lg:grid-cols-2 gap-16 items-center">
+      {/* JOINT VENTURE SECTION - OFFICIAL IMAGE & CLEAN DIRECT TEXT */}
+      <section className="py-20 bg-secondary border-y border-border">
+        <div className="container-x grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="bg-card border-2 border-border rounded-3xl p-8 sm:p-12 shadow-elegant flex items-center justify-center relative z-10 overflow-hidden">
               <div className="absolute -left-12 -top-12 h-64 w-64 bg-gradient-gold/10 rounded-full blur-3xl"></div>
@@ -268,56 +265,28 @@ function HomeAbout() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "ESTRUTURA ACIONISTA" : "SHAREHOLDER STRUCTURE"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-foreground mb-4 leading-tight">
-              {lang === "pt" ? "GOVERNAÇÃO & PARCERIA ESTRATÉGICA" : "GOVERNANCE & STRATEGIC PARTNERSHIP"}
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-foreground mb-6 leading-tight">
+              {lang === "pt" ? "JOINT VENTURE ESTRATÉGICA" : "STRATEGIC JOINT VENTURE"}
             </h2>
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-8 text-justify">
-              {lang === "pt"
-                ? "Uma união sólida que combina o conhecimento estratégico do mercado nacional com a capacidade tecnológica e de engenharia submarina de nível mundial."
-                : "A solid union combining local strategic market knowledge with world-class technology and subsea engineering capabilities."}
-            </p>
-
-            <div className="space-y-5">
-              <div className="bg-card border border-border rounded-2xl p-6 hover:border-gold/50 transition-colors shadow-sm">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-navy bg-gold/15 px-3 py-1 rounded-full border border-gold/30">
-                    40% • {lang === "pt" ? "PARCEIRO NACIONAL" : "NATIONAL PARTNER"}
-                  </span>
-                </div>
-                <h4 className="text-xl font-extrabold uppercase text-foreground mt-2">SONANGOL E.P.</h4>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed text-justify">
-                  {lang === "pt"
-                    ? "Empresa Nacional de Hidrocarbonetos de Angola, impulsionando a capacitação local, o investimento industrial e o desenvolvimento energético sustentável do país."
-                    : "National Oil Company of Angola, driving local capacity building, industrial investment, and sustainable energy development."}
-                </p>
-              </div>
-
-              <div className="bg-card border border-border rounded-2xl p-6 hover:border-gold/50 transition-colors shadow-sm">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-navy bg-gold/15 px-3 py-1 rounded-full border border-gold/30">
-                    60% • {lang === "pt" ? "PARCEIRO INTERNACIONAL" : "INTERNATIONAL PARTNER"}
-                  </span>
-                </div>
-                <h4 className="text-xl font-extrabold uppercase text-foreground mt-2">SUBSEA 7</h4>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed text-justify">
-                  {lang === "pt"
-                    ? "Líder mundial na prestação de serviços, engenharia offshore e execução de projetos complexos em águas profundas para a indústria global de energia."
-                    : "Global leader in offshore project execution, subsea engineering, and deepwater services for the global energy industry."}
-                </p>
-              </div>
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">
+              <p className="text-foreground text-base sm:text-lg leading-relaxed font-semibold">
+                {lang === "pt"
+                  ? "A Sonamet é uma joint venture entre a Sonangol com 40% e a Subsea 7 com 60%."
+                  : "Sonamet is a joint venture between Sonangol with 40% and Subsea7 with 60%."}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* STRATEGIC CAPABILITIES (CARDS WITH CLEAN TITLES ONLY) */}
-      <section className="py-24 bg-background">
+      {/* CAPABILITIES (CARDS WITH CLEAN TITLES ONLY) */}
+      <section className="py-20 bg-background">
         <div className="container-x">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
-              {lang === "pt" ? "CAPACIDADES ESTRATÉGICAS" : "STRATEGIC CAPABILITIES"}
+              {lang === "pt" ? "CAPACIDADES" : "CAPABILITIES"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "SOLUÇÕES INTEGRADAS DE CLASSE MUNDIAL" : "WORLD-CLASS INTEGRATED SOLUTIONS"}
             </h2>
           </div>
@@ -354,20 +323,15 @@ function HomeAbout() {
       </section>
 
       {/* PHILOSOPHY: THREE PROMISES, ONE COMMITMENT */}
-      <section className="py-24 bg-gradient-navy text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-navy text-white relative overflow-hidden">
         <div className="container-x relative">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
               {lang === "pt" ? "FILOSOFIA SONAMET" : "SONAMET PHILOSOPHY"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "TRÊS PROMESSAS, UM COMPROMISSO" : "THREE PROMISES, ONE COMMITMENT"}
             </h2>
-            <p className="mt-4 text-white/80 text-base md:text-lg uppercase">
-              {lang === "pt"
-                ? "A NOSSA CONDUTA OPERACIONAL EM CADA PROJETO"
-                : "OUR OPERATIONAL STANDARD IN EVERY PROJECT"}
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -376,8 +340,7 @@ function HomeAbout() {
                 <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6">
                   <p.icon className="text-gold" size={26} />
                 </div>
-                <div className="text-xs uppercase tracking-widest text-gold font-bold mb-2">{p.step}</div>
-                <h3 className="text-2xl font-bold uppercase mb-3">{p.title}</h3>
+                <h3 className="text-xl font-bold uppercase mb-3 text-gold">{p.title}</h3>
                 <p className="text-white/80 leading-relaxed text-sm">{p.desc}</p>
               </div>
             ))}
@@ -392,7 +355,7 @@ function HomeAbout() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "MISSÃO & VALORES" : "MISSION & VALUES"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase mb-6">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase mb-6">
               {lang === "pt" ? "A NOSSA MISSÃO E PRINCÍPIOS" : "OUR MISSION AND PRINCIPLES"}
             </h2>
             <p className="text-foreground/85 text-base md:text-lg leading-relaxed">
@@ -460,7 +423,7 @@ function HomeAbout() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "LIDERANÇA EXECUTIVA" : "EXECUTIVE LEADERSHIP"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "A NOSSA DIREÇÃO" : "OUR MANAGEMENT TEAM"}
             </h2>
           </div>

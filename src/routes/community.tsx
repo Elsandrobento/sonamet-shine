@@ -101,7 +101,7 @@ function Community() {
               <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {lang === "pt" ? "CONTEÚDO LOCAL & PESSOAS" : "LOCAL CONTENT & PEOPLE"}
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-foreground mb-6 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-foreground mb-6 leading-tight">
                 {lang === "pt" ? "INVESTIR NO TALENTO DE ANGOLA" : "INVESTING IN ANGOLAN TALENT"}
               </h2>
               <p className="text-foreground/85 text-base leading-relaxed mb-6">
@@ -183,7 +183,7 @@ function Community() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
               {lang === "pt" ? "SAÚDE PÚBLICA & IMPACTO COMUNITÁRIO" : "PUBLIC HEALTH & COMMUNITY IMPACT"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "PROGRAMA DE CONTROLO DA MALÁRIA (MCP)" : "MALARIA CONTROL PROGRAMME (MCP)"}
             </h2>
             <p className="mt-4 text-white/85 text-xs sm:text-base leading-relaxed">
@@ -219,7 +219,7 @@ function Community() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "RESPONSABILIDADE SOCIAL" : "SOCIAL RESPONSIBILITY"}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
+            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "AÇÕES CONCRETAS INTEGRADAS NA OPERAÇÃO" : "CONCRETE ACTIONS EMBEDDED IN OUR WORK"}
             </h2>
           </div>
