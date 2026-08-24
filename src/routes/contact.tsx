@@ -37,8 +37,8 @@ function Contact() {
   return (
     <>
       <PageHero
-        eyebrow="LET'S BUILD TOGETHER"
-        title="YOUR CONTRACTOR OF CHOICE"
+        eyebrow={lang === "pt" ? "VAMOS CONSTRUIR JUNTOS" : "LET'S BUILD TOGETHER"}
+        title={lang === "pt" ? "O SEU EMPREITEIRO DE CONFIANÇA" : "YOUR CONTRACTOR OF CHOICE"}
         description={lang === "pt"
           ? "A Sonamet recebe clientes, parceiros e investidores para visitas estruturadas ao estaleiro, com acesso integral às oficinas de fabricação, oficinas brancas, spoolbase e cais."
           : "Sonamet welcomes prospective clients, partners, and investors for a structured yard tour, with full access to fabrication shops, white workshops, spoolbase, and quaysides."}

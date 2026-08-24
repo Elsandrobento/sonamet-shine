@@ -278,7 +278,7 @@ function QHSE() {
                   <ShieldCheck className="text-gold" size={26} />
                 </div>
                 <h3 className="text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
-                  SONAMET HSE GOLDEN RULES
+                  {lang === "pt" ? "REGRAS DE OURO DE HSE SONAMET" : "SONAMET HSE GOLDEN RULES"}
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-6">
                   {lang === "pt"
@@ -352,7 +352,7 @@ function QHSE() {
                 {lang === "pt" ? "SAÚDE OCUPACIONAL & EMERGÊNCIA" : "OCCUPATIONAL HEALTH & EMERGENCY"}
               </div>
               <h3 className="text-2xl md:text-4xl font-extrabold uppercase mb-4 text-foreground">
-                {lang === "pt" ? "POSTO MÉDICO PRÓPRIO (MEDICAL POST)" : "ON-SITE MEDICAL POST"}
+                {lang === "pt" ? "POSTO MÉDICO PRÓPRIO NO ESTALEIRO" : "ON-SITE MEDICAL POST"}
               </h3>
               <p className="text-foreground/85 leading-relaxed text-xs sm:text-base mb-6">
                 {lang === "pt"

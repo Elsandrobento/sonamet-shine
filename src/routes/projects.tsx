@@ -199,22 +199,6 @@ function Projects() {
         ? "Grandes estruturas flutuantes de ancoragem e transferência de hidrocarbonetos para navios petroleiros."
         : "Large offshore mooring and fluid transfer structures for ultra-deepwater FPSO developments."
     },
-    {
-      id: "fpso-chains",
-      title: "MANUSEAMENTO & S-LAY DE CORRENTES FPSO (800M)",
-      client: "Operadores Offshore",
-      categoryKey: "DISMANTLE",
-      category: lang === "pt" ? "OUTROS PROJETOS" : "OTHER PROJECTS",
-      year: "Diversos",
-      image: chainsImg,
-      scope: lang === "pt"
-        ? "Handling, flaking e S-Lay de correntes de amarração de FPSO com 800 metros de comprimento."
-        : "Handling, flaking, and S-Lay of 800-meter-long heavy FPSO mooring chains.",
-      stats: ["800M LENGTH", "HEAVY CHAINS", "PORT LOGISTICS"],
-      details: lang === "pt"
-        ? "Operações de alta complexidade logística e manuseamento seguro de correntes de aço maciço."
-        : "High-complexity quayside logistics and safe handling of solid forged steel mooring lines."
-    },
   ];
 
   const categories = [
@@ -430,16 +414,21 @@ function Projects() {
         )}
       </AnimatePresence>
 
-      {/* CLIENTS & PARTNERS */}
+      {/* OUR CLIENTS */}
       <section className="py-24 bg-secondary border-t border-border">
         <div className="container-x">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
-              {lang === "pt" ? "CLIENTES & PARCEIROS OFICIAIS" : "OFFICIAL CLIENTS & PARTNERS"}
+              {lang === "pt" ? "NOSSOS CLIENTES" : "OUR CLIENTS"}
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold uppercase">
               TRUSTED BY THE INDUSTRY'S MAJORS
             </h2>
+            <p className="mt-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              {lang === "pt"
+                ? "Desde 1998 que trabalhamos com as maiores empresas da indústria mundial de energia."
+                : "Since 1998 we have been working with the majors in the industry."}
+            </p>
           </div>
 
           <ClientLogoCloud />

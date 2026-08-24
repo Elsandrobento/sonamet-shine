@@ -10,18 +10,31 @@ export function SiteFooter() {
       <div className="container-x grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-gold shadow-gold">
-              <span className="font-display text-lg font-bold text-navy-deep">S</span>
+            <div className="bg-white px-3 py-1.5 rounded-xl shadow-md inline-flex items-center justify-center">
+              <img 
+                src="https://strapi-cms.sonangol.co.ao/uploads/sonamet_logo_2f91198dd8.png" 
+                alt="Sonamet Logo" 
+                className="h-8 md:h-9 w-auto object-contain" 
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
             </div>
-            <div className="leading-tight">
-              <div className="font-display text-lg font-bold text-white uppercase">SONAMET</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold">Made in Angola</div>
+            <div className="hidden items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-gold shadow-gold">
+                <span className="font-display text-lg font-bold text-navy-deep">S</span>
+              </div>
+              <div className="leading-tight">
+                <div className="font-display text-lg font-bold text-white uppercase">SONAMET</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold">Made in Angola</div>
+              </div>
             </div>
           </div>
-          <p className="text-xs sm:text-sm leading-relaxed text-white/75">
+          <p className="text-xs sm:text-sm leading-relaxed text-white/75 text-justify">
             {lang === "pt"
-              ? "Joint venture entre a Sonangol (40%) e a Subsea 7 (60%). Soluções integradas de fabricação offshore, engenharia submarina e projetos EPC/EPCI na Baía do Lobito desde 1998."
-              : "Joint venture between Sonangol (40%) and Subsea 7 (60%). Integrated offshore fabrication, subsea engineering, and EPC/EPCI solutions in Lobito Bay since 1998."}
+              ? "Joint venture entre a Sonangol (40%) e a Subsea 7 (60%), soluções integradas de fabricação offshore, engenharia submarina e projetos EPC/EPCI na Baía do Lobito desde 1998."
+              : "Joint venture between Sonangol (40%) and Subsea 7 (60%), integrated offshore fabrication, subsea engineering, and EPC/EPCI solutions in Lobito Bay since 1998."}
           </p>
         </div>
 
@@ -104,15 +117,15 @@ export function SiteFooter() {
           <ul className="space-y-2.5 text-xs">
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-semibold uppercase">ISO 9001 — Quality Management</span>
+              <span className="font-semibold uppercase">{lang === "pt" ? "ISO 9001 — Gestão da Qualidade" : "ISO 9001 — Quality Management"}</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-semibold uppercase">ISO 14001 — Environment</span>
+              <span className="font-semibold uppercase">{lang === "pt" ? "ISO 14001 — Gestão Ambiental" : "ISO 14001 — Environmental Management"}</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-semibold uppercase">ISO 45001 — Health & Safety</span>
+              <span className="font-semibold uppercase">{lang === "pt" ? "ISO 45001 — Saúde e Segurança" : "ISO 45001 — Occupational Health & Safety"}</span>
             </li>
             <li className="pt-2">
               <a
@@ -129,7 +142,7 @@ export function SiteFooter() {
       </div>
 
       <div className="container-x mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] uppercase text-white/60">
-        <p>© {new Date().getFullYear()} Sonamet Industrial S.A. — Sonangol (40%) & Subsea 7 (60%). All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Sonamet Industrial S.A. — Sonangol (40%) & Subsea 7 (60%). {lang === "pt" ? "Todos os direitos reservados." : "All rights reserved."}</p>
         <p className="font-bold text-gold">Baía do Lobito • Benguela • Angola</p>
       </div>
     </footer>

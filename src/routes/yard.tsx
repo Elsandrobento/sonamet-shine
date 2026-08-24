@@ -184,7 +184,7 @@ function Yard() {
     <>
       <PageHero
         eyebrow={lang === "pt" ? "INSTALAÇÕES & INFRAESTRUTURAS" : "FACILITIES & INFRASTRUCTURE"}
-        title={lang === "pt" ? "LOBITO BAY: A STRATEGIC ATLANTIC GATEWAY" : "LOBITO BAY: A STRATEGIC ATLANTIC GATEWAY"}
+        title={lang === "pt" ? "BAÍA DO LOBITO: UMA PORTA ESTRATÉGICA NO ATLÂNTICO" : "LOBITO BAY: A STRATEGIC ATLANTIC GATEWAY"}
         description={lang === "pt"
           ? "O estaleiro da Sonamet situa-se junto ao Porto do Lobito, um dos portos mais profundos e estrategicamente posicionados da África Ocidental devido à sua localização geográfica, extensão e calado natural."
           : "Sonamet's facility sits adjacent to the Port of Lobito, one of West Africa's deepest and most strategically positioned ports due to its geographic location, extension, and water depth."}
@@ -286,14 +286,30 @@ function Yard() {
                   <span className="h-4 w-1 bg-gold rounded-full" />
                   {group.category}
                 </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex flex-wrap justify-center gap-6">
                   {group.items.map((item) => (
-                    <div key={item.title} className="bg-secondary/60 rounded-2xl p-6 border border-border/80 hover:border-gold transition-all">
-                      <h4 className="text-base font-bold uppercase text-foreground mb-2 flex items-center gap-2">
-                        <CheckCircle2 size={16} className="text-gold shrink-0" />
-                        {item.title}
-                      </h4>
-                      <p className="text-xs sm:text-sm text-foreground/85 leading-relaxed">{item.specs}</p>
+                    <div
+                      key={item.title}
+                      className={`bg-secondary/60 rounded-2xl p-6 border border-border/80 hover:border-gold hover:shadow-sm transition-all flex flex-col justify-between w-full ${
+                        group.items.length === 3
+                          ? "md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                          : "md:w-[calc(50%-12px)]"
+                      }`}
+                    >
+                      <div>
+                        <h4 className="text-base font-bold uppercase text-navy mb-4 flex items-center gap-2 border-b border-border/60 pb-3">
+                          <CheckCircle2 size={18} className="text-gold shrink-0" />
+                          {item.title}
+                        </h4>
+                        <ul className="space-y-2.5">
+                          {item.specs.split("·").map((spec, specIdx) => (
+                            <li key={specIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/85">
+                              <span className="h-1.5 w-1.5 rounded-full bg-gold shrink-0 mt-2" />
+                              <span className="leading-relaxed">{spec.trim()}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -387,14 +403,16 @@ function Yard() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {clientServices.map((service) => (
-              <div key={service.title} className="bg-card border border-border rounded-3xl p-8 hover:border-gold hover:shadow-elegant transition-all">
-                <div className="h-12 w-12 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6 shadow-gold">
-                  <Sparkles className="text-navy-deep" size={22} />
+              <div key={service.title} className="bg-card border border-border rounded-3xl p-8 hover:border-gold hover:shadow-elegant transition-all w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-sm flex flex-col justify-between">
+                <div>
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-gold flex items-center justify-center mb-6 shadow-gold">
+                    <Sparkles className="text-navy-deep" size={22} />
+                  </div>
+                  <h4 className="text-base font-bold uppercase text-foreground mb-2">{service.title}</h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
                 </div>
-                <h4 className="text-base font-bold uppercase text-foreground mb-2">{service.title}</h4>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
               </div>
             ))}
           </div>

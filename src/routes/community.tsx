@@ -5,15 +5,15 @@ import {
   Heart, 
   TreePine, 
   Droplet, 
-  Building, 
+  GraduationCap, 
   Waves,
   CheckCircle2
 } from "lucide-react";
-import trainingImg from "@/assets/community-training.jpg";
 import bloodDonationImg from "@/assets/community-blood-donation.jpg";
 import childrenImg from "@/assets/community-children.jpg";
 import treePlantingImg from "@/assets/community-tree-planting.png";
 import schoolImg from "@/assets/community-school-catumbela.png";
+import educationPresentationImg from "@/assets/community-education-presentation.png";
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -21,9 +21,9 @@ export const Route = createFileRoute("/community")({
   head: () => ({
     meta: [
       { title: "Comunidade & Conteúdo Local — Sonamet Industrial S.A. | Benguela" },
-      { name: "description", content: "Impacto comunitário e talento angolano na Sonamet: 80% de taxa de angolanização (Decreto Presidencial 271/20), Centro de Formação com 168.479 horas de treino, Programa de Controlo da Malária ativo desde 2002 e proteção ambiental do mangal do Lobito." },
+      { name: "description", content: "Impacto comunitário e talento angolano na Sonamet: 80% de taxa de angolanização (Decreto Presidencial 271/20), mais de 168.479 horas de formação ministradas, Programa de Controlo da Malária ativo desde 2002 e apoio à Escola Evokiyo da Catumbela." },
       { property: "og:title", content: "Comunidade & Conteúdo Local — Sonamet Industrial S.A." },
-      { property: "og:image", content: trainingImg },
+      { property: "og:image", content: treePlantingImg },
     ],
   }),
   component: Community,
@@ -39,20 +39,20 @@ function Community() {
     { value: "DESDE 2002", label: lang === "pt" ? "PROGRAMA ATIVO" : "ACTIVE PROGRAMME", desc: lang === "pt" ? "Mais de 20 anos de ação" : "Over 20 years of action" },
   ];
 
-  const trainingStats = [
+  const talentStats = [
     { value: "80%", label: lang === "pt" ? "TAXA DE ANGOLANIZAÇÃO" : "ANGOLANIZATION RATE", desc: "Dec. Presidencial 271/20" },
-    { value: "168.479", label: lang === "pt" ? "HORAS DE FORMAÇÃO" : "TRAINING HOURS", desc: lang === "pt" ? "Ministradas desde 2010" : "Delivered since 2010" },
-    { value: "4.906", label: lang === "pt" ? "TUBISTAS & SOLDADORES" : "FABRICATORS & WELDERS", desc: lang === "pt" ? "Profissionais formados" : "Trained for Angola" },
-    { value: "200", label: lang === "pt" ? "FORMANDOS EM PICO" : "PEAK TRAINEES", desc: lang === "pt" ? "Capacidade em simultâneo" : "Simultaneous capacity" },
-    { value: "3.500 M²", label: lang === "pt" ? "ÁREA DO CENTRO" : "CENTRE SURFACE", desc: lang === "pt" ? "3 oficinas · 80 cabines" : "3 workshops · 80 booths" },
+    { value: "168.479", label: lang === "pt" ? "HORAS DE FORMAÇÃO" : "TRAINING HOURS", desc: lang === "pt" ? "Ministradas até hoje" : "Delivered to date" },
+    { value: "4.906", label: lang === "pt" ? "QUADROS CAPACITADOS" : "CERTIFIED SPECIALISTS", desc: lang === "pt" ? "Profissionais preparados" : "Trained for the industry" },
+    { value: "25+ ANOS", label: lang === "pt" ? "VALORIZAÇÃO NACIONAL" : "TALENT DEVELOPMENT", desc: lang === "pt" ? "Formação contínua" : "Continuous learning" },
+    { value: "100%", label: lang === "pt" ? "CONTEÚDO LOCAL" : "LOCAL CONTENT", desc: lang === "pt" ? "Compromisso estrutural" : "Core commitment" },
   ];
 
   const socialActions = [
     {
-      title: lang === "pt" ? "DOAÇÃO DE MEDICAMENTOS & APOIO À SAÚDE" : "HOSPITAL MEDICINE DONATIONS",
+      title: lang === "pt" ? "DOAÇÃO DE MEDICAMENTOS & SAÚDE INFANTIL" : "MEDICINE DONATIONS & CHILD HEALTHCARE",
       desc: lang === "pt"
-        ? "Doações regulares de medicamentos e materiais hospitalares essenciais para os hospitais e centros de saúde da província de Benguela."
-        : "Regular donations of essential medicines and hospital supplies to local hospitals and healthcare clinics in Benguela Province.",
+        ? "Apoio continuado à saúde infantil, com doações regulares de medicamentos essenciais e materiais hospitalares para os centros de saúde da província de Benguela."
+        : "Ongoing support for child healthcare, providing essential medicine and medical equipment to hospitals across Benguela Province.",
       icon: Heart,
       image: childrenImg
     },
@@ -65,18 +65,18 @@ function Community() {
       image: bloodDonationImg
     },
     {
-      title: lang === "pt" ? "INFRAESTRUTURAS & BOMBEIROS DO LOBITO" : "COMMUNITY SUPPORT & FIRE BRIGADE",
+      title: lang === "pt" ? "ESCOLA EVOKIYO DA CATUMBELA & APOIO ESCOLAR" : "EVOKIYO SCHOOL OF CATUMBELA & EDUCATION",
       desc: lang === "pt"
-        ? "Reabilitação integral da embarcação do Corpo de Bombeiros do Lobito, apoio a escolas e recuperação de equipamentos comunitários."
-        : "Comprehensive overhaul of the Lobito Fire Brigade boat, school infrastructure support, and local civic assistance.",
-      icon: Building,
+        ? "Construção e apoio contínuo às infraestruturas de ensino da Escola Evokiyo da Catumbela, promovendo a educação, o conforto e o futuro das crianças na província de Benguela."
+        : "Construction and ongoing infrastructure support for the Evokiyo School of Catumbela, fostering education and bright futures for local children.",
+      icon: GraduationCap,
       image: schoolImg
     },
     {
-      title: lang === "pt" ? "AÇÃO AMBIENTAL & PRESERVAÇÃO DO FLAMINGO-ROSA" : "MANGROVE & PINK FLAMINGO CONSERVATION",
+      title: lang === "pt" ? "PRESERVAÇÃO AMBIENTAL & PLANTAÇÃO DE ÁRBORES" : "ENVIRONMENTAL CARE & TREE PLANTING",
       desc: lang === "pt"
-        ? "Campanhas de plantação de árvores dentro e fora do estaleiro, controlo de emissões e reabilitação do mangal do Lobito para salvaguarda do Flamingo-Rosa."
-        : "Tree planting campaigns inside and outside the yard, carbon monitoring, and Lobito mangrove rehabilitation to preserve Pink Flamingo habitat.",
+        ? "Campanhas de arborização, plantação de árvores dentro e fora do estaleiro e ações de sensibilização ecológica promovidas pela Sonamet para a proteção do ecossistema."
+        : "Tree planting campaigns, reforestation inside and outside the yard, and ecological awareness initiatives to preserve the local ecosystem.",
       icon: TreePine,
       image: treePlantingImg
     }
@@ -90,10 +90,10 @@ function Community() {
         description={lang === "pt"
           ? "Para além dos limites do estaleiro, a Sonamet investe continuamente na saúde a longo prazo, no bem-estar dos colaboradores e famílias, e no desenvolvimento sustentável das comunidades de Benguela."
           : "Beyond the yard, Sonamet invests in the long-term health and wellbeing of its workers, their families, and the communities of Benguela Province."}
-        image={trainingImg}
+        image={treePlantingImg}
       />
 
-      {/* LOCAL CONTENT & TRAINING CENTRE */}
+      {/* LOCAL CONTENT & TALENT DEVELOPMENT */}
       <section className="py-24 bg-background">
         <div className="container-x">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -122,23 +122,23 @@ function Community() {
                 </div>
                 <p className="text-xs sm:text-sm text-foreground/85 leading-relaxed">
                   {lang === "pt"
-                    ? "O desenvolvimento de competências técnicas nacionais é a pedra angular da nossa sustentabilidade operacional. Formamos os melhores profissionais da indústria em soldadura especializada, tubagem, mecânica e liderança."
-                    : "Developing national technical skills is the cornerstone of our sustainability. We train industry-leading professionals in specialized welding, pipefitting, mechanics, and leadership."}
+                    ? "O desenvolvimento de competências técnicas nacionais é a pedra angular da nossa sustentabilidade operacional. Promovemos a capacitação contínua dos nossos profissionais em soldadura especializada, tubagem, mecânica, engenharia e liderança."
+                    : "Developing national technical skills is the cornerstone of our operational sustainability. We empower professionals through continuous training in specialized welding, pipefitting, mechanics, engineering, and leadership."}
                 </p>
               </div>
 
               <div className="space-y-3 text-xs sm:text-sm text-foreground/90 uppercase font-semibold">
                 <div className="flex items-center gap-2.5">
                   <CheckCircle2 size={16} className="text-gold shrink-0" />
-                  <span><strong>{lang === "pt" ? "CENTRO DE FORMAÇÃO:" : "TRAINING CENTRE:"}</strong> {lang === "pt" ? "Instalação de topo construída em Angola." : "Best-in-class purpose-built facility in Angola."}</span>
+                  <span><strong>{lang === "pt" ? "CAPACITAÇÃO DE TALENTOS:" : "TALENT DEVELOPMENT:"}</strong> {lang === "pt" ? "Programas contínuos de valorização dos profissionais angolanos." : "Ongoing programmes empowering Angolan professionals."}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <CheckCircle2 size={16} className="text-gold shrink-0" />
-                  <span><strong>3.500 M²</strong> {lang === "pt" ? "com 3 oficinas dedicadas e 80 cabines de soldadura." : "with 3 dedicated workshops and 80 welding booths."}</span>
+                  <span><strong>168.479+ {lang === "pt" ? "HORAS DE FORMAÇÃO" : "TRAINING HOURS"}</strong> {lang === "pt" ? "ministradas em diversas especialidades técnicas." : "delivered across technical disciplines."}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <CheckCircle2 size={16} className="text-gold shrink-0" />
-                  <span><strong>4.906 {lang === "pt" ? "PROFISSIONAIS" : "SPECIALISTS"}</strong> {lang === "pt" ? "capacitados e certificados." : "trained and certified for the industry."}</span>
+                  <span><strong>4.906 {lang === "pt" ? "PROFISSIONAIS" : "SPECIALISTS"}</strong> {lang === "pt" ? "capacitados para a indústria petrolífera e industrial." : "trained and certified for the energy sector."}</span>
                 </div>
               </div>
             </div>
@@ -146,24 +146,24 @@ function Community() {
             <div className="space-y-6">
               <div className="relative">
                 <img
-                  src={trainingImg}
-                  alt="Centro de Formação Profissional Sonamet"
+                  src={educationPresentationImg}
+                  alt="Desenvolvimento de Talentos e Capacitação Sonamet"
                   loading="lazy"
                   width={1280}
                   height={800}
                   className="rounded-3xl shadow-elegant w-full object-cover aspect-[4/3]"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-navy-deep/90 backdrop-blur-md text-white p-4 rounded-2xl border border-white/10 text-xs uppercase">
-                  <span className="font-bold text-gold">{lang === "pt" ? "CENTRO DE FORMAÇÃO:" : "TRAINING CENTRE:"}</span>{" "}
-                  {lang === "pt" ? "Mais de 168.479 horas de treino desde 2010." : "Over 168,479 training hours delivered since 2010."}
+                  <span className="font-bold text-gold">{lang === "pt" ? "VALORIZAÇÃO DO TALENTO:" : "TALENT EMPOWERMENT:"}</span>{" "}
+                  {lang === "pt" ? "Desenvolvimento contínuo e formação de quadros angolanos." : "Continuous development and empowerment of Angolan professionals."}
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Training Numbers Grid */}
+          {/* Talent Numbers Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-16">
-            {trainingStats.map((st, idx) => (
+            {talentStats.map((st, idx) => (
               <Reveal key={st.label} delay={idx * 0.04}>
                 <div className="bg-card border border-border rounded-2xl p-5 text-center hover:border-gold hover:shadow-elegant transition-all h-full flex flex-col justify-center">
                   <div className="font-display text-2xl lg:text-3xl font-bold text-navy">{st.value}</div>
