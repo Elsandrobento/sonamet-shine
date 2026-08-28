@@ -58,15 +58,11 @@ function QHSE() {
   ];
 
   const policiesList = [
-    { name: lang === "pt" ? "POLÍTICA DE QHSE (REV. 4.0)" : "QHSE POLICY (REV. 4.0)", file: "/documents/SON-MGT-PL-001_QHSE_Policy.pdf" },
-    { name: lang === "pt" ? "REGRAS DE OURO DE SEGURANÇA" : "HSE GOLDEN RULES", file: "/documents/SONAMET_GOLDEN_RULES.pdf" },
     { name: lang === "pt" ? "POLÍTICA DE ABUSO DE SUBSTÂNCIAS" : "SUBSTANCE ABUSE POLICY", file: "/documents/SON-MGT-PL-003_Substance_Abuse_Policy.pdf" },
     { name: lang === "pt" ? "POLÍTICA DE CONTROLO DA MALÁRIA" : "MALARIA CONTROL POLICY", file: "/documents/SON-MGT-PL-004_Malaria_Control_Policy.pdf" },
     { name: lang === "pt" ? "POLÍTICA DE NÃO FUMADORES" : "SMOKING POLICY", file: "/documents/SON-MGT-PL-005_Smoking_Policy.pdf" },
     { name: lang === "pt" ? "POLÍTICA DE RESPONSABILIDADE SOCIAL" : "SOCIAL RESPONSIBILITY POLICY", file: "/documents/SON-MGT-PL-008_Social_Responsibility_Policy.pdf" },
     { name: lang === "pt" ? "POLÍTICA DE APROVISIONAMENTO MINERAL" : "MINERAL SOURCING POLICY", file: "/documents/MINERAL_SOURCING_POLICY.pdf" },
-    { name: lang === "pt" ? "CERTIFICADO UKAS ISO 14001" : "ISO 14001 CERTIFICATE", file: "/documents/SONAMET_ISO_14001.pdf" },
-    { name: lang === "pt" ? "CERTIFICADO ISO 45001" : "ISO 45001 CERTIFICATE", file: "/documents/SONAMET_ISO_45001.pdf" },
     { name: lang === "pt" ? "CÓDIGO DE CONDUTA EMPRESARIAL" : "CODE OF BUSINESS CONDUCT", file: "/documents/Sonamet_Code_of_Business_Conduct_2024.pdf" },
   ];
 
@@ -246,7 +242,7 @@ function QHSE() {
               {lang === "pt" ? "CENTRO DE DOCUMENTAÇÃO" : "DOCUMENTATION CENTER"}
             </div>
             <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
-              {lang === "pt" ? "POLÍTICAS CORPORATIVAS & CERTIFICADOS OFICIAIS" : "CORPORATE POLICIES & OFFICIAL CERTIFICATES"}
+              {lang === "pt" ? "POLÍTICAS CORPORATIVAS" : "CORPORATE POLICIES"}
             </h2>
           </div>
 
