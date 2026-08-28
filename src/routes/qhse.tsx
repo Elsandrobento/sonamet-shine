@@ -63,15 +63,6 @@ function QHSE() {
     },
   ];
 
-  const hseIndicators = [
-    { metric: "TRI = 0", label: "TOTAL RECORDABLE INCIDENTS", desc: lang === "pt" ? "Zero incidentes registáveis" : "Zero recordable incidents" },
-    { metric: "DAFW = 0", label: "DAYS AWAY FROM WORK", desc: lang === "pt" ? "Zero dias de baixa médica" : "Zero days away from work" },
-    { metric: "RWDC = 0", label: "RESTRICTED WORK DAYS", desc: lang === "pt" ? "Zero casos de trabalho restrito" : "Zero restricted work cases" },
-    { metric: "NM = 0", label: "NEAR MISSES", desc: lang === "pt" ? "Controlo preventivo total" : "Total preventive control" },
-    { metric: "MTC = 0", label: "MEDICAL TREATMENT CASES", desc: lang === "pt" ? "Zero tratamentos médicos" : "Zero medical treatment cases" },
-    { metric: "ED = 0", label: "ENVIRONMENTAL DAMAGES", desc: lang === "pt" ? "Zero danos ambientais" : "Zero environmental damage" },
-  ];
-
   const policiesList = [
     { name: lang === "pt" ? "POLÍTICA DE QHSE (REV. 4.0)" : "QHSE POLICY (REV. 4.0)", file: "/documents/SON-MGT-PL-001_QHSE_Policy.pdf" },
     { name: lang === "pt" ? "REGRAS DE OURO DE SEGURANÇA" : "HSE GOLDEN RULES", file: "/documents/SONAMET_GOLDEN_RULES.pdf" },
@@ -96,33 +87,6 @@ function QHSE() {
         image={yardHero}
       />
 
-      {/* MOTTO & HSE PERFORMANCE INDICATORS */}
-      <section className="py-16 bg-gradient-navy text-white border-b border-white/10">
-        <div className="container-x">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
-              {lang === "pt" ? "CULTURA DE SEGURANÇA" : "SAFETY CULTURE"}
-            </div>
-            <h2 className="text-2xl md:text-4xl font-extrabold uppercase tracking-wide">
-              {lang === "pt" ? '"TRABALHE COM SEGURANÇA... VIVA COM CONFIANÇA..."' : '"WORK SAFELY... LIVE WITH CONFIDENCE..."'}
-            </h2>
-            <p className="mt-3 text-xs sm:text-sm font-bold uppercase text-white/80 tracking-wider">
-              {lang === "pt" ? "INDICADORES DE DESEMPENHO HSE" : "HSE PERFORMANCE INDICATORS"}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            {hseIndicators.map((ind) => (
-              <div key={ind.metric} className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center hover:border-gold transition-all">
-                <div className="font-display text-xl lg:text-2xl font-black text-gold">{ind.metric}</div>
-                <div className="text-[10px] font-bold uppercase tracking-wider text-white mt-1">{ind.label}</div>
-                <div className="text-[9px] text-white/70 mt-0.5 uppercase">{ind.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* TRIPLE ISO CERTIFICATIONS */}
       <section className="py-24 bg-background">
         <div className="container-x">
@@ -130,7 +94,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "CERTIFICAÇÕES INTERNACIONAIS" : "INTERNATIONAL CERTIFICATIONS"}
             </div>
-            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
+            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "SISTEMA DE GESTÃO INTEGRADO" : "INTEGRATED MANAGEMENT SYSTEM"}
             </h2>
           </div>
@@ -148,7 +112,7 @@ function QHSE() {
                       {iso.certifiedSince}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold uppercase text-foreground mb-3">{iso.title}</h3>
+                  <h3 className="font-display text-lg font-bold uppercase text-foreground mb-3">{iso.title}</h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">{iso.desc}</p>
                 </div>
 
@@ -175,7 +139,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "DIFERENCIADOR COMPETITIVO" : "COMPETITIVE DIFFERENTIATOR"}
             </div>
-            <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-navy">
+            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase text-navy">
               {lang === "pt" ? "VANTAGEM EM SUPER DUPLEX & QUALIDADE" : "SUPER DUPLEX & QUALITY ADVANTAGE"}
             </h2>
           </div>
@@ -265,7 +229,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
               {lang === "pt" ? "PROGRAMAS HSE" : "HSE PROGRAMMES"}
             </div>
-            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
+            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "REGRAS DE OURO & PROGRAMA C.A.R.E." : "GOLDEN RULES & C.A.R.E. PROGRAMME"}
             </h2>
           </div>
@@ -277,7 +241,7 @@ function QHSE() {
                 <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6">
                   <ShieldCheck className="text-gold" size={26} />
                 </div>
-                <h3 className="text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
+                <h3 className="font-display text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
                   {lang === "pt" ? "REGRAS DE OURO DE HSE SONAMET" : "SONAMET HSE GOLDEN RULES"}
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-6">
@@ -310,7 +274,7 @@ function QHSE() {
                 <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6">
                   <Leaf className="text-gold" size={26} />
                 </div>
-                <h3 className="text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
+                <h3 className="font-display text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
                   PROGRAMA C.A.R.E.
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-6">
@@ -351,7 +315,7 @@ function QHSE() {
                 <HeartPulse size={16} className="mr-1.5" />
                 {lang === "pt" ? "SAÚDE OCUPACIONAL & EMERGÊNCIA" : "OCCUPATIONAL HEALTH & EMERGENCY"}
               </div>
-              <h3 className="text-2xl md:text-4xl font-extrabold uppercase mb-4 text-foreground">
+              <h3 className="font-display text-2xl md:text-4xl font-extrabold uppercase mb-4 text-foreground">
                 {lang === "pt" ? "POSTO MÉDICO PRÓPRIO NO ESTALEIRO" : "ON-SITE MEDICAL POST"}
               </h3>
               <p className="text-foreground/85 leading-relaxed text-xs sm:text-base mb-6">
@@ -412,7 +376,7 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "CENTRO DE DOCUMENTAÇÃO" : "DOCUMENTATION CENTER"}
             </div>
-            <h2 className="text-2xl md:text-4xl font-extrabold uppercase">
+            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
               {lang === "pt" ? "POLÍTICAS CORPORATIVAS & CERTIFICADOS OFICIAIS" : "CORPORATE POLICIES & OFFICIAL CERTIFICATES"}
             </h2>
           </div>
