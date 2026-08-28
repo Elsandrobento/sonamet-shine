@@ -261,13 +261,11 @@ export function Projects() {
     {
       id: "dismantling",
       title: "Dismantling",
-      client: "Chevron / CABGOC & Operadoras Internacionais",
+      client: "Chevron / CABGOC",
       category: "OTHERS",
       scope: t("Desmantelamento", "Dismantling"),
       bulletPoints: [
         t("5 Boias FPSO Desmanteladas", "5 FPSO Buoys Dismantled"),
-        t("1 Stinger Desmantelado", "1 Stinger Dismantled"),
-        t("Capacidade dedicada para atividades de desmantelamento offshore", "Dedicated capability to support dismantling-related activities safely"),
       ],
       image: welder,
     },
