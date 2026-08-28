@@ -41,7 +41,7 @@ function QHSE() {
       desc: lang === "pt"
         ? "Garantia da qualidade em todas as etapas da fabricação, qualificação de procedimentos de soldadura (WPQR) e processo integral de entrega para garantir a total satisfação do cliente."
         : "Quality assurance across fabrication, welding qualification (WPQR), and the full project delivery process to ensure complete client satisfaction.",
-      pdf: "/documents/SON-MGT-PL-001_QHSE_Policy.pdf",
+      pdf: "/documents/SONAMET_ISO_45001.pdf",
     },
     {
       code: "ISO 14001",
