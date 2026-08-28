@@ -152,10 +152,10 @@ export function Projects() {
     {
       id: "OTHERS",
       title: "OTHERS",
-      subtitle: t("Tanques de Flutuabilidade, Boias & Desmantelamento", "Buoyancy Tanks, Buoys & Dismantling"),
+      subtitle: t("Boias FPSO & Desmantelamento", "FPSO Buoys & Dismantling"),
       desc: t(
-        "Fabricação de tanques de flutuabilidade, boias FPSO, amarras e desmantelamento de estruturas offshore.",
-        "Fabrication of buoyancy tanks, FPSO buoys, mooring chains and offshore decommissioning."
+        "Fabricação de boias FPSO e desmantelamento de estruturas offshore.",
+        "Fabrication of FPSO buoys and offshore dismantling."
       ),
       count: "2 " + t("Projetos Principais", "Major Projects"),
       image: categoryOthers,
@@ -247,15 +247,13 @@ export function Projects() {
 
     // OTHERS
     {
-      id: "buoyancy-fpsos",
-      title: "Buoyancy Tanks & FPSO Buoys",
-      client: "TotalEnergies, ExxonMobil & Chevron",
+      id: "fpso-buoys",
+      title: "FPSO Buoys",
+      client: "TotalEnergies",
       category: "OTHERS",
       scope: t("Componentes Offshore", "Offshore Components"),
       bulletPoints: [
-        t("17 Tanques de Flutuabilidade fabricados (ExxonMobil, BP e TotalEnergies)", "17 Buoyancy Tanks fabricated for ExxonMobil, BP and TotalEnergies"),
-        t("Boias FPSO fabricadas para TotalEnergies e ExxonMobil", "FPSO Buoys fabricated for TotalEnergies and ExxonMobil"),
-        t("Manuseamento e montagem S-Lay de correntes de amarração de 800m", "Handling, flaking and S-Lay of 800m long FPSO chains"),
+        t("Boias FPSO fabricadas para a TotalEnergies", "FPSO Buoys fabricated for TotalEnergies"),
       ],
       image: yardAerial,
     },
