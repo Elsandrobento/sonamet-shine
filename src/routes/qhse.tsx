@@ -1,10 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/Section";
 import { 
-  Shield, 
   Leaf, 
   Award, 
-  CheckCircle2, 
   FileText, 
   Download, 
   ShieldCheck 
@@ -124,96 +122,6 @@ function QHSE() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* KEY DIFFERENTIATORS: WHITE WORKSHOPS & QUALITY */}
-      <section className="py-24 bg-secondary border-y border-border">
-        <div className="container-x">
-          <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
-              {lang === "pt" ? "DIFERENCIADOR COMPETITIVO" : "COMPETITIVE DIFFERENTIATOR"}
-            </div>
-            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase text-navy">
-              {lang === "pt" ? "VANTAGEM EM SUPER DUPLEX & QUALIDADE" : "SUPER DUPLEX & QUALITY ADVANTAGE"}
-            </h2>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="bg-card border border-border rounded-3xl p-6 sm:p-8 shadow-sm">
-                <h4 className="text-base font-bold uppercase text-navy mb-4 flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-gold" />
-                  {lang === "pt" ? "OFICINAS BRANCAS & FABRICAÇÃO SUBMARINA" : "WHITE WORKSHOPS & SUBSEA FABRICATION"}
-                </h4>
-                <ul className="space-y-3 text-xs sm:text-sm text-foreground/85">
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-gold shrink-0 mt-0.5" />
-                    <span><strong>4.700 M²</strong> {lang === "pt" ? "de superfície para pré-fabricação em aço inoxidável e duplex." : "surface for stainless steel, duplex, and super duplex fabrication."}</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-gold shrink-0 mt-0.5" />
-                    <span><strong>9 MANIFOLDS</strong> {lang === "pt" ? "erguidos e montados em simultâneo." : "erected and fabricated simultaneously."}</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-gold shrink-0 mt-0.5" />
-                    <span><strong>105 MANIFOLDS</strong> {lang === "pt" ? "entregues com total segurança até à data." : "safely delivered to global clients to date."}</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-gold shrink-0 mt-0.5" />
-                    <span><strong>12.000+</strong> {lang === "pt" ? "juntas de pequeno diâmetro em superduplex executadas no Kaombo SPS." : "small-bore superduplex joints welded on Kaombo SPS."}</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="text-gold shrink-0 mt-0.5" />
-                    <span><strong>&lt; 4%</strong> {lang === "pt" ? "de taxa de reparação de soldadura para tubagens de pequeno diâmetro." : "weld repair rate on small-bore piping."}</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-card border border-border rounded-3xl p-6 sm:p-8 shadow-sm">
-                <h4 className="text-base font-bold uppercase text-navy mb-4 flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-gold" />
-                  {lang === "pt" ? "SISTEMA DE GESTÃO DA QUALIDADE (QMS)" : "QUALITY MANAGEMENT SYSTEM (QMS)"}
-                </h4>
-                <div className="grid grid-cols-3 gap-3 text-center mb-4">
-                  <div className="bg-secondary p-3 rounded-xl border border-border">
-                    <div className="font-display text-2xl font-bold text-navy">500+</div>
-                    <div className="text-[9px] uppercase font-bold text-muted-foreground mt-1">{lang === "pt" ? "WPQRs DISPONÍVEIS" : "AVAILABLE WPQRS"}</div>
-                  </div>
-                  <div className="bg-secondary p-3 rounded-xl border border-border">
-                    <div className="font-display text-2xl font-bold text-navy">350+</div>
-                    <div className="text-[9px] uppercase font-bold text-muted-foreground mt-1">{lang === "pt" ? "SOLDADORES QUALIFICADOS" : "QUALIFIED WELDERS"}</div>
-                  </div>
-                  <div className="bg-secondary p-3 rounded-xl border border-border">
-                    <div className="font-display text-2xl font-bold text-navy">~20</div>
-                    <div className="text-[9px] uppercase font-bold text-muted-foreground mt-1">{lang === "pt" ? "INSPETORES LOCAIS" : "LOCAL INSPECTORS"}</div>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {lang === "pt"
-                    ? "Ensaios mecânicos e qualificações WPQR realizados por entidades terceiras independentes com rastreabilidade total."
-                    : "Mechanical testing and WPQR qualifications conducted by independent third parties with full material traceability."}
-                </p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <img
-                src={whiteWorkshopImg}
-                alt="Manifold em fabricação na White Workshop da Sonamet"
-                loading="lazy"
-                width={800}
-                height={600}
-                className="rounded-3xl shadow-elegant w-full object-cover"
-              />
-              <div className="absolute bottom-4 left-4 right-4 bg-navy-deep/95 backdrop-blur-md text-white p-4 rounded-2xl border border-white/10 text-xs uppercase">
-                <span className="font-bold text-gold">WHITE WORKSHOP:</span>{" "}
-                {lang === "pt"
-                  ? "Ambiente controlado com soldadura orbital e proteção contra contaminação cruzada."
-                  : "Controlled cleanroom environment with orbital welding and cross-contamination prevention."}
-              </div>
-            </div>
           </div>
         </div>
       </section>
