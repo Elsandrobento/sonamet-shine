@@ -87,6 +87,30 @@ function QHSE() {
         image={yardHero}
       />
 
+      {/* MOTTO SECTION */}
+      <section className="py-16 md:py-20 bg-gradient-navy text-white border-b border-white/10 relative overflow-hidden">
+        <div className="container-x relative z-10 text-center max-w-4xl mx-auto">
+          <Reveal>
+            <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-4 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
+              {lang === "pt" ? "LEMA DE SEGURANÇA" : "SAFETY MOTTO"}
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight md:leading-snug">
+              {lang === "pt" ? (
+                <>
+                  TRABALHE COM SEGURANÇA...<br className="hidden sm:block" />
+                  VIVA COM CONFIANÇA...
+                </>
+              ) : (
+                <>
+                  WORK SAFELY...<br className="hidden sm:block" />
+                  LIVE WITH CONFIDENCE...
+                </>
+              )}
+            </h2>
+          </Reveal>
+        </div>
+      </section>
+
       {/* TRIPLE ISO CERTIFICATIONS */}
       <section className="py-24 bg-background">
         <div className="container-x">
