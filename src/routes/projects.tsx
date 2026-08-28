@@ -9,7 +9,7 @@ import categorySpsSurf from "@/assets/category-sps-surf-new.jpg";
 import categoryOthers from "@/assets/category-others-new.png";
 import projectSlgc from "@/assets/project-slgc-new.jpg";
 import projectSouthNemba from "@/assets/project-south-nemba-new.png";
-import projectAgogo from "@/assets/project-agogo.jpg";
+import projectAgogo from "@/assets/project-suction-piles-agogo.jpg";
 import projectMafumeira from "@/assets/project-mafumeira-new.jpg";
 import quay2 from "@/assets/quay-2.jpg";
 import team from "@/assets/team.jpg";
