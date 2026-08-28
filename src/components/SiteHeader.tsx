@@ -13,7 +13,7 @@ export function SiteHeader() {
     { to: "/about", label: t("A Empresa", "About Us") },
     { to: "/yard", label: "Yard" },
     { to: "/projects", label: t("Projetos", "Projects") },
-    { to: "/hseq", label: "HSEQ" },
+    { to: "/qhse", label: "QHSE" },
     { to: "/community", label: t("Comunidade", "Community") },
     { to: "/contact", label: t("Contacto", "Contact") },
   ];
