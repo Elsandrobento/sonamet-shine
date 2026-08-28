@@ -11,7 +11,21 @@ export default defineConfig({
     server: {
       allowedHosts: true,
       watch: {
-        ignored: ["**/Mudanças/**", "**/*.pdf", "**/*.pptx", "**/*.JPG", "**/*.jpg", "**/*.png"],
+        usePolling: true,
+        interval: 1000,
+        ignored: [
+          "**/Mudanças/**",
+          "**/logo Clients/**",
+          "**/*.pdf",
+          "**/*.pptx",
+          "**/*.JPG",
+          "**/*.jpg",
+          "**/*.png",
+          "**/*.svg",
+          "**/*.~*",
+          "**/*.tmp",
+          "**/*.tmp.*",
+        ],
       },
     },
   },
