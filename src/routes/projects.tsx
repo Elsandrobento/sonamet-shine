@@ -15,6 +15,7 @@ import projectClov from "@/assets/project-clov-new.jpg";
 import projectKaombo from "@/assets/project-kaombo-new.jpg";
 import projectBuoys from "@/assets/project-fpso-buoy-new.png";
 import projectDismantling from "@/assets/project-dismantling-new.jpg";
+import projectSpoolbase from "@/assets/project-spoolbase-new.jpg";
 import quay2 from "@/assets/quay-2.jpg";
 import team from "@/assets/team.jpg";
 import yardAerial from "@/assets/yard-aerial.jpg";
@@ -159,7 +160,7 @@ export function Projects() {
         "Reabilitação de Estacas de Sucção, Spreader Bars, Sistemas de Proteção de Risers, Serviços de Spool Base e muito mais.",
         "Suction Pile Refurbishment, Spreader Bars, Riser Protection Systems, Spool Base Services, and much more."
       ),
-      count: "2 " + t("Projetos Principais", "Major Projects"),
+      count: "3 " + t("Projetos Principais", "Major Projects"),
       image: categoryOthers,
     },
   ];
@@ -248,6 +249,17 @@ export function Projects() {
     },
 
     // OTHERS
+    {
+      id: "sonamet-spool-base",
+      title: "Sonamet Spool Base",
+      client: "Total Energies",
+      category: "OTHERS",
+      scope: t("Serviços de Spool Base", "Spool Base Services"),
+      bulletPoints: [
+        t("Atualmente a única spool base operacional em Angola", "For the time being is the only operational spool base in Angola"),
+      ],
+      image: projectSpoolbase,
+    },
     {
       id: "fpso-buoys",
       title: "FPSO Buoys",
