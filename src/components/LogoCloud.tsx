@@ -1,7 +1,7 @@
 import React from "react";
 
 const clients = [
-  "TotalEnergies",
+  "Total Energies",
   "Chevron / CABGOC",
   "ExxonMobil",
   "Azule Energy",

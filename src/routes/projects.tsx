@@ -156,8 +156,8 @@ export function Projects() {
       title: "OTHERS",
       subtitle: t("Boias FPSO, Spoolbase & Desmantelamento", "FPSO Buoys, Spoolbase & Dismantling"),
       desc: t(
-        "Fabricação de boias FPSO, operações de spoolbase, manifolds e desmantelamento de estruturas offshore.",
-        "Fabrication of FPSO buoys, spoolbase operations, manifolds and offshore dismantling."
+        "Fabricação de boias FPSO, operações de spoolbase e desmantelamento de estruturas offshore.",
+        "Fabrication of FPSO buoys, spoolbase operations and offshore dismantling."
       ),
       count: "2 " + t("Projetos Principais", "Major Projects"),
       image: categoryOthers,
@@ -224,7 +224,7 @@ export function Projects() {
     {
       id: "kaombo-sps",
       title: "Kaombo SPS (2018)",
-      client: "TotalEnergies",
+      client: "Total Energies",
       category: "SPS & SURF",
       scope: t("Fabricação SPS", "SPS Fabrication"),
       bulletPoints: [
@@ -237,7 +237,7 @@ export function Projects() {
     {
       id: "clov-project",
       title: "CLOV Project (2012–2013)",
-      client: "Subsea 7 / TotalEnergies",
+      client: "Subsea 7 / Total Energies",
       category: "SPS & SURF",
       scope: t("SURF & Pipe-in-Pipe", "SURF & Pipe-in-Pipe"),
       bulletPoints: [
@@ -251,11 +251,11 @@ export function Projects() {
     {
       id: "fpso-buoys",
       title: "FPSO Buoys",
-      client: "TotalEnergies",
+      client: "Total Energies & ExxonMobil",
       category: "OTHERS",
       scope: t("Componentes Offshore", "Offshore Components"),
       bulletPoints: [
-        t("Boias FPSO fabricadas para a TotalEnergies", "FPSO Buoys fabricated for TotalEnergies"),
+        t("Boias FPSO — Total Energies & ExxonMobil", "FPSO buoys — Total Energies & ExxonMobil"),
       ],
       image: projectBuoys,
     },
@@ -274,7 +274,7 @@ export function Projects() {
 
   // Major clients roster
   const clientMajors = [
-    { name: "TotalEnergies", projects: "Girassol · Pazflor · CLOV · Kaombo" },
+    { name: "Total Energies", projects: "Girassol · Pazflor · CLOV · Kaombo" },
     { name: "Chevron / CABGOC", projects: "Mafumeira · CRX · Lianzi · MaFuSul · Block 0" },
     { name: "ExxonMobil", projects: "Kizomba · Gas Gathering · Block 15" },
     { name: "Azule Energy (BP+Eni)", projects: "Greater Plutonio · GES · Block 18 · Agogo" },
