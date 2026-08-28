@@ -210,7 +210,7 @@ export function Yard() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("O NOSSO ESTALEIRO & PRINCIPAIS INSTALAÇÕES", "OUR YARD & MAIN FACILITIES")}
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight">
                 {t("O Nosso Estaleiro", "Our Yard")}
               </h2>
               <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed">
@@ -248,7 +248,7 @@ export function Yard() {
         <div className="container-x">
           <Reveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
                 {t("PRINCIPAIS INSTALAÇÕES", "MAIN FACILITIES")}
               </h2>
             </div>
@@ -280,7 +280,7 @@ export function Yard() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <Reveal>
               <div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-6 tracking-tight">
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-6 tracking-tight">
                   SONAMET SPOOL BASE
                 </h2>
                 <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed mb-4 text-justify">
@@ -329,7 +329,7 @@ export function Yard() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("SERVIÇOS DE APOIO", "SUPPORT SERVICES")}
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
                 {t("SERVIÇOS AO CLIENTE", "CLIENT SERVICES")}
               </h2>
               <p className="text-base md:text-lg text-foreground/85 font-medium leading-relaxed">
@@ -384,7 +384,7 @@ export function Yard() {
                 <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                   {t("SAÚDE & SEGURANÇA", "HEALTH & SAFETY")}
                 </div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-6 tracking-tight">
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-6 tracking-tight">
                   {t("POSTO MÉDICO", "MEDICAL POST")}
                 </h2>
                 <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed text-justify mb-6">
@@ -419,7 +419,7 @@ export function Yard() {
             <div className="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
             <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
             <div className="relative z-10">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-balance max-w-3xl mx-auto uppercase tracking-tight mb-4">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white text-balance max-w-3xl mx-auto uppercase tracking-tight mb-4">
                 {t("Agende uma Visita ao Estaleiro do Lobito", "Schedule a Visit to the Lobito Yard")}
               </h2>
               <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-8">

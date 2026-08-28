@@ -199,7 +199,7 @@ export function About() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("SOBRE NÓS", "ABOUT US")}
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight leading-snug">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight leading-snug">
                 MADE IN ANGOLA<br />
                 BUILT FOR THE WORLD
               </h2>
@@ -260,7 +260,7 @@ export function About() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("CAPACIDADES", "CAPABILITIES")}
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
                 {t("Soluções integradas para a indústria de óleo e gás", "Integrated solutions for the oil & gas industry")}
               </h2>
               <p className="mt-3 text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -301,7 +301,7 @@ export function About() {
                   <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                     {t("GOVERNAÇÃO", "GOVERNANCE")}
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
+                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
                     {t("Estrutura Acionista", "Shareholding Structure")}
                   </h2>
                   <p className="text-base md:text-lg text-foreground/85 leading-relaxed font-medium">
@@ -333,7 +333,7 @@ export function About() {
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {t("FILOSOFIA DA SONAMET", "SONAMET PHILOSOPHY")}
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-tight">
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-tight">
               {t("TRÊS PROMESSAS, UM COMPROMISSO", "THREE PROMISES, ONE COMMITMENT")}
             </h2>
           </div>
@@ -365,7 +365,7 @@ export function About() {
         <div className="container-x">
           <Reveal>
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight">
                 {t("NOSSA MISSÃO E VALORES", "OUR MISSION AND VALUES")}
               </h2>
               <p className="text-sm md:text-base text-foreground/85 leading-relaxed text-center font-medium">
@@ -439,7 +439,7 @@ export function About() {
         <div className="container-x">
           <Reveal>
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
                 {t("LIDERANÇA", "LEADERSHIP")}
               </h2>
             </div>

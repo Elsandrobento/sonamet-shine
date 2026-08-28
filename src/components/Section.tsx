@@ -18,7 +18,7 @@ export function SectionHeader({
           {eyebrow}
         </div>
       )}
-      <h2 className="text-3xl md:text-5xl font-bold text-balance">{title}</h2>
+      <h2 className="font-display text-3xl md:text-5xl font-bold text-balance">{title}</h2>
       {description && (
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">{description}</p>
       )}
@@ -39,7 +39,7 @@ export function PageHero({ eyebrow, title, description, image }: { eyebrow: stri
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4">
             {eyebrow}
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white text-balance">{title}</h1>
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-white text-balance">{title}</h1>
           <p className="mt-6 text-lg md:text-xl text-white/85 max-w-2xl">{description}</p>
         </div>
       </div>

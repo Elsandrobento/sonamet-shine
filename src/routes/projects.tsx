@@ -374,7 +374,7 @@ export function Projects() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("PROJETOS & HISTÓRICO", "PROJECTS & TRACK RECORD")}
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight leading-tight mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight leading-tight mb-6">
                 {t(
                   "Construído no Lobito Entregue à Indústria Petrolífera",
                   "Built in Lobito Delivered to the Oil & Gas Industry"
@@ -399,7 +399,7 @@ export function Projects() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("HISTÓRICO", "TRACK RECORD")}
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
                 {t("Números que demonstram capacidade", "Numbers that demonstrate capability")}
               </h2>
             </div>
@@ -433,7 +433,7 @@ export function Projects() {
                   <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                     {t("EXPERIÊNCIA EM PROJETOS", "PROJECT EXPERIENCE")}
                   </div>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
+                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
                     {t("PRINCIPAIS PROJETOS", "MAIN PROJECTS")}
                   </h2>
                   <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed mt-4">
@@ -531,7 +531,7 @@ export function Projects() {
                 <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-2">
                   {t("CATEGORIA SELECIONADA", "SELECTED CATEGORY")}
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
                   {selectedCategory}
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground">
@@ -613,7 +613,7 @@ export function Projects() {
                       <BarChart3 size={14} />
                       <span>{t("HISTÓRICO SUBSEA DETALHADO", "DETAILED SUBSEA TRACK RECORD")}</span>
                     </div>
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
+                    <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
                       {t("Manifolds & Estacas de Sucção (Piles)", "Manifolds & Suction Piles")}
                     </h3>
                     <p className="text-sm md:text-base text-muted-foreground">
@@ -766,7 +766,7 @@ export function Projects() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 OUR CLIENTS
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-4 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-4 tracking-tight">
                 {t("Confiança das Principais Operadoras da Indústria", "Trusted by the Industry's Majors")}
               </h2>
               <p className="text-base md:text-lg text-white/85 font-medium leading-relaxed">
