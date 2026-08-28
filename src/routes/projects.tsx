@@ -154,10 +154,10 @@ export function Projects() {
     {
       id: "OTHERS",
       title: "OTHERS",
-      subtitle: t("Boias FPSO & Desmantelamento", "FPSO Buoys & Dismantling"),
+      subtitle: t("Boias FPSO, Spoolbase & Desmantelamento", "FPSO Buoys, Spoolbase & Dismantling"),
       desc: t(
-        "Fabricação de boias FPSO e desmantelamento de estruturas offshore.",
-        "Fabrication of FPSO buoys and offshore dismantling."
+        "Fabricação de boias FPSO, operações de spoolbase, manifolds e desmantelamento de estruturas offshore.",
+        "Fabrication of FPSO buoys, spoolbase operations, manifolds and offshore dismantling."
       ),
       count: "2 " + t("Projetos Principais", "Major Projects"),
       image: categoryOthers,
@@ -255,7 +255,6 @@ export function Projects() {
       category: "OTHERS",
       scope: t("Componentes Offshore", "Offshore Components"),
       bulletPoints: [
-        t("17 Tanques de Flutuabilidade fabricados (ExxonMobil, BP e TotalEnergies)", "17 Buoyancy Tanks fabricated for ExxonMobil, BP and TotalEnergies"),
         t("Boias FPSO fabricadas para a TotalEnergies", "FPSO Buoys fabricated for TotalEnergies"),
       ],
       image: projectBuoys,
