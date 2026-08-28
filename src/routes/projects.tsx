@@ -254,6 +254,7 @@ export function Projects() {
       category: "OTHERS",
       scope: t("Componentes Offshore", "Offshore Components"),
       bulletPoints: [
+        t("17 Tanques de Flutuabilidade fabricados (ExxonMobil, BP e TotalEnergies)", "17 Buoyancy Tanks fabricated for ExxonMobil, BP and TotalEnergies"),
         t("Boias FPSO fabricadas para a TotalEnergies", "FPSO Buoys fabricated for TotalEnergies"),
       ],
       image: projectBuoys,
