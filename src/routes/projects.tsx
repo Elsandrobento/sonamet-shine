@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Reveal, HoverCard } from "@/components/Reveal";
-import { Building2, ArrowRight, ArrowLeft, ChevronRight } from "lucide-react";
+import { Building2, ArrowRight, ArrowLeft, ChevronRight, Layers, Anchor, BarChart3 } from "lucide-react";
 import projectsHero from "@/assets/projects-hero.jpg";
 import categoryShallowWater from "@/assets/category-shallow-water-new.jpg";
 import categorySpsSurf from "@/assets/category-sps-surf-new.jpg";
@@ -48,6 +48,81 @@ export function Projects() {
     { value: "18", label: t("Decks & Módulos FPSO", "Decks & FPSO modules") },
     { value: "5", label: t("Boias FPSO Desmanteladas", "FPSO Buoys Dismantled") },
     { value: "7", label: t("Boias FPSO Entregues", "FPSO Buoys Delivered") },
+  ];
+
+  // Sub-tab state for SPS & SURF detailed charts
+  const [spsSubTab, setSpsSubTab] = useState<"all" | "manifolds" | "piles">("all");
+
+  // Track record statistics for Manifolds and Piles (from official project charts)
+  const manifoldsData = [
+    { project: "BLOCK 18 INFILL", count: 1 },
+    { project: "NDUNGU SPS", count: 4 },
+    { project: "AGOGO SPS", count: 25 },
+    { project: "CLOV 2+", count: 1 },
+    { project: "DALIA Ph3", count: 1 },
+    { project: "Kaombo SPS", count: 9 },
+    { project: "Kizomba Sat PH2", count: 6 },
+    { project: "Clov Subsea", count: 7 },
+    { project: "GirRi Manifold", count: 1 },
+    { project: "Kizomba Sat PH1", count: 6 },
+    { project: "BL31 PSVM SPS", count: 3 },
+    { project: "Pazflor Subsea", count: 3 },
+    { project: "Tombua Landana", count: 2 },
+    { project: "Kizomba C Saxi Bat", count: 8 },
+    { project: "Kizomba C Mondo", count: 6 },
+    { project: "Marimba", count: 1 },
+    { project: "Lobito Tomboco", count: 6 },
+    { project: "Greater Plutonio", count: 6 },
+    { project: "Kizomba B", count: 3 },
+    { project: "Kizomba A", count: 4 },
+    { project: "Xikomba", count: 1 },
+    { project: "Kuito", count: 1 },
+  ];
+
+  const pilesData = [
+    { project: "NDUNGU SPS", count: 4 },
+    { project: "AGOGO SURF", count: 11 },
+    { project: "AGOGO FPSO", count: 12 },
+    { project: "AGOGO SPS", count: 25 },
+    { project: "CLOV 3", count: 2 },
+    { project: "CLOV 2+", count: 1 },
+    { project: "DALIA PH3", count: 1 },
+    { project: "ZINIA SURF Ph2", count: 1 },
+    { project: "Block 15/06FMCTI CCF", count: 1 },
+    { project: "KAOMBO SPS", count: 19 },
+    { project: "Block 15/06 FPSO", count: 9 },
+    { project: "Kizomba Satellite Ph2", count: 4 },
+    { project: "DALIA Pile Refurbishing", count: 1 },
+    { project: "B31GES", count: 2 },
+    { project: "CLOV BUOY", count: 7 },
+    { project: "CLOV Ph1", count: 8 },
+    { project: "Giri Manifold", count: 1 },
+    { project: "Kizomba Satellite Manifold VG", count: 6 },
+    { project: "BP Block 18/31 (Lote 1)", count: 7 },
+    { project: "BP Block 18/31 (Lote 2)", count: 12 },
+    { project: "DALIA Pile P5", count: 1 },
+    { project: "PAZFLOR (Pkg 1)", count: 10 },
+    { project: "PAZFLOR (Pkg 2)", count: 7 },
+    { project: "PAZFLOR (Pkg 3)", count: 6 },
+    { project: "PAZFLOR (Pkg 4)", count: 16 },
+    { project: "EXXON GAS GATHERING", count: 6 },
+    { project: "Tombua Landana (Lote 1)", count: 1 },
+    { project: "Tombua Landana (Lote 2)", count: 2 },
+    { project: "Takula TGPP", count: 1 },
+    { project: "Kizomba C Saxi Bat", count: 8 },
+    { project: "Kizomba C Mondo", count: 5 },
+    { project: "Marimba North", count: 1 },
+    { project: "Greater Plutonio (Lote 1)", count: 1 },
+    { project: "Greater Plutonio (Lote 2)", count: 25 },
+    { project: "Benguela-Belize", count: 1 },
+    { project: "Kizomba B (Lote 1)", count: 13 },
+    { project: "Kizomba B (Lote 2)", count: 10 },
+    { project: "Xikomba", count: 1 },
+    { project: "Kizomba A (Lote 1)", count: 11 },
+    { project: "Kizomba A (Lote 2)", count: 15 },
+    { project: "Girassol FPSO", count: 16 },
+    { project: "Girassol Buoy", count: 9 },
+    { project: "Girassol Surf", count: 3 },
   ];
 
   // 3 Category Cover Cards matching user attachment
@@ -461,6 +536,161 @@ export function Projects() {
                   ))}
                 </AnimatePresence>
               </motion.div>
+
+              {/* SPECIALIZED SUBSEA CHARTS (MANIFOLDS & PILES) FOR SPS & SURF */}
+              {selectedCategory === "SPS & SURF" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mt-16 pt-14 border-t border-border max-w-6xl mx-auto"
+                >
+                  {/* Header */}
+                  <div className="text-center max-w-3xl mx-auto mb-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold uppercase tracking-wider mb-3">
+                      <BarChart3 size={14} />
+                      <span>{t("HISTÓRICO SUBSEA DETALHADO", "DETAILED SUBSEA TRACK RECORD")}</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
+                      {t("Manifolds & Estacas de Sucção (Piles)", "Manifolds & Suction Piles")}
+                    </h3>
+                    <p className="text-sm md:text-base text-muted-foreground">
+                      {t(
+                        "Volume histórico consolidado de estruturas fabricadas para projetos submarinos em Angola.",
+                        "Consolidated historical volume of structures fabricated for subsea developments in Angola."
+                      )}
+                    </p>
+
+                    {/* Filter Tabs */}
+                    <div className="flex flex-wrap justify-center gap-2 mt-6">
+                      <button
+                        onClick={() => setSpsSubTab("all")}
+                        className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                          spsSubTab === "all"
+                            ? "bg-gold text-navy-deep font-bold shadow-md"
+                            : "bg-secondary text-muted-foreground hover:text-foreground border border-border"
+                        }`}
+                      >
+                        {t("Ver Todos", "View All")}
+                      </button>
+                      <button
+                        onClick={() => setSpsSubTab("manifolds")}
+                        className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                          spsSubTab === "manifolds"
+                            ? "bg-gold text-navy-deep font-bold shadow-md"
+                            : "bg-secondary text-muted-foreground hover:text-foreground border border-border"
+                        }`}
+                      >
+                        {t("Manifolds (105+)", "Manifolds (105+)")}
+                      </button>
+                      <button
+                        onClick={() => setSpsSubTab("piles")}
+                        className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                          spsSubTab === "piles"
+                            ? "bg-gold text-navy-deep font-bold shadow-md"
+                            : "bg-secondary text-muted-foreground hover:text-foreground border border-border"
+                        }`}
+                      >
+                        {t("Piles / Estacas (384)", "Piles & Foundations (384)")}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    {/* MANIFOLDS CHART CARD */}
+                    {(spsSubTab === "all" || spsSubTab === "manifolds") && (
+                      <div className={`bg-card border border-border rounded-3xl p-6 md:p-8 shadow-sm ${spsSubTab === "manifolds" ? "lg:col-span-2 max-w-4xl mx-auto w-full" : ""}`}>
+                        <div className="flex items-center justify-between gap-4 pb-5 mb-6 border-b border-border">
+                          <div className="flex items-center gap-3">
+                            <div className="h-10 w-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center font-bold">
+                              <Layers size={22} />
+                            </div>
+                            <div>
+                              <h4 className="text-xl font-bold text-foreground uppercase tracking-wide">
+                                {t("MANIFOLDS", "MANIFOLDS")}
+                              </h4>
+                              <p className="text-xs text-muted-foreground">
+                                {t("Manifolds submarinos de produção e injeção", "Subsea production and injection manifolds")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-xl md:text-2xl font-display font-bold text-gold">105+</div>
+                            <div className="text-[10px] uppercase font-bold text-muted-foreground">{t("Entregues", "Delivered")}</div>
+                          </div>
+                        </div>
+
+                        {/* List of Bars */}
+                        <div className="space-y-3 max-h-[580px] overflow-y-auto pr-2 custom-scrollbar">
+                          {manifoldsData.map((item, idx) => (
+                            <div key={idx} className="group/item">
+                              <div className="flex items-center justify-between text-xs mb-1">
+                                <span className="font-semibold text-foreground/90 group-hover/item:text-gold transition-colors">{item.project}</span>
+                                <span className="font-bold text-gold font-mono">{item.count}</span>
+                              </div>
+                              <div className="h-3 w-full bg-secondary rounded-full overflow-hidden p-0.5 border border-border/50">
+                                <motion.div
+                                  initial={{ width: 0 }}
+                                  whileInView={{ width: `${(item.count / 25) * 100}%` }}
+                                  viewport={{ once: true }}
+                                  transition={{ duration: 0.6, delay: idx * 0.02 }}
+                                  className="h-full rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-gold"
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* PILES CHART CARD */}
+                    {(spsSubTab === "all" || spsSubTab === "piles") && (
+                      <div className={`bg-card border border-border rounded-3xl p-6 md:p-8 shadow-sm ${spsSubTab === "piles" ? "lg:col-span-2 max-w-4xl mx-auto w-full" : ""}`}>
+                        <div className="flex items-center justify-between gap-4 pb-5 mb-6 border-b border-border">
+                          <div className="flex items-center gap-3">
+                            <div className="h-10 w-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-bold">
+                              <Anchor size={22} />
+                            </div>
+                            <div>
+                              <h4 className="text-xl font-bold text-foreground uppercase tracking-wide">
+                                {t("PILES", "PILES")}
+                              </h4>
+                              <p className="text-xs text-muted-foreground">
+                                {t("Estacas de sucção, fundações e ancoragens", "Suction piles, foundations and anchorages")}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-xl md:text-2xl font-display font-bold text-gold">384</div>
+                            <div className="text-[10px] uppercase font-bold text-muted-foreground">{t("Entregues", "Delivered")}</div>
+                          </div>
+                        </div>
+
+                        {/* List of Bars */}
+                        <div className="space-y-3 max-h-[580px] overflow-y-auto pr-2 custom-scrollbar">
+                          {pilesData.map((item, idx) => (
+                            <div key={idx} className="group/item">
+                              <div className="flex items-center justify-between text-xs mb-1">
+                                <span className="font-semibold text-foreground/90 group-hover/item:text-gold transition-colors">{item.project}</span>
+                                <span className="font-bold text-gold font-mono">{item.count}</span>
+                              </div>
+                              <div className="h-3 w-full bg-secondary rounded-full overflow-hidden p-0.5 border border-border/50">
+                                <motion.div
+                                  initial={{ width: 0 }}
+                                  whileInView={{ width: `${(item.count / 25) * 100}%` }}
+                                  viewport={{ once: true }}
+                                  transition={{ duration: 0.6, delay: idx * 0.015 }}
+                                  className="h-full rounded-full bg-gradient-to-r from-navy-deep via-blue-500 to-gold"
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
             </div>
           )}
         </div>
