@@ -203,7 +203,7 @@ function QHSE() {
               <div className="bg-card border-2 border-border rounded-3xl p-8 sm:p-12 shadow-sm">
                 <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                   <Leaf size={16} className="mr-2" />
-                  {lang === "pt" ? "PROGRAMA AMBIENTAL" : "ENVIRONMENTAL PROGRAM"}
+                  {lang === "pt" ? "AMBIENTAL" : "ENVIRONMENTAL"}
                 </div>
                 <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase text-navy mb-4">
                   CARE PROGRAM
