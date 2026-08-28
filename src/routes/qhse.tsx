@@ -234,84 +234,136 @@ function QHSE() {
         </div>
       </section>
 
-      {/* HSE GOLDEN RULES & CARE PROGRAM */}
+      {/* HSE CULTURE, GOLDEN RULES & CARE PROGRAM (3 Dedicated Cards) */}
       <section className="py-24 bg-gradient-navy text-white relative overflow-hidden">
         <div className="container-x relative">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
-              {lang === "pt" ? "PROGRAMAS HSE" : "HSE PROGRAMMES"}
+              {lang === "pt" ? "CULTURA & PROGRAMAS HSE" : "HSE CULTURE & PROGRAMMES"}
             </div>
             <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
-              {lang === "pt" ? "REGRAS DE OURO & PROGRAMA C.A.R.E." : "GOLDEN RULES & C.A.R.E. PROGRAMME"}
+              {lang === "pt" ? "COMPROMISSO COM A SEGURANÇA E AMBIENTE" : "COMMITMENT TO SAFETY & ENVIRONMENT"}
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Golden Rules */}
-            <div className="bg-white/5 border border-white/15 rounded-3xl p-8 md:p-10 backdrop-blur-md hover:bg-white/10 transition-all flex flex-col justify-between">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            {/* 1. HSE CULTURE */}
+            <div className="bg-white/5 border border-white/15 rounded-3xl p-8 md:p-9 backdrop-blur-md hover:bg-white/10 hover:border-gold/50 transition-all flex flex-col justify-between shadow-lg">
               <div>
-                <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6">
-                  <ShieldCheck className="text-gold" size={26} />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="text-gold" size={26} />
+                  </div>
+                  <span className="text-[10px] font-bold text-gold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    HSE CULTURE
+                  </span>
                 </div>
-                <h3 className="font-display text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
-                  {lang === "pt" ? "REGRAS DE OURO DE HSE SONAMET" : "SONAMET HSE GOLDEN RULES"}
+                <h3 className="font-display text-xl sm:text-2xl font-extrabold text-gold mb-4 uppercase tracking-wide leading-snug">
+                  TRABALHE COM SEGURANÇA, VIVA COM CONFIANÇA
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-6">
                   {lang === "pt"
-                    ? "As Regras de Ouro de HSE da Sonamet reforçam uma cultura de segurança sólida, encorajando cada colaborador a assumir a responsabilidade, prevenir situações inseguras, aprender continuamente e parar qualquer ato ou condição insegura (Stop Work Authority)."
-                    : "Sonamet's HSE Golden Rules reinforce a strong safety culture, encouraging everyone to take responsibility, prevent unsafe situations, learn continuously, and stop any unsafe act or condition (Stop Work Authority)."}
+                    ? "A Sonamet integra o HSE na sua cultura operacional, promovendo a eliminação de perigos, redução de riscos, prevenção da poluição e melhoria contínua para proteger as nossas pessoas, parceiros, comunidades e o ambiente."
+                    : "Sonamet embeds HSE into its operational culture, promoting hazard elimination, risk reduction, pollution prevention and continuous improvement to protect our people, partners, communities and the environment."}
                 </p>
-                <ul className="space-y-2 text-xs uppercase text-white/80 mb-6">
-                  <li className="flex items-center gap-2">✓ {lang === "pt" ? "Autoridade inegociável de Paragem de Trabalho" : "Non-negotiable Stop Work Authority"}</li>
-                  <li className="flex items-center gap-2">✓ {lang === "pt" ? "Avaliação contínua de risco em todas as operações" : "Continuous risk assessment across operations"}</li>
-                  <li className="flex items-center gap-2">✓ {lang === "pt" ? "Equipamento de Proteção Individual (EPI) obrigatório" : "Mandatory Personal Protective Equipment (PPE)"}</li>
-                </ul>
               </div>
 
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-6 border-t border-white/10 mt-auto">
                 <a
-                  href="/documents/SONAMET_GOLDEN_RULES.pdf"
+                  href="/documents/SON-MGT-PL-001_QHSE_Policy.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-xs font-bold uppercase text-navy-deep hover:bg-gold-soft transition-all"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase text-navy-deep hover:bg-gold-soft transition-all shadow-sm"
                 >
-                  <Download size={14} /> {lang === "pt" ? "DESCARREGAR REGRAS DE OURO (PDF)" : "DOWNLOAD GOLDEN RULES (PDF)"}
+                  <Download size={14} /> {lang === "pt" ? "VER POLÍTICA HSE (PDF)" : "VIEW HSE POLICY (PDF)"}
                 </a>
               </div>
             </div>
 
-            {/* CARE Program */}
-            <div className="bg-white/5 border border-white/15 rounded-3xl p-8 md:p-10 backdrop-blur-md hover:bg-white/10 transition-all flex flex-col justify-between">
+            {/* 2. SONAMET HSE GOLDEN RULES */}
+            <div className="bg-white/5 border border-white/15 rounded-3xl p-8 md:p-9 backdrop-blur-md hover:bg-white/10 hover:border-gold/50 transition-all flex flex-col justify-between shadow-lg">
               <div>
-                <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center mb-6">
-                  <Leaf className="text-gold" size={26} />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0">
+                    <Award className="text-gold" size={26} />
+                  </div>
+                  <span className="text-[10px] font-bold text-gold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    {lang === "pt" ? "REGRAS DE OURO" : "GOLDEN RULES"}
+                  </span>
                 </div>
-                <h3 className="font-display text-2xl font-extrabold text-gold mb-3 uppercase tracking-wide">
-                  PROGRAMA C.A.R.E.
+                <h3 className="font-display text-xl sm:text-2xl font-extrabold text-white mb-4 uppercase tracking-wide leading-snug">
+                  SONAMET HSE GOLDEN RULES
                 </h3>
                 <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-6">
                   {lang === "pt"
-                    ? "O objetivo do Programa SONAMET C.A.R.E. é fortalecer a cultura ambiental em toda a empresa através de 4 pilares estratégicos:"
-                    : "The purpose of the SONAMET C.A.R.E. Programme is to strengthen environmental culture across the company through 4 pillars:"}
+                    ? "As Regras de Ouro de HSE da Sonamet fortalecem a nossa cultura de segurança através da responsabilidade pessoal, prevenção, aprendizagem contínua e Autoridade de Paragem de Trabalho (Stop Work Authority)."
+                    : "Sonamet's HSE Golden Rules strengthen our safety culture through personal responsibility, prevention, continuous learning and Stop Work Authority."}
                 </p>
-                <div className="space-y-3 text-xs text-white/80 mb-6">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    <strong className="text-gold uppercase">1. {lang === "pt" ? "SENSIBILIZAÇÃO:" : "AWARENESS:"}</strong> {lang === "pt" ? "Consciencialização sobre os impactos ambientais." : "Raising awareness of Sonamet's environmental footprint."}
-                  </div>
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    <strong className="text-gold uppercase">2. {lang === "pt" ? "RESPONSABILIDADE:" : "RESPONSIBILITY:"}</strong> {lang === "pt" ? "Promoção da responsabilidade ambiental em todos os níveis." : "Promoting individual and collective environmental responsibility."}
-                  </div>
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    <strong className="text-gold uppercase">3. {lang === "pt" ? "BOAS PRÁTICAS:" : "BEST PRACTICES:"}</strong> {lang === "pt" ? "Incentivo e monitorização de boas práticas ambientais." : "Encouraging and tracking daily environmental good practices."}
-                  </div>
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    <strong className="text-gold uppercase">4. {lang === "pt" ? "MUDANÇA COMPORTAMENTAL:" : "BEHAVIORAL CHANGE:"}</strong> {lang === "pt" ? "Ações ativas para prevenção da poluição." : "Driving proactive behavioral change towards pollution prevention."}
-                  </div>
+                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 mb-6 text-xs text-white/80">
+                  <span className="text-gold font-bold uppercase">Stop Work Authority:</span> {lang === "pt" ? "Autoridade inegociável de paragem de qualquer ato inseguro." : "Non-negotiable authority to stop any unsafe act."}
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 text-[11px] uppercase text-white/70">
-                {lang === "pt" ? "Alinhado com a ISO 14001 e a proteção costeira do Lobito." : "Aligned with ISO 14001 and Lobito coastal conservation."}
+              <div className="pt-6 border-t border-white/10 mt-auto">
+                <a
+                  href="/documents/SONAMET_GOLDEN_RULES.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase text-navy-deep hover:bg-gold-soft transition-all shadow-sm"
+                >
+                  <Download size={14} /> {lang === "pt" ? "BAIXAR REGRAS DE OURO (PDF)" : "DOWNLOAD GOLDEN RULES (PDF)"}
+                </a>
+              </div>
+            </div>
+
+            {/* 3. CARE PROGRAM */}
+            <div className="bg-white/5 border border-white/15 rounded-3xl p-8 md:p-9 backdrop-blur-md hover:bg-white/10 hover:border-gold/50 transition-all flex flex-col justify-between shadow-lg">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="h-12 w-12 rounded-2xl bg-gold/20 flex items-center justify-center shrink-0">
+                    <Leaf className="text-gold" size={26} />
+                  </div>
+                  <span className="text-[10px] font-bold text-gold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    {lang === "pt" ? "PROGRAMA AMBIENTAL" : "ENVIRONMENTAL PROGRAMME"}
+                  </span>
+                </div>
+                <h3 className="font-display text-xl sm:text-2xl font-extrabold text-white mb-4 uppercase tracking-wide leading-snug">
+                  CARE PROGRAM
+                </h3>
+                <p className="text-white/85 text-xs sm:text-sm leading-relaxed mb-4">
+                  {lang === "pt"
+                    ? "O Programa SONAMET C.A.R.E. fortalece a nossa cultura ambiental promovendo:"
+                    : "The SONAMET C.A.R.E. Program strengthens our environmental culture by promoting:"}
+                </p>
+                <ul className="space-y-2 text-xs text-white/90 mb-6 pl-1 font-medium">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">▸</span>
+                    <span>{lang === "pt" ? "Consciencialização ambiental" : "Environmental awareness"}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">▸</span>
+                    <span>{lang === "pt" ? "Responsabilidade pessoal" : "Personal responsibility"}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">▸</span>
+                    <span>{lang === "pt" ? "Boas práticas ambientais" : "Good environmental practices"}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">▸</span>
+                    <span>{lang === "pt" ? "Prevenção da poluição e mudança comportamental" : "Pollution prevention and behavioral change"}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="pt-6 border-t border-white/10 mt-auto">
+                <a
+                  href="/documents/SONAMET_ISO_14001.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-xs font-bold uppercase text-navy-deep hover:bg-gold-soft transition-all shadow-sm"
+                >
+                  <Download size={14} /> {lang === "pt" ? "VER CERTIFICADO AMBIENTAL (PDF)" : "VIEW ENVIRONMENTAL CERTIFICATE (PDF)"}
+                </a>
               </div>
             </div>
           </div>
