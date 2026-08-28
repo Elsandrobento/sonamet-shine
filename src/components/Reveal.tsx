@@ -5,15 +5,17 @@ interface RevealProps {
   children: React.ReactNode;
   width?: "fit-content" | "100%";
   delay?: number;
+  className?: string;
 }
 
-export function Reveal({ children, width = "100%", delay = 0 }: RevealProps) {
+export function Reveal({ children, width = "100%", delay = 0, className = "" }: RevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref} className={className} style={{ position: "relative", width, overflow: "hidden" }}>
       <motion.div
+        className={className.includes("h-full") ? "h-full flex flex-col" : ""}
         variants={{
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },

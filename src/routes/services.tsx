@@ -1,5 +1,6 @@
-import { createFileRoute, Navigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { Yard } from "./yard";
 
 export const Route = createFileRoute("/services")({
-  component: () => <Navigate to="/yard" replace />,
+  component: Yard,
 });

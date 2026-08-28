@@ -1,149 +1,78 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
+import sonametLogo from "@/assets/sonamet-logo.png";
 import { useLanguage } from "@/context/LanguageContext";
 
 export function SiteFooter() {
-  const { lang } = useLanguage();
+  const { t } = useLanguage();
 
   return (
-    <footer className="bg-gradient-navy text-white/80 pt-20 pb-8 border-t border-white/10">
+    <footer className="bg-[#091b2e] text-white/80 pt-20 pb-8 border-t border-white/10">
       <div className="container-x grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-white px-3 py-1.5 rounded-xl shadow-md inline-flex items-center justify-center">
-              <img 
-                src="https://strapi-cms.sonangol.co.ao/uploads/sonamet_logo_2f91198dd8.png" 
-                alt="Sonamet Logo" 
-                className="h-8 md:h-9 w-auto object-contain" 
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                }}
-              />
-            </div>
-            <div className="hidden items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-gold shadow-gold">
-                <span className="font-display text-lg font-bold text-navy-deep">S</span>
-              </div>
-              <div className="leading-tight">
-                <div className="font-display text-lg font-bold text-white uppercase">SONAMET</div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-gold font-semibold">Made in Angola</div>
-              </div>
-            </div>
+            <img
+              src={sonametLogo}
+              alt="Sonamet Industrial S.A."
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </div>
-          <p className="text-xs sm:text-sm leading-relaxed text-white/75 text-justify">
-            {lang === "pt"
-              ? "Joint venture entre a Sonangol (40%) e a Subsea 7 (60%), soluções integradas de fabricação offshore, engenharia submarina e projetos EPC/EPCI na Baía do Lobito desde 1998."
-              : "Joint venture between Sonangol (40%) and Subsea 7 (60%), integrated offshore fabrication, subsea engineering, and EPC/EPCI solutions in Lobito Bay since 1998."}
+          <p className="text-sm leading-relaxed text-white/80">
+            {t(
+              "Joint venture entre a Sonangol e a Subsea 7. Engenharia, Fabricação Offshore e projetos EPC/EPCI em Angola desde 1998.",
+              "Joint venture between Sonangol and Subsea 7. EPC & Complex Offshore Fabrication Proudly Made in Angola Since 1998."
+            )}
           </p>
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest text-gold">
-            {lang === "pt" ? "NAVEGAÇÃO" : "NAVIGATION"}
-          </h4>
-          <ul className="space-y-2.5 text-xs font-bold uppercase tracking-wider">
-            <li>
-              <Link to="/" className="hover:text-gold transition-colors">
-                {lang === "pt" ? "SOBRE NÓS" : "ABOUT US"}
-              </Link>
+          <h4 className="text-white font-semibold mb-4">{t("Navegação", "Navigation")}</h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/about" className="hover:text-gold transition-colors">{t("A Empresa", "About Us")}</Link></li>
+            <li><Link to="/yard" className="hover:text-gold transition-colors">Yard</Link></li>
+            <li><Link to="/projects" className="hover:text-gold transition-colors">{t("Projetos", "Projects")}</Link></li>
+            <li><Link to="/hseq" className="hover:text-gold transition-colors">HSEQ</Link></li>
+            <li><Link to="/community" className="hover:text-gold transition-colors">{t("Comunidade", "Community")}</Link></li>
+            <li><Link to="/contact" className="hover:text-gold transition-colors">{t("Contacto", "Contact")}</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-white font-semibold mb-4">{t("Contactos", "Contacts")}</h4>
+          <ul className="space-y-3 text-sm">
+            <li className="flex gap-3">
+              <MapPin size={18} className="text-gold shrink-0 mt-0.5" />
+              <span>15 Rua 1.º de Dezembro, Cx n.º 479, Lobito, Benguela, Angola</span>
             </li>
-            <li>
-              <Link to="/yard" className="hover:text-gold transition-colors">
-                {lang === "pt" ? "ESTALEIRO" : "YARD"}
-              </Link>
+            <li className="flex gap-3">
+              <Phone size={18} className="text-gold shrink-0 mt-0.5" />
+              <span>(244) 225 300 002</span>
             </li>
-            <li>
-              <Link to="/projects" className="hover:text-gold transition-colors">
-                {lang === "pt" ? "PROJETOS" : "PROJECTS"}
-              </Link>
-            </li>
-            <li>
-              <Link to="/qhse" className="hover:text-gold transition-colors">
-                QHSE
-              </Link>
-            </li>
-            <li>
-              <Link to="/community" className="hover:text-gold transition-colors">
-                {lang === "pt" ? "COMUNIDADE" : "COMMUNITY"}
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-gold transition-colors">
-                {lang === "pt" ? "CONTACTO" : "CONTACTS"}
-              </Link>
+            <li className="flex gap-3">
+              <Mail size={18} className="text-gold shrink-0 mt-0.5" />
+              <span>info@sonamet.com</span>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest text-gold">
-            {lang === "pt" ? "CONTACTOS OFICIAIS" : "OFFICIAL CONTACTS"}
-          </h4>
-          <ul className="space-y-3.5 text-xs">
-            <li className="flex gap-2.5 items-start">
-              <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
-              <div>
-                <span className="font-bold text-white uppercase">
-                  {lang === "pt" ? "ESTALEIRO LOBITO:" : "LOBITO YARD:"}
-                </span>
-                <div className="text-white/70 text-[11px] mt-0.5">15 Rua 1.º de Dezembro, Cx n.º 479, Lobito, Benguela</div>
-              </div>
-            </li>
-            <li className="flex gap-2.5 items-start">
-              <MapPin size={16} className="text-gold shrink-0 mt-0.5" />
-              <div>
-                <span className="font-bold text-white uppercase">
-                  {lang === "pt" ? "ESCRITÓRIO LUANDA:" : "LUANDA OFFICE:"}
-                </span>
-                <div className="text-white/70 text-[11px] mt-0.5">Rua Domingos Tchekahanga n°18, Ingombotas, Cx n.º 5728</div>
-              </div>
-            </li>
-            <li className="flex gap-2.5 items-center">
-              <Phone size={16} className="text-gold shrink-0" />
-              <span className="text-white/90 font-medium">Lobito: (244) 225 300 002</span>
-            </li>
-            <li className="flex gap-2.5 items-center">
-              <Phone size={16} className="text-gold shrink-0" />
-              <span className="text-white/90 font-medium">Luanda: (244) 225 400 011</span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-white font-bold mb-4 text-xs uppercase tracking-widest text-gold">
-            {lang === "pt" ? "CERTIFICAÇÕES & ÉTICA" : "CERTIFICATIONS & ETHICS"}
-          </h4>
-          <ul className="space-y-2.5 text-xs">
-            <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-semibold uppercase">{lang === "pt" ? "ISO 9001 — Gestão da Qualidade" : "ISO 9001 — Quality Management"}</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-semibold uppercase">{lang === "pt" ? "ISO 14001 — Gestão Ambiental" : "ISO 14001 — Environmental Management"}</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              <span className="font-semibold uppercase">{lang === "pt" ? "ISO 45001 — Saúde e Segurança" : "ISO 45001 — Occupational Health & Safety"}</span>
-            </li>
-            <li className="pt-2">
-              <a
-                href="/documents/Sonamet_Code_of_Business_Conduct_2024.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase text-gold hover:underline"
-              >
-                {lang === "pt" ? "CÓDIGO DE CONDUTA OFICIAL (PDF) →" : "OFFICIAL CODE OF CONDUCT (PDF) →"}
-              </a>
-            </li>
+          <h4 className="text-white font-semibold mb-4">{t("Certificações", "Certifications")}</h4>
+          <ul className="space-y-2 text-sm">
+            <li>{t("ISO 9001 — Qualidade (desde 2011)", "ISO 9001 — Quality (since 2011)")}</li>
+            <li>{t("ISO 14001 — Ambiente (desde 2016)", "ISO 14001 — Environment (since 2016)")}</li>
+            <li>{t("ISO 45001 — Segurança (desde 2023)", "ISO 45001 — Safety (since 2023)")}</li>
           </ul>
         </div>
       </div>
 
-      <div className="container-x mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] uppercase text-white/60">
-        <p>© {new Date().getFullYear()} Sonamet Industrial S.A. — Sonangol (40%) & Subsea 7 (60%). {lang === "pt" ? "Todos os direitos reservados." : "All rights reserved."}</p>
-        <p className="font-bold text-gold">Baía do Lobito • Benguela • Angola</p>
+      <div className="container-x mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/50">
+        <p>
+          {t(
+            `© ${new Date().getFullYear()} Sonamet Industrial S.A. — Joint Venture Sonangol & Subsea 7. Todos os direitos reservados.`,
+            `© ${new Date().getFullYear()} Sonamet Industrial S.A. — Sonangol & Subsea 7 Joint Venture. All rights reserved.`
+          )}
+        </p>
+        <p>Baía do Lobito · Angola</p>
       </div>
     </footer>
   );

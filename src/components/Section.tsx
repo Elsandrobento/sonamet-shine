@@ -1,59 +1,47 @@
 import type { ReactNode } from "react";
 
-interface SectionHeaderProps {
+export function SectionHeader({
+  eyebrow,
+  title,
+  description,
+  align = "left",
+}: {
   eyebrow?: string;
   title: string;
   description?: string;
-  dark?: boolean;
-  centered?: boolean;
-}
-
-export function SectionHeader({ eyebrow, title, description, dark, centered = true }: SectionHeaderProps) {
+  align?: "left" | "center";
+}) {
   return (
-    <div className={`max-w-3xl ${centered ? "mx-auto text-center" : ""} mb-12`}>
+    <div className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""} mb-12`}>
       {eyebrow && (
-        <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
+        <div className={`inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4`}>
           {eyebrow}
         </div>
       )}
-      <h2 className="text-2xl md:text-4xl font-bold uppercase text-balance">{title}</h2>
+      <h2 className="text-3xl md:text-5xl font-bold text-balance">{title}</h2>
       {description && (
-        <p className={`mt-4 text-base md:text-lg leading-relaxed ${dark ? "text-white/80" : "text-muted-foreground"}`}>
-          {description}
-        </p>
+        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">{description}</p>
       )}
     </div>
   );
 }
 
-interface PageHeroProps {
-  eyebrow: string;
-  title: string;
-  description: string;
-  image: string;
-}
-
-export function PageHero({ eyebrow, title, description, image }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, image }: { eyebrow: string; title: string; description: string; image: string }) {
   return (
-    <section className="relative min-h-[55vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-navy-deep text-white">
-      {image && (
-        <div className="absolute inset-0 z-0">
-          <img src={image} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-hero" />
-        </div>
-      )}
-      <div className="container-x relative z-10 text-center max-w-4xl">
-        {eyebrow && (
-          <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-4 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
+    <section className="relative min-h-[60vh] flex items-end pt-32 pb-20 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${image})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-hero" />
+      <div className="container-x relative">
+        <div className="max-w-3xl reveal">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4">
             {eyebrow}
           </div>
-        )}
-        <h1 className="text-3xl md:text-5xl font-extrabold uppercase text-white text-balance leading-tight">{title}</h1>
-        {description && (
-          <p className="mt-6 text-base md:text-lg text-white/85 leading-relaxed text-balance max-w-2xl mx-auto">
-            {description}
-          </p>
-        )}
+          <h1 className="text-4xl md:text-6xl font-bold text-white text-balance">{title}</h1>
+          <p className="mt-6 text-lg md:text-xl text-white/85 max-w-2xl">{description}</p>
+        </div>
       </div>
     </section>
   );
