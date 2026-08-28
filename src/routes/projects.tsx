@@ -16,6 +16,16 @@ import projectKaombo from "@/assets/project-kaombo-new.jpg";
 import projectBuoys from "@/assets/project-fpso-buoy-new.png";
 import projectDismantling from "@/assets/project-dismantling-new.jpg";
 import projectSpoolbase from "@/assets/project-spoolbase-new.jpg";
+import logoTotalEnergies from "@/assets/clients/logo-totalenergies.png";
+import logoChevron from "@/assets/clients/logo-chevron.png";
+import logoExxonMobil from "@/assets/clients/logo-exxonmobil.png";
+import logoSonangol from "@/assets/clients/logo-sonangol.png";
+import logoTechnipFMC from "@/assets/clients/logo-technipfmc.png";
+import logoSubsea7 from "@/assets/clients/logo-subsea7.png";
+import logoOneSubsea from "@/assets/clients/logo-onesubsea.png";
+import logoYinson from "@/assets/clients/logo-yinson.png";
+import logoDsme from "@/assets/clients/logo-dsme.png";
+import logoBakerAzule from "@/assets/clients/logo-baker-azule.png";
 import quay2 from "@/assets/quay-2.jpg";
 import team from "@/assets/team.jpg";
 import yardAerial from "@/assets/yard-aerial.jpg";
@@ -286,14 +296,56 @@ export function Projects() {
 
   // Major clients roster
   const clientMajors = [
-    { name: "Total Energies", projects: "Girassol · Pazflor · CLOV · Kaombo" },
-    { name: "Chevron / CABGOC", projects: "Mafumeira · CRX · Lianzi · MaFuSul · Block 0" },
-    { name: "ExxonMobil", projects: "Kizomba · Gas Gathering · Block 15" },
-    { name: "Azule Energy (BP+Eni)", projects: "Greater Plutonio · GES · Block 18 · Agogo" },
-    { name: "Sonangol P&P", projects: t("Operações conjuntas e parcerias no Bloco 0", "Joint operations and Block 0 partnerships") },
-    { name: "TechnipFMC", projects: t("Estruturas subsea · Bloco 15/06 · Agogo · CLOV", "Subsea structures · Block 15/06 · Agogo · CLOV") },
-    { name: "Subsea 7", projects: t("Parceiro EPCI · múltiplas campanhas SURF", "EPCI partner · multiple SURF campaigns") },
-    { name: "SLB OneSubsea · Baker Hughes · DSME", projects: t("Parceiros internacionais de EPC / subsea", "International EPC / subsea partners") },
+    { 
+      name: "Total Energies", 
+      projects: "Girassol · Pazflor · CLOV · Kaombo", 
+      logo: logoTotalEnergies 
+    },
+    { 
+      name: "Chevron / CABGOC", 
+      projects: "Mafumeira · CRX · Lianzi · MaFuSul · Block 0", 
+      logo: logoChevron 
+    },
+    { 
+      name: "ExxonMobil", 
+      projects: "Kizomba · Gas Gathering · Block 15", 
+      logo: logoExxonMobil 
+    },
+    { 
+      name: "Azule Energy", 
+      projects: "Greater Plutonio · GES · Block 18 · Agogo", 
+      logo: logoBakerAzule 
+    },
+    { 
+      name: "Sonangol P&P", 
+      projects: t("Operações conjuntas e parcerias no Bloco 0", "Joint operations and Block 0 partnerships"), 
+      logo: logoSonangol 
+    },
+    { 
+      name: "TechnipFMC", 
+      projects: t("Estruturas subsea · Bloco 15/06 · Agogo · CLOV", "Subsea structures · Block 15/06 · Agogo · CLOV"), 
+      logo: logoTechnipFMC 
+    },
+    { 
+      name: "Subsea 7", 
+      projects: t("Parceiro EPCI · múltiplas campanhas SURF", "EPCI partner · multiple SURF campaigns"), 
+      logo: logoSubsea7 
+    },
+    { 
+      name: "SLB OneSubsea", 
+      projects: t("Sistemas submarinos & manifolds de produção", "Subsea production systems & manifolds"), 
+      logo: logoOneSubsea 
+    },
+    { 
+      name: "Yinson Production", 
+      projects: t("FPSO Agogo & componentes submarinos", "FPSO Agogo & subsea components"), 
+      logo: logoYinson 
+    },
+    { 
+      name: "DSME", 
+      projects: t("Parceiro internacional de Engenharia & Fabricação", "International Engineering & Fabrication Partner"), 
+      logo: logoDsme 
+    },
   ];
 
   // Filtered project list for current selected category
@@ -723,18 +775,24 @@ export function Projects() {
             </div>
           </Reveal>
 
-          {/* Client Majors Grid — Equal Height Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-stretch">
+          {/* Client Majors Grid — Equal Height Cards with Unified Logo Badges */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto items-stretch">
             {clientMajors.map((c, i) => (
-              <Reveal key={c.name} delay={i * 0.05} className="h-full flex flex-col">
+              <Reveal key={c.name} delay={i * 0.04} className="h-full flex flex-col">
                 <HoverCard className="h-full flex flex-col flex-1">
-                  <div className="h-full rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md p-6 text-center hover:border-gold/60 hover:bg-white/10 transition-all flex flex-col justify-between flex-1">
-                    <div>
-                      <div className="h-10 w-10 rounded-xl bg-gold/15 text-gold flex items-center justify-center mx-auto mb-4 shrink-0">
-                        <Building2 size={22} />
+                  <div className="h-full rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md p-5 text-center hover:border-gold/60 hover:bg-white/10 transition-all flex flex-col justify-between flex-1 group shadow-lg">
+                    <div className="flex flex-col h-full">
+                      {/* Uniform Logo Container */}
+                      <div className="h-16 w-full rounded-xl bg-white p-2.5 flex items-center justify-center shadow-sm border border-white/30 mb-4 transition-transform duration-300 group-hover:scale-105 shrink-0 overflow-hidden">
+                        <img 
+                          src={c.logo} 
+                          alt={c.name} 
+                          className="max-h-11 max-w-[90%] object-contain"
+                          loading="lazy"
+                        />
                       </div>
-                      <div className="font-bold text-base text-white mb-2 uppercase tracking-wide">{c.name}</div>
-                      <p className="text-xs text-white/75 leading-relaxed">{c.projects}</p>
+                      <div className="font-bold text-sm text-white mb-2 uppercase tracking-wide">{c.name}</div>
+                      <p className="text-xs text-white/70 leading-relaxed mt-auto font-normal">{c.projects}</p>
                     </div>
                   </div>
                 </HoverCard>
