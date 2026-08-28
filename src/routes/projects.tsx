@@ -14,6 +14,7 @@ import projectMafumeira from "@/assets/project-mafumeira-new.jpg";
 import projectClov from "@/assets/project-clov-new.jpg";
 import projectKaombo from "@/assets/project-kaombo-new.jpg";
 import projectBuoys from "@/assets/project-fpso-buoy-new.png";
+import projectDismantling from "@/assets/project-dismantling-new.jpg";
 import quay2 from "@/assets/quay-2.jpg";
 import team from "@/assets/team.jpg";
 import yardAerial from "@/assets/yard-aerial.jpg";
@@ -268,7 +269,7 @@ export function Projects() {
       bulletPoints: [
         t("5 Boias FPSO Desmanteladas", "5 FPSO Buoys Dismantled"),
       ],
-      image: welder,
+      image: projectDismantling,
     },
   ];
 
