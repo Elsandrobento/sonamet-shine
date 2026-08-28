@@ -11,6 +11,8 @@ import projectSlgc from "@/assets/project-slgc-new.jpg";
 import projectSouthNemba from "@/assets/project-south-nemba-new.png";
 import projectAgogo from "@/assets/project-suction-piles-agogo.jpg";
 import projectMafumeira from "@/assets/project-mafumeira-new.jpg";
+import projectClov from "@/assets/project-clov-new.jpg";
+import projectKaombo from "@/assets/project-kaombo-new.jpg";
 import quay2 from "@/assets/quay-2.jpg";
 import team from "@/assets/team.jpg";
 import yardAerial from "@/assets/yard-aerial.jpg";
@@ -128,7 +130,7 @@ export function Projects() {
       image: projectMafumeira,
     },
 
-    // SPS & SURF PROJECTS
+    // SPS & SURF PROJECTS (Ordered from newest to oldest)
     {
       id: "agogo-project",
       title: "Agogo Project (2023–2024)",
@@ -143,18 +145,6 @@ export function Projects() {
       image: projectAgogo,
     },
     {
-      id: "clov-project",
-      title: "CLOV Project (2012–2013)",
-      client: "Subsea 7 / TotalEnergies",
-      category: "SPS & SURF",
-      scope: t("SURF & Pipe-in-Pipe", "SURF & Pipe-in-Pipe"),
-      bulletPoints: [
-        t("130 km de linhas de fluxo (4.000 juntas duplas e 3.300 tubos pipe-in-pipe)", "130 km of flow lines made of 4,000 double joints and 3,300 pipe in pipe"),
-        t("Maior projeto SURF já executado na Sonamet", "CLOV project is the largest SURF project ever executed in Sonamet"),
-      ],
-      image: quay2,
-    },
-    {
       id: "kaombo-sps",
       title: "Kaombo SPS (2018)",
       client: "TotalEnergies",
@@ -165,7 +155,19 @@ export function Projects() {
         t("2,5M homens-horas de segurança sem incidentes", "2.5M safety man-hours without incidents"),
         t("Segundo maior âmbito SPS fabricado na Sonamet", "Second largest SPS scope ever fabricated at Sonamet"),
       ],
-      image: team,
+      image: projectKaombo,
+    },
+    {
+      id: "clov-project",
+      title: "CLOV Project (2012–2013)",
+      client: "Subsea 7 / TotalEnergies",
+      category: "SPS & SURF",
+      scope: t("SURF & Pipe-in-Pipe", "SURF & Pipe-in-Pipe"),
+      bulletPoints: [
+        t("130 km de linhas de fluxo (4.000 juntas duplas e 3.300 tubos pipe-in-pipe)", "130 km of flow lines made of 4,000 double joints and 3,300 pipe in pipe"),
+        t("Maior projeto SURF já executado na Sonamet", "CLOV project is the largest SURF project ever executed in Sonamet"),
+      ],
+      image: projectClov,
     },
 
     // OTHERS
