@@ -154,10 +154,10 @@ export function Projects() {
     {
       id: "OTHERS",
       title: "OTHERS",
-      subtitle: t("Boias FPSO, Spoolbase & Desmantelamento", "FPSO Buoys, Spoolbase & Dismantling"),
+      subtitle: t("Reabilitação de Estacas, Spreader Bars & Spool Base", "Suction Pile Refurbishment, Spreader Bars & Spool Base"),
       desc: t(
-        "Fabricação de boias FPSO, operações de spoolbase e desmantelamento de estruturas offshore.",
-        "Fabrication of FPSO buoys, spoolbase operations and offshore dismantling."
+        "Reabilitação de Estacas de Sucção, Spreader Bars, Sistemas de Proteção de Risers, Serviços de Spool Base e muito mais.",
+        "Suction Pile Refurbishment, Spreader Bars, Riser Protection Systems, Spool Base Services, and much more."
       ),
       count: "2 " + t("Projetos Principais", "Major Projects"),
       image: categoryOthers,
