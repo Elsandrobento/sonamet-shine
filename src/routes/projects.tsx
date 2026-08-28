@@ -87,7 +87,20 @@ export function Projects() {
 
   // Detailed project list categorized
   const projectList = [
-    // SHALLOW WATER PROJECTS
+    // SHALLOW WATER PROJECTS (Ordered from newest to oldest)
+    {
+      id: "slgc-project",
+      title: "SLGC Project (2021–2022)",
+      client: "Chevron / CABGOC",
+      category: "SHALLOW WATER",
+      scope: t("Fabricação EPC", "EPC Fabrication"),
+      bulletPoints: [
+        t("Fabricação de 6.904 mT de Aço para a Subsea 7", "6,904 mT of Steel Fabrication for Subsea 7"),
+        t("1.º Compressor Booster fabricado em África", "1st Booster Compressor Fabricated in Africa"),
+        t("1off 1850mT Jacket com Ponte e 1off Flare", "1off 1850mT Jacket with Bridge and 1off Flare"),
+      ],
+      image: projectSlgc,
+    },
     {
       id: "south-nemba",
       title: "South Nemba Jacket (2015)",
@@ -113,19 +126,6 @@ export function Projects() {
         t("1.300.000 Homens-horas de segurança", "1.300.000 Safety man-hours"),
       ],
       image: projectMafumeira,
-    },
-    {
-      id: "slgc-project",
-      title: "SLGC Project (2021–2022)",
-      client: "Chevron / CABGOC",
-      category: "SHALLOW WATER",
-      scope: t("Fabricação EPC", "EPC Fabrication"),
-      bulletPoints: [
-        t("Fabricação de 6.904 mT de Aço para a Subsea 7", "6,904 mT of Steel Fabrication for Subsea 7"),
-        t("1.º Compressor Booster fabricado em África", "1st Booster Compressor Fabricated in Africa"),
-        t("1off 1850mT Jacket com Ponte e 1off Flare", "1off 1850mT Jacket with Bridge and 1off Flare"),
-      ],
-      image: projectSlgc,
     },
 
     // SPS & SURF PROJECTS
