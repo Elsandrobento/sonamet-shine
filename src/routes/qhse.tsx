@@ -214,7 +214,7 @@ function QHSE() {
                     : "The SONAMET C.A.R.E. Program strengthens our environmental culture by promoting:"}
                 </p>
 
-                <ul className="space-y-3 text-xs sm:text-sm md:text-base text-foreground/90 mb-8 bg-secondary/60 p-6 rounded-2xl border border-border">
+                <ul className="space-y-3 text-xs sm:text-sm md:text-base text-foreground/90 bg-secondary/60 p-6 rounded-2xl border border-border">
                   <li className="flex items-start gap-3">
                     <span className="text-gold font-bold text-lg leading-none mt-0.5">▸</span>
                     <span className="font-semibold">{lang === "pt" ? "Consciencialização ambiental" : "Environmental awareness"}</span>
@@ -232,20 +232,6 @@ function QHSE() {
                     <span className="font-semibold">{lang === "pt" ? "Prevenção da poluição e mudança comportamental" : "Pollution prevention and behavioral change"}</span>
                   </li>
                 </ul>
-
-                <div className="pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <span className="text-xs uppercase font-bold text-muted-foreground">
-                    {lang === "pt" ? "Certificação Ambiental ISO 14001" : "ISO 14001 Environmental Certificate"}
-                  </span>
-                  <a
-                    href="/documents/SONAMET_ISO_14001.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-xs sm:text-sm font-bold uppercase text-white hover:bg-navy-light transition-all shadow-sm hover:scale-[1.02]"
-                  >
-                    <Download size={15} /> {lang === "pt" ? "VER CERTIFICADO AMBIENTAL (PDF)" : "VIEW ENVIRONMENTAL CERTIFICATE (PDF)"}
-                  </a>
-                </div>
               </div>
             </Reveal>
           </div>
