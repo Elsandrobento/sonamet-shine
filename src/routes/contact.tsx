@@ -96,11 +96,22 @@ function Contact() {
                     <Clock className="text-navy-deep" size={20} />
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-                      {t("Horário", "Working Hours")}
+                    <div className="text-xs uppercase tracking-widest text-muted-foreground mb-1.5">
+                      {t("Horário de Funcionamento", "Working Hours")}
                     </div>
-                    <div className="text-foreground font-medium text-sm">
-                      {t("Seg a Sex, 08:00–17:00", "Mon to Fri, 08:00–17:00")}
+                    <div className="space-y-1.5 text-xs text-foreground font-medium leading-relaxed">
+                      <div>
+                        <span className="text-muted-foreground block text-[11px]">
+                          {t("Segunda a Quinta-feira:", "Monday to Thursday:")}
+                        </span>
+                        <span className="font-semibold text-foreground">07:00–12:00 & 13:00–17:00</span>
+                      </div>
+                      <div>
+                        <span className="text-muted-foreground block text-[11px]">
+                          {t("Sexta-feira:", "Friday:")}
+                        </span>
+                        <span className="font-semibold text-foreground">07:00–12:00 & 13:00–16:00</span>
+                      </div>
                     </div>
                   </div>
                 </div>

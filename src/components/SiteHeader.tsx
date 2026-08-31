@@ -33,13 +33,13 @@ export function SiteHeader() {
           : "bg-gradient-to-b from-[#091b2e]/95 via-[#091b2e]/70 to-transparent"
       }`}
     >
-      <div className="container-x flex h-20 items-center justify-between">
-        {/* Original Sonamet Logo — Rendered directly with 100% opacity */}
-        <Link to="/about" className="flex items-center gap-3">
+      <div className="container-x flex h-20 md:h-24 items-center justify-between py-2">
+        {/* Original Sonamet Logo */}
+        <Link to="/" className="flex items-center gap-3 group">
           <img 
             src={sonametLogo} 
             alt="Sonamet Industrial S.A." 
-            className="h-10 md:h-12 w-auto object-contain"
+            className="h-13 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
           />
         </Link>
 

@@ -10,13 +10,13 @@ export function SiteFooter() {
     <footer className="bg-[#091b2e] text-white/80 pt-20 pb-8 border-t border-white/10">
       <div className="container-x grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3 mb-4">
+          <Link to="/" className="inline-flex items-center gap-3 mb-5 group">
             <img
               src={sonametLogo}
               alt="Sonamet Industrial S.A."
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
             />
-          </div>
+          </Link>
           <p className="text-sm leading-relaxed text-white/80">
             {t(
               "Joint venture entre a Sonangol e a Subsea 7. Engenharia, Fabricação Offshore e projetos EPC/EPCI em Angola desde 1998.",

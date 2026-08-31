@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeader } from "@/components/Section";
-import { HeartPulse, Sprout, TreePine, Flame } from "lucide-react";
-import drone1 from "@/assets/drone-1.jpg";
+import { HeartPulse, Droplet, Flame, Sprout } from "lucide-react";
+import communityHero from "@/assets/community-hero.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Route = createFileRoute("/community")({
@@ -21,35 +21,38 @@ function Community() {
   const socialActionPillars = [
     {
       icon: HeartPulse,
-      title: t("Doação de Medicamentos & Sangue", "Healthcare Donations"),
+      title: t("Doações para a Saúde", "Healthcare Donations"),
       desc: t(
-        "Doação de medicamentos a hospitais locais e campanhas regulares de doação de sangue organizadas pelos colaboradores em apoio aos hospitais de Benguela.",
-        "Donation of Medicines to local hospitals and regular blood donation campaigns organized by employees in support of Benguela hospitals."
+        "Doação de medicamentos a hospitais locais.",
+        "Donation of Medicines to local hospitals"
+      ),
+    },
+    {
+      icon: Droplet,
+      title: t("Campanhas de Doação de Sangue", "Blood Donation Campaigns"),
+      desc: t(
+        "Campanhas regulares organizadas pelos colaboradores em apoio aos hospitais de Benguela.",
+        "Regular campaigns organized by employees in support of Benguela hospitals"
       ),
     },
     {
       icon: Flame,
       title: t("Infraestruturas Públicas", "Public Infrastructure"),
       desc: t(
-        "Reabilitação da embarcação do Corpo de Bombeiros do Lobito e apoio contínuo às infraestruturas municipais chave da região.",
-        "Rehabilitation of the Lobito Fire Brigade boat and support for key municipal infrastructure in the region."
+        "Reabilitação da embarcação do Corpo de Bombeiros do Lobito.",
+        "Rehabilitation of the Lobito Fire Brigade boat"
       ),
     },
     {
       icon: Sprout,
       title: t("Ação Ambiental", "Environmental Action"),
-      desc: t(
-        "Campanhas de plantação de árvores dentro e fora do estaleiro, controlo de focos de mosquitos, desinfestação e celebração do Dia Nacional do Ambiente com as comunidades locais.",
-        "Tree planting campaigns inside and outside the yard, mosquito breeding site control, fumigation, and National Environment Day celebrations with local communities."
-      ),
-    },
-    {
-      icon: TreePine,
-      title: t("Preservação do Mangal", "Mangrove Preservation"),
-      desc: t(
-        "Reabilitação do ecossistema do mangal do Lobito para garantir que espécies como o Flamingo Rosa permaneçam no seu habitat natural, a par do controlo do consumo de energia e água.",
-        "Rehabilitation of the Lobito mangrove ecosystem to ensure species such as the Pink Flamingo remain in their natural habitat, alongside water/energy conservation."
-      ),
+      points: [
+        t("Campanhas de plantação de árvores dentro e fora do estaleiro.", "Tree Planting Campaigns inside and outside of the yard."),
+        t("Identificação de focos de mosquitos, fumigações e distribuição de mosquiteiros.", "Identification of mosquitos breeding sites, Fumigations and Mosquitos nets distribution."),
+        t("Celebração do Dia Nacional do Ambiente com a comunidade local.", "National Environment Day celebration with Local community."),
+        t("Controlo do consumo de energia e água e emissões de CO2.", "Control the energy and water consumption and CO2 emissions."),
+        t("Reabilitação do mangal do Lobito para assegurar que espécies como o Flamingo Rosa permaneçam no seu habitat natural.", "Rehabilitation of the Lobito mangrove and ensure that species such as the Pink Flamingo remains in its natural habitat."),
+      ],
     },
   ];
 
@@ -69,50 +72,15 @@ function Community() {
           "Para além do estaleiro, a Sonamet investe na saúde e no bem-estar a longo prazo dos seus trabalhadores, das suas famílias e das comunidades da Província de Benguela.",
           "Beyond the yard, Sonamet invests in the long-term health and wellbeing of its workers, their families and the communities of Benguela Province."
         )}
-        image={drone1}
+        image={communityHero}
       />
 
-      {/* Local Content & Training Centre */}
-      <section className="py-24">
-        <div className="container-x">
-          <SectionHeader
-            eyebrow={t("Conteúdo Local & Pessoas", "Local Content & People")}
-            title={t("Investir no Talento Angolano", "Investing in Angolan Talent")}
-            description={t(
-              "Totalmente alinhados com o Decreto Presidencial 271/20 — fazendo do conteúdo local uma vantagem competitiva estrutural e não uma mera obrigação. 80% da força de trabalho da Sonamet é angolana.",
-              "Fully aligned with Decreto Presidencial 271/20 — making local content a structural competitive advantage, not a compliance obligation. 80% of Sonamet's workforce is Angolan."
-            )}
-          />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {trainingStats.map((s) => (
-              <div key={s.label} className="bg-card border border-border rounded-2xl p-6 text-center hover:border-gold transition-all">
-                <div className="font-display text-3xl font-bold text-gold mb-2">{s.value}</div>
-                <div className="text-xs text-muted-foreground font-medium leading-relaxed">{s.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-secondary rounded-3xl p-8 md:p-12 border border-border">
-            <h3 className="text-2xl font-bold mb-4">
-              {t("Centro de Formação — Concebido Especificamente em Angola", "Training Centre — Purpose-built in Angola")}
-            </h3>
-            <p className="text-foreground/80 leading-relaxed max-w-3xl mb-6 text-sm md:text-base">
-              {t(
-                "Instalação de classe mundial com 3.500 m² distribuídos por três oficinas especializadas com 80 cabines de soldadura. Concebido para qualificar a próxima geração de especialistas angolanos para a fabricação offshore complexa.",
-                "Best-in-class facility covering 3,500 m² across three specialized workshops with 80 welding boxes. Designed to qualify the next generation of Angolan specialists for complex offshore fabrication."
-              )}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Malaria Control Programme */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24">
         <div className="container-x">
           <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-elegant relative overflow-hidden">
             <div className="max-w-3xl relative z-10">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4">
-                <span className="h-px w-8 bg-gold" />
+              <div className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4">
                 {t("Ativo Desde 2002", "Active Since 2002")}
               </div>
               <h3 className="text-3xl font-bold mb-4">
@@ -150,7 +118,7 @@ function Community() {
       </section>
 
       {/* Social Responsibility */}
-      <section className="py-24">
+      <section className="py-24 bg-secondary">
         <div className="container-x">
           <SectionHeader
             eyebrow={t("Responsabilidade Social", "Social Responsibility")}
@@ -160,16 +128,61 @@ function Community() {
               "Continuous social investment and concrete actions in healthcare, environment and community."
             )}
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {socialActionPillars.map((p) => (
-              <div key={p.title} className="bg-card border border-border rounded-2xl p-8 hover:border-gold hover:shadow-elegant transition-all">
-                <div className="h-14 w-14 rounded-xl bg-gradient-gold flex items-center justify-center mb-5">
+              <div key={p.title} className="bg-card border border-border rounded-2xl p-8 hover:border-gold hover:shadow-elegant transition-all flex flex-col">
+                <div className="h-14 w-14 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 shrink-0">
                   <p.icon className="text-navy-deep" size={26} />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                <h3 className="text-xl font-semibold mb-3">{p.title}</h3>
+                {p.points ? (
+                  <ul className="text-sm text-muted-foreground leading-relaxed space-y-2.5 mt-1 flex-1">
+                    {p.points.map((pt, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-gold shrink-0 mt-2" />
+                        <span className="leading-snug">{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">{p.desc}</p>
+                )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Content & Training Centre */}
+      <section className="py-24">
+        <div className="container-x">
+          <SectionHeader
+            eyebrow={t("Conteúdo Local & Pessoas", "Local Content & People")}
+            title={t("Investir no Talento Angolano", "Investing in Angolan Talent")}
+            description={t(
+              "Totalmente alinhados com o Decreto Presidencial 271/20 — fazendo do conteúdo local uma vantagem competitiva estrutural e não uma mera obrigação. 80% da força de trabalho da Sonamet é angolana.",
+              "Fully aligned with Decreto Presidencial 271/20 — making local content a structural competitive advantage, not a compliance obligation. 80% of Sonamet's workforce is Angolan."
+            )}
+          />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {trainingStats.map((s) => (
+              <div key={s.label} className="bg-card border border-border rounded-2xl p-6 text-center hover:border-gold transition-all">
+                <div className="font-display text-3xl font-bold text-gold mb-2">{s.value}</div>
+                <div className="text-xs text-muted-foreground font-medium leading-relaxed">{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-secondary rounded-3xl p-8 md:p-12 border border-border">
+            <h3 className="text-2xl font-bold mb-4">
+              {t("Centro de Formação — Concebido Especificamente em Angola", "Training Centre — Purpose-built in Angola")}
+            </h3>
+            <p className="text-foreground/80 leading-relaxed max-w-3xl mb-6 text-sm md:text-base">
+              {t(
+                "Instalação de classe mundial com 3.500 m² distribuídos por três oficinas especializadas com 80 cabines de soldadura. Concebido para qualificar a próxima geração de especialistas angolanos para a fabricação offshore complexa.",
+                "Best-in-class facility covering 3,500 m² across three specialized workshops with 80 welding boxes. Designed to qualify the next generation of Angolan specialists for complex offshore fabrication."
+              )}
+            </p>
           </div>
         </div>
       </section>

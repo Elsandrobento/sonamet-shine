@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as YardRouteImport } from './routes/yard'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as QhseRouteImport } from './routes/qhse'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as HseqRouteImport } from './routes/hseq'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -26,6 +27,11 @@ const YardRoute = YardRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QhseRoute = QhseRouteImport.update({
+  id: '/qhse',
+  path: '/qhse',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsRoute = ProjectsRouteImport.update({
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/hseq': typeof HseqRoute
   '/projects': typeof ProjectsRoute
+  '/qhse': typeof QhseRoute
   '/services': typeof ServicesRoute
   '/yard': typeof YardRoute
 }
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/hseq': typeof HseqRoute
   '/projects': typeof ProjectsRoute
+  '/qhse': typeof QhseRoute
   '/services': typeof ServicesRoute
   '/yard': typeof YardRoute
 }
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/hseq': typeof HseqRoute
   '/projects': typeof ProjectsRoute
+  '/qhse': typeof QhseRoute
   '/services': typeof ServicesRoute
   '/yard': typeof YardRoute
 }
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/hseq'
     | '/projects'
+    | '/qhse'
     | '/services'
     | '/yard'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/hseq'
     | '/projects'
+    | '/qhse'
     | '/services'
     | '/yard'
   id:
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/hseq'
     | '/projects'
+    | '/qhse'
     | '/services'
     | '/yard'
   fileRoutesById: FileRoutesById
@@ -130,6 +142,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   HseqRoute: typeof HseqRoute
   ProjectsRoute: typeof ProjectsRoute
+  QhseRoute: typeof QhseRoute
   ServicesRoute: typeof ServicesRoute
   YardRoute: typeof YardRoute
 }
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qhse': {
+      id: '/qhse'
+      path: '/qhse'
+      fullPath: '/qhse'
+      preLoaderRoute: typeof QhseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -202,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   HseqRoute: HseqRoute,
   ProjectsRoute: ProjectsRoute,
+  QhseRoute: QhseRoute,
   ServicesRoute: ServicesRoute,
   YardRoute: YardRoute,
 }

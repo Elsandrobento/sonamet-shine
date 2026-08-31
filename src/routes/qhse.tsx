@@ -25,32 +25,33 @@ export const Route = createFileRoute("/qhse")({
 });
 
 function QHSE() {
-  const { lang } = useLanguage();
+  const { language, t } = useLanguage();
+  const lang = language;
 
   const isoCertifications = [
     {
       code: "ISO 9001",
-      certifiedSince: lang === "pt" ? "CERTIFICADA DESDE 2011" : "CERTIFIED SINCE 2011",
-      title: lang === "pt" ? "SISTEMA DE GESTÃO DA QUALIDADE" : "QUALITY MANAGEMENT SYSTEM",
-      desc: lang === "pt"
+      certifiedSince: language === "pt" ? "CERTIFICADA DESDE 2011" : "CERTIFIED SINCE 2011",
+      title: language === "pt" ? "SISTEMA DE GESTÃO DA QUALIDADE" : "QUALITY MANAGEMENT SYSTEM",
+      desc: language === "pt"
         ? "Garantia da qualidade em todas as etapas da fabricação, qualificação de procedimentos de soldadura (WPQR) e processo integral de entrega para garantir a total satisfação do cliente."
         : "Quality assurance across fabrication, welding qualification (WPQR), and the full project delivery process to ensure complete client satisfaction.",
       pdf: "/documents/SONAMET_ISO_45001.pdf",
     },
     {
       code: "ISO 14001",
-      certifiedSince: lang === "pt" ? "CERTIFICADA DESDE 2016" : "CERTIFIED SINCE 2016",
-      title: lang === "pt" ? "SISTEMA DE GESTÃO AMBIENTAL" : "ENVIRONMENTAL MANAGEMENT SYSTEM",
-      desc: lang === "pt"
+      certifiedSince: language === "pt" ? "CERTIFICADA DESDE 2016" : "CERTIFIED SINCE 2016",
+      title: language === "pt" ? "SISTEMA DE GESTÃO AMBIENTAL" : "ENVIRONMENTAL MANAGEMENT SYSTEM",
+      desc: language === "pt"
         ? "Minimização rigorosa do impacto ambiental através de práticas sólidas de gestão, controlo de emissões, gestão de resíduos e cumprimento estrito das obrigações de conformidade."
         : "Minimizing adverse environmental impact through strong management practices, emissions monitoring, waste reduction, and compliance fulfillment.",
       pdf: "/documents/SONAMET_ISO_14001.pdf",
     },
     {
       code: "ISO 45001",
-      certifiedSince: lang === "pt" ? "CERTIFICADA DESDE 2023" : "CERTIFIED SINCE 2023",
-      title: lang === "pt" ? "SAÚDE E SEGURANÇA OCUPACIONAL" : "OCCUPATIONAL HEALTH & SAFETY",
-      desc: lang === "pt"
+      certifiedSince: language === "pt" ? "CERTIFICADA DESDE 2023" : "CERTIFIED SINCE 2023",
+      title: language === "pt" ? "SAÚDE E SEGURANÇA OCUPACIONAL" : "OCCUPATIONAL HEALTH & SAFETY",
+      desc: language === "pt"
         ? "Ambiente de trabalho seguro, prevenção de lesões e problemas de saúde relacionados com o trabalho e melhoria contínua do desempenho de Saúde e Segurança no Trabalho."
         : "Safe and healthy workplace, prevention of work-related injury and ill health, and continuous improvement of occupational safety performance.",
       pdf: "/documents/SONAMET_ISO_45001.pdf",
