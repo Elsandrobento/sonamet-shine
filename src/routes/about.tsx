@@ -27,7 +27,7 @@ export function About() {
 
   const stats = [
     { value: "1998", label: t("Ano de Fundação", "Year Established") },
-    { value: "80 HA", label: t("Área de Instalações", "Facility Area") },
+    { value: "80 Ha", label: t("Área de Instalações", "Facility Area") },
     { value: "1.039 M", label: t("Comprimento da Spoolbase", "Spoolbase Length") },
     { value: "1.300+", label: t("Colaboradores em Época Alta", "Peak Workforce") },
   ];
