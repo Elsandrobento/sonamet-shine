@@ -629,8 +629,8 @@ export function Projects() {
                     </h3>
                     <p className="text-sm md:text-base text-muted-foreground">
                       {t(
-                        "Histórico cronológico oficial de fabricação de jackets, decks, plataformas e módulos EPC desde 1999.",
-                        "Official chronological track record of jackets, decks, platforms, and EPC modules since 1999."
+                        "Histórico cronológico oficial de fabricação de jackets, decks, plataformas e módulos EPC desde 1998.",
+                        "Official chronological track record of jackets, decks, platforms, and EPC modules since 1998."
                       )}
                     </p>
                   </div>
