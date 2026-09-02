@@ -5,6 +5,9 @@ import aboutUsPhoto from "@/assets/about-us-foto.jpg";
 import pcaPhoto from "@/assets/PCA.png";
 import joinVenture from "@/assets/join-venture.png";
 import team from "@/assets/team.jpg";
+import photoCarlosPaixao from "@/assets/team-carlos-paixao.jpg";
+import photoMarcolinoTrosso from "@/assets/team-marcolino-trosso.jpg";
+import photoDomingosAugusto from "@/assets/team-domingos-augusto.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Route = createFileRoute("/about")({
@@ -25,7 +28,7 @@ export function About() {
   const stats = [
     { value: "1998", label: t("Ano de Fundação", "Year Established") },
     { value: "80 HA", label: t("Área de Instalações", "Facility Area") },
-    { value: "1.039 m", label: t("Comprimento da Spoolbase", "Spoolbase Length") },
+    { value: "1.039 M", label: t("Comprimento da Spoolbase", "Spoolbase Length") },
     { value: "1.300+", label: t("Colaboradores em Época Alta", "Peak Workforce") },
   ];
 
@@ -149,13 +152,13 @@ export function About() {
   ];
 
   const leadershipRoster = [
-    { name: "Olivier Mollaret", role: t("Director Geral Adjunto", "Deputy General Manager") },
-    { name: "Luis Paixão", role: t("Director Financeiro e Administrativo", "Financial & Administrative Manager") },
-    { name: "Sandro Ferreira", role: t("Director Comercial e Marketing", "Sales & Marketing Manager") },
-    { name: "Domingos Augusto", role: t("Director de Recursos Humanos", "HR Manager") },
-    { name: "Marcolino Trosso", role: t("Director de QHSE", "QHSE Manager") },
-    { name: t("A nomear", "To be nominated"), role: t("Director de Projetos", "Projects Director"), isTBN: true },
-    { name: t("A nomear", "To be nominated"), role: t("Director de SCM e Serviços Gerais", "SCM & General Services Manager"), isTBN: true },
+    { name: "Olivier Mollaret", role: t("Director Geral Adjunto", "Deputy General Manager"), photo: undefined, photoPosition: "object-center" },
+    { name: "Carlos Paixão", role: t("Director Financeiro e Administrativo", "Financial & Administrative Manager"), photo: photoCarlosPaixao, photoPosition: "object-top" },
+    { name: "Sandro Ferreira", role: t("Director Comercial e Marketing", "Sales & Marketing Manager"), photo: undefined, photoPosition: "object-center" },
+    { name: "Domingos Augusto", role: t("Director de Recursos Humanos", "HR Manager"), photo: photoDomingosAugusto, photoPosition: "object-center" },
+    { name: "Marcolino Trosso", role: t("Director de QHSE", "QHSE Manager"), photo: photoMarcolinoTrosso, photoPosition: "object-top" },
+    { name: t("A nomear", "To be nominated"), role: t("Director de Projetos", "Projects Director"), photo: undefined, photoPosition: "object-center" },
+    { name: t("A nomear", "To be nominated"), role: t("Director de SCM e Serviços Gerais", "SCM & General Services Manager"), photo: undefined, photoPosition: "object-center" },
   ];
 
   return (
@@ -199,9 +202,9 @@ export function About() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("SOBRE NÓS", "ABOUT US")}
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight leading-snug">
-                MADE IN ANGOLA<br />
-                BUILT FOR THE WORLD
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 tracking-tight leading-snug">
+                Made in Angola<br />
+                Built for the World
               </h2>
               <p className="text-base md:text-lg text-foreground/85 font-medium leading-relaxed mb-3">
                 {t(
@@ -241,9 +244,9 @@ export function About() {
                 height={1000}
                 className="rounded-2xl shadow-elegant w-full object-cover"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-gold rounded-2xl p-5 shadow-gold hidden md:block animate-float">
-                <div className="font-display text-3xl font-bold text-navy-deep">28 {t("Anos", "Years")}</div>
-                <div className="text-[11px] uppercase tracking-widest text-navy-deep/80 mt-0.5">
+              <div className="absolute -bottom-5 right-4 sm:-bottom-6 sm:right-6 bg-gradient-gold rounded-2xl px-5 py-4 sm:p-5 shadow-gold animate-float z-10">
+                <div className="font-display text-2xl sm:text-3xl font-bold text-navy-deep">28 {t("Anos", "Years")}</div>
+                <div className="text-[10px] sm:text-[11px] md:text-xs font-semibold uppercase tracking-wider text-navy-deep/85 mt-0.5 whitespace-nowrap">
                   {t("Anos a Entregar Excelência", "Years Delivering Excellence")}
                 </div>
               </div>
@@ -260,8 +263,8 @@ export function About() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("CAPACIDADES", "CAPABILITIES")}
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
-                {t("Soluções integradas para a indústria de óleo e gás", "Integrated solutions for the oil & gas industry")}
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
+                {t("Soluções Integradas para a Indústria de Óleo e Gás", "Integrated Solutions for the Oil & Gas Industry")}
               </h2>
               <p className="mt-3 text-sm md:text-base text-muted-foreground leading-relaxed">
                 {t(
@@ -280,7 +283,7 @@ export function About() {
                       <div className="h-12 w-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 shrink-0 shadow-sm">
                         <s.icon className="text-navy-deep" size={24} />
                       </div>
-                      <h3 className="text-base md:text-lg font-bold mb-2.5 text-foreground uppercase tracking-wide">{s.title}</h3>
+                      <h3 className="text-base md:text-lg font-bold mb-2.5 text-foreground tracking-wide">{s.title}</h3>
                       <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
@@ -301,7 +304,7 @@ export function About() {
                   <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                     {t("GOVERNAÇÃO", "GOVERNANCE")}
                   </div>
-                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
+                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
                     {t("Estrutura Acionista", "Shareholding Structure")}
                   </h2>
                   <p className="text-base md:text-lg text-foreground/85 leading-relaxed font-medium">
@@ -333,8 +336,8 @@ export function About() {
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {t("FILOSOFIA DA SONAMET", "SONAMET PHILOSOPHY")}
             </div>
-            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-tight">
-              {t("TRÊS PROMESSAS, UM COMPROMISSO", "THREE PROMISES, ONE COMMITMENT")}
+            <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+              {t("Três Promessas, Um Compromisso", "Three Promises, One Commitment")}
             </h2>
           </div>
 
@@ -365,10 +368,10 @@ export function About() {
         <div className="container-x">
           <Reveal>
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight">
-                {t("NOSSA MISSÃO E VALORES", "OUR MISSION AND VALUES")}
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 tracking-tight">
+                {t("Nossa Missão e Valores", "Our Mission and Values")}
               </h2>
-              <p className="text-sm md:text-base text-foreground/85 leading-relaxed text-center font-medium">
+              <p className="text-sm md:text-base text-foreground/85 leading-relaxed text-justify font-medium">
                 {t(
                   "Entregar projetos de desenvolvimento de Engenharia, Aprovisionamento e Construção de última geração para a indústria de óleo e gás em Angola. Liderar o desenvolvimento e transferência de tecnologia para participar no crescimento a longo prazo da indústria petrolífera local e do capital humano. Tornar o 'Made in Angola' uma meta a alcançar para um negócio equilibrado entre todos os parceiros envolvidos.",
                   "Deliver state-of-the-art Engineering, Procurement and Construction development projects for the oil and gas industry in Angola. Lead the development and transfer of technology to participate in the long-term growth of local oil and gas industry and human capital. Enable 'Made in Angola' a target to reach for a balanced business between all partners involved."
@@ -408,7 +411,7 @@ export function About() {
                   <FileText size={15} />
                   {t("CÓDIGO DE CONDUTA", "CODE OF CONDUCT")}
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3.5 text-foreground uppercase tracking-tight">
+                <h3 className="text-xl md:text-2xl font-bold mb-3.5 text-foreground tracking-tight">
                   {t("Ética Empresarial", "Business Ethics")}
                 </h3>
                 <p className="text-foreground/80 leading-relaxed text-xs md:text-sm text-justify">
@@ -439,8 +442,8 @@ export function About() {
         <div className="container-x">
           <Reveal>
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
-                {t("LIDERANÇA", "LEADERSHIP")}
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
+                {t("Liderança", "Leadership")}
               </h2>
             </div>
           </Reveal>
@@ -454,7 +457,7 @@ export function About() {
                 </div>
               </div>
               <div className="md:col-span-3">
-                <p className="text-xs md:text-sm font-light italic leading-relaxed text-white/95 mb-5 text-justify">
+                <p className="font-display italic text-sm md:text-base leading-relaxed text-white/95 mb-5 text-justify font-normal">
                   {t(
                     "\"Os anos de trabalho árduo dos nossos colaboradores e as realizações ao longo do tempo só foram possíveis graças ao nosso foco absoluto na segurança e na qualidade. Embora a entrega atempada dos produtos tenha sido sempre o nosso principal objetivo, qualquer cedência na segurança ou na qualidade das entregas nunca foi sequer considerada como opção. O resultado tem sido recompensador, com os nossos resultados a corresponderem e mesmo a superarem as expetativas dos clientes.\"",
                     "\"The years of hard work by our employees and the accomplishments over the time was made possible only by our focus on safety and quality. Although, delivering the products on schedule has always been our prime objective, any compromise on safety in execution and quality of deliverable were never even considered as an option. The result has been rewarding with our deliverables always being in line with and even exceeding the expectations from clients.\""
@@ -477,14 +480,22 @@ export function About() {
                 <HoverCard className="h-full flex flex-col flex-1">
                   <div className="h-full bg-card rounded-2xl p-6 border border-border hover:border-gold hover:shadow-elegant transition-all text-center flex flex-col justify-between flex-1">
                     <div>
-                      {/* Circular photo placeholder with user icon */}
-                      <div className="h-20 w-20 md:h-24 md:w-24 rounded-full border-2 border-dashed border-border bg-secondary/80 flex items-center justify-center mx-auto mb-4 text-muted-foreground shrink-0 shadow-inner">
-                        <User size={36} className="text-muted-foreground/60" />
+                      {/* Circular photo placeholder with user icon or real photo */}
+                      <div className="h-20 w-20 md:h-24 md:w-24 rounded-full border-2 border-gold/40 overflow-hidden bg-secondary/80 flex items-center justify-center mx-auto mb-4 text-muted-foreground shrink-0 shadow-md">
+                        {leader.photo ? (
+                          <img
+                            src={leader.photo}
+                            alt={leader.name}
+                            className={`h-full w-full object-cover ${leader.photoPosition || "object-center"}`}
+                          />
+                        ) : (
+                          <User size={36} className="text-muted-foreground/60" />
+                        )}
                       </div>
-                      <h3 className={`text-base font-bold uppercase mb-1 ${leader.isTBN ? "text-muted-foreground italic" : "text-foreground"}`}>
+                      <h3 className="text-sm sm:text-base font-bold mb-1.5 text-foreground">
                         {leader.name}
                       </h3>
-                      <p className="text-xs font-semibold text-gold uppercase tracking-wider">
+                      <p className="text-[10.5px] sm:text-[11px] font-semibold text-gold uppercase tracking-wider leading-snug">
                         {leader.role}
                       </p>
                     </div>

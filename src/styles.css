@@ -32,12 +32,27 @@
   --color-navy-deep: var(--navy-deep);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-sans: Verdana, Geneva, sans-serif;
+  --font-primary: Verdana, Geneva, sans-serif;
+  --font-system: Arial, Helvetica, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
+  /* Sonamet Brand Typography Tokens */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-primary: Verdana, Geneva, sans-serif;
+  --font-sans: Verdana, Geneva, sans-serif;
+  --font-system: Arial, Helvetica, sans-serif;
+
+  /* Official Brand Guide Typographic Scale Tokens */
+  --font-size-h1: clamp(20pt, 2.2vw, 28pt);
+  --font-size-h2: clamp(13pt, 1.4vw, 16pt);
+  --font-size-h3: clamp(10pt, 1vw, 11pt);
+  --font-size-body: clamp(9pt, 1vw, 11pt);
+  --font-size-caption: clamp(6.5pt, 0.7vw, 7.5pt);
+
   /* Sonamet brand palette */
   --navy-deep: oklch(0.18 0.06 265);
   --navy: oklch(0.26 0.08 265);
@@ -79,15 +94,80 @@
   html {
     scroll-behavior: smooth;
   }
+  body,
+  p,
+  nav,
+  button,
+  input,
+  textarea,
+  label {
+    font-family: var(--font-primary);
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4, h5, h6, .font-display {
-    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    letter-spacing: -0.02em;
+
+  /* H1 — PAGE TITLE: Georgia Regular 20–28 pt */
+  h1, .page-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h1);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  /* H2 — SECTION HEADING: Georgia Regular 13–16 pt */
+  h2, .section-heading {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  /* H3 — SUB-HEADING: Verdana Bold 10–11 pt */
+  h3, .sub-heading {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  /* H4, H5, H6 fallback */
+  h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+  }
+
+  /* BODY — BODY TEXT: Verdana Regular 9–11 pt */
+  p, .body-text {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  /* CAPTION & FOOTNOTE: Verdana Regular 6.5–7.5 pt */
+  caption, .caption, .footnote, figcaption, small {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-caption);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .technical,
+  .data-table,
+  .engineering-annotation {
+    font-family: var(--font-system);
   }
 }
 
@@ -130,6 +210,3 @@
     to { transform: translateX(-50%); }
   }
 }
-
-/* Google fonts via CSS import */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");

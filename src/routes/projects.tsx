@@ -2,9 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Reveal, HoverCard } from "@/components/Reveal";
-import { Building2, ArrowRight, ArrowLeft, ChevronRight, Layers, Anchor, BarChart3 } from "lucide-react";
+import { Building2, ArrowRight, ArrowLeft, ChevronRight, Layers, Anchor, BarChart3, Milestone, Clock, Sparkles, Award, TrendingUp } from "lucide-react";
 import projectsHero from "@/assets/projects-hero.jpg";
 import categoryShallowWater from "@/assets/category-shallow-water-new.jpg";
+import shallowWaterTimelineImg from "@/assets/shallow-water-timeline.png";
 import categorySpsSurf from "@/assets/category-sps-surf-new.jpg";
 import categoryOthers from "@/assets/category-others-new.png";
 import projectSlgc from "@/assets/project-slgc-new.jpg";
@@ -45,7 +46,7 @@ export const Route = createFileRoute("/projects")({
 });
 
 export function Projects() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   // selectedCategory: null = main 3 category cards view; or "SHALLOW WATER" | "SPS & SURF" | "OTHERS"
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -142,7 +143,7 @@ export function Projects() {
   const mainCategories = [
     {
       id: "SHALLOW WATER",
-      title: "SHALLOW WATER",
+      title: "Shallow Water",
       subtitle: t("Plataformas, Jackets & Módulos", "Platforms, Jackets & Modules"),
       desc: t(
         "Fabricação pesada de estruturas para águas rasas, jackets, pontes e flares no Bloco 0 e costa angolana.",
@@ -164,7 +165,7 @@ export function Projects() {
     },
     {
       id: "OTHERS",
-      title: "OTHERS",
+      title: t("Outros Projetos", "Other Projects"),
       subtitle: t("Reabilitação de Estacas, Spreader Bars & Spool Base", "Suction Pile Refurbishment, Spreader Bars & Spool Base"),
       desc: t(
         "Reabilitação de Estacas de Sucção, Spreader Bars, Sistemas de Proteção de Risers, Serviços de Spool Base e muito mais.",
@@ -374,10 +375,10 @@ export function Projects() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("PROJETOS & HISTÓRICO", "PROJECTS & TRACK RECORD")}
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight leading-tight mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
                 {t(
-                  "Construído no Lobito Entregue à Indústria Petrolífera",
-                  "Built in Lobito Delivered to the Oil & Gas Industry"
+                  "Construído no Lobito, Entregue à Indústria Petrolífera",
+                  "Built in Lobito, Delivered to the Oil & Gas Industry"
                 )}
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium leading-relaxed max-w-3xl">
@@ -399,8 +400,18 @@ export function Projects() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("HISTÓRICO", "TRACK RECORD")}
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
-                {t("Números que demonstram capacidade", "Numbers that demonstrate capability")}
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight leading-snug">
+                {language === "pt" ? (
+                  <>
+                    Projetos Entregues<br />
+                    Experiência Comprovada
+                  </>
+                ) : (
+                  <>
+                    Projects Delivered<br />
+                    Experience Proven
+                  </>
+                )}
               </h2>
             </div>
           </Reveal>
@@ -433,8 +444,8 @@ export function Projects() {
                   <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                     {t("EXPERIÊNCIA EM PROJETOS", "PROJECT EXPERIENCE")}
                   </div>
-                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
-                    {t("PRINCIPAIS PROJETOS", "MAIN PROJECTS")}
+                  <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
+                    {t("Principais Projetos", "Main Projects")}
                   </h2>
                   <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed mt-4">
                     {t(
@@ -473,7 +484,7 @@ export function Projects() {
                         {/* Text Content */}
                         <div className="p-7 flex flex-col justify-between flex-1">
                           <div>
-                            <h3 className="text-2xl font-bold text-foreground uppercase tracking-wide mb-2 group-hover:text-gold transition-colors">
+                            <h3 className="text-2xl font-bold text-foreground tracking-wide mb-2 group-hover:text-gold transition-colors">
                               {cat.title}
                             </h3>
                             <div className="text-xs font-semibold text-gold uppercase tracking-wider mb-3">
@@ -528,13 +539,13 @@ export function Projects() {
 
               {/* Header for Selected Category */}
               <div className="mb-10 text-center max-w-3xl mx-auto">
-                <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-2">
+                <div className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-gold mb-2">
                   {t("CATEGORIA SELECIONADA", "SELECTED CATEGORY")}
                 </div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
-                  {selectedCategory}
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground tracking-tight mb-2.5">
+                  {mainCategories.find((c) => c.id === selectedCategory)?.title || "Shallow Water"}
                 </h2>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                   {mainCategories.find((c) => c.id === selectedCategory)?.desc}
                 </p>
               </div>
@@ -577,7 +588,7 @@ export function Projects() {
                               <div className="text-xs font-semibold text-gold uppercase tracking-wider mb-1">
                                 {p.client}
                               </div>
-                              <h3 className="text-lg font-bold text-foreground mb-4 uppercase tracking-tight">
+                              <h3 className="text-lg font-bold text-foreground mb-4 tracking-tight">
                                 {p.title}
                               </h3>
 
@@ -599,6 +610,45 @@ export function Projects() {
                 </AnimatePresence>
               </motion.div>
 
+              {/* SPECIALIZED SHALLOW WATER TIMELINE IMAGE */}
+              {selectedCategory === "SHALLOW WATER" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mt-16 pt-14 border-t border-border max-w-6xl mx-auto"
+                >
+                  {/* Header */}
+                  <div className="text-center max-w-3xl mx-auto mb-8">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold uppercase tracking-wider mb-3">
+                      <Milestone size={14} />
+                      <span>{t("CRONOLOGIA HISTÓRICA & RECORDES", "HISTORICAL TIMELINE & RECORDS")}</span>
+                    </div>
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-3">
+                      {t("Evolução dos Projetos de Águas Rasas", "Shallow Water Projects Evolution")}
+                    </h3>
+                    <p className="text-sm md:text-base text-muted-foreground">
+                      {t(
+                        "Histórico cronológico oficial de fabricação de jackets, decks, plataformas e módulos EPC desde 1999.",
+                        "Official chronological track record of jackets, decks, platforms, and EPC modules since 1999."
+                      )}
+                    </p>
+                  </div>
+
+                  {/* High-Resolution Timeline Diagram Container */}
+                  <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 border-2 border-border shadow-md overflow-hidden">
+                    <div className="w-full overflow-x-auto">
+                      <img
+                        src={shallowWaterTimelineImg}
+                        alt="Shallow Water Projects Timeline — Sonamet"
+                        className="w-full min-w-[850px] h-auto object-contain mx-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
               {/* SPECIALIZED SUBSEA CHARTS (MANIFOLDS & PILES) FOR SPS & SURF */}
               {selectedCategory === "SPS & SURF" && (
                 <motion.div
@@ -613,7 +663,7 @@ export function Projects() {
                       <BarChart3 size={14} />
                       <span>{t("HISTÓRICO SUBSEA DETALHADO", "DETAILED SUBSEA TRACK RECORD")}</span>
                     </div>
-                    <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight mb-3">
+                    <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight mb-3">
                       {t("Manifolds & Estacas de Sucção (Piles)", "Manifolds & Suction Piles")}
                     </h3>
                     <p className="text-sm md:text-base text-muted-foreground">
@@ -668,8 +718,8 @@ export function Projects() {
                               <Layers size={22} />
                             </div>
                             <div>
-                              <h4 className="text-xl font-bold text-foreground uppercase tracking-wide">
-                                {t("MANIFOLDS", "MANIFOLDS")}
+                              <h4 className="text-xl font-bold text-foreground tracking-wide">
+                                {t("Manifolds", "Manifolds")}
                               </h4>
                               <p className="text-xs text-muted-foreground">
                                 {t("Manifolds submarinos de produção e injeção", "Subsea production and injection manifolds")}
@@ -714,8 +764,8 @@ export function Projects() {
                               <Anchor size={22} />
                             </div>
                             <div>
-                              <h4 className="text-xl font-bold text-foreground uppercase tracking-wide">
-                                {t("PILES", "PILES")}
+                              <h4 className="text-xl font-bold text-foreground tracking-wide">
+                                {t("Piles", "Piles")}
                               </h4>
                               <p className="text-xs text-muted-foreground">
                                 {t("Estacas de sucção, fundações e ancoragens", "Suction piles, foundations and anchorages")}
@@ -766,7 +816,7 @@ export function Projects() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 OUR CLIENTS
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-4 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight">
                 {t("Confiança das Principais Operadoras da Indústria", "Trusted by the Industry's Majors")}
               </h2>
               <p className="text-base md:text-lg text-white/85 font-medium leading-relaxed">

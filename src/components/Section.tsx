@@ -5,14 +5,18 @@ export function SectionHeader({
   title,
   description,
   align = "left",
+  className = "",
+  descriptionClassName = "",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  className?: string;
+  descriptionClassName?: string;
 }) {
   return (
-    <div className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""} mb-12`}>
+    <div className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""} mb-12 ${className}`}>
       {eyebrow && (
         <div className={`inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4`}>
           {eyebrow}
@@ -20,7 +24,7 @@ export function SectionHeader({
       )}
       <h2 className="font-display text-3xl md:text-5xl font-bold text-balance">{title}</h2>
       {description && (
-        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">{description}</p>
+        <p className={`mt-4 text-lg text-muted-foreground leading-relaxed ${descriptionClassName}`}>{description}</p>
       )}
     </div>
   );

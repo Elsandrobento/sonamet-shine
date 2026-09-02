@@ -130,7 +130,7 @@ function Contact() {
 
           <div className="bg-card border border-border rounded-2xl p-8 lg:p-10 shadow-elegant h-fit">
             <h3 className="text-2xl font-bold mb-2">
-              {t("Envie-nos uma mensagem", "Send us a message")}
+              {t("Envie-nos uma Mensagem", "Send Us a Message")}
             </h3>
             <p className="text-muted-foreground mb-8 text-sm">
               {t(

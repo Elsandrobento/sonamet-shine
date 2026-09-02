@@ -32,7 +32,7 @@ function QHSE() {
     {
       code: "ISO 9001",
       certifiedSince: language === "pt" ? "CERTIFICADA DESDE 2011" : "CERTIFIED SINCE 2011",
-      title: language === "pt" ? "SISTEMA DE GESTÃO DA QUALIDADE" : "QUALITY MANAGEMENT SYSTEM",
+      title: language === "pt" ? "Sistema de Gestão da Qualidade" : "Quality Management System",
       desc: language === "pt"
         ? "Garantia da qualidade em todas as etapas da fabricação, qualificação de procedimentos de soldadura (WPQR) e processo integral de entrega para garantir a total satisfação do cliente."
         : "Quality assurance across fabrication, welding qualification (WPQR), and the full project delivery process to ensure complete client satisfaction.",
@@ -41,7 +41,7 @@ function QHSE() {
     {
       code: "ISO 14001",
       certifiedSince: language === "pt" ? "CERTIFICADA DESDE 2016" : "CERTIFIED SINCE 2016",
-      title: language === "pt" ? "SISTEMA DE GESTÃO AMBIENTAL" : "ENVIRONMENTAL MANAGEMENT SYSTEM",
+      title: language === "pt" ? "Sistema de Gestão Ambiental" : "Environmental Management System",
       desc: language === "pt"
         ? "Minimização rigorosa do impacto ambiental através de práticas sólidas de gestão, controlo de emissões, gestão de resíduos e cumprimento estrito das obrigações de conformidade."
         : "Minimizing adverse environmental impact through strong management practices, emissions monitoring, waste reduction, and compliance fulfillment.",
@@ -50,7 +50,7 @@ function QHSE() {
     {
       code: "ISO 45001",
       certifiedSince: language === "pt" ? "CERTIFICADA DESDE 2023" : "CERTIFIED SINCE 2023",
-      title: language === "pt" ? "SAÚDE E SEGURANÇA OCUPACIONAL" : "OCCUPATIONAL HEALTH & SAFETY",
+      title: language === "pt" ? "Saúde e Segurança Ocupacional" : "Occupational Health & Safety",
       desc: language === "pt"
         ? "Ambiente de trabalho seguro, prevenção de lesões e problemas de saúde relacionados com o trabalho e melhoria contínua do desempenho de Saúde e Segurança no Trabalho."
         : "Safe and healthy workplace, prevention of work-related injury and ill health, and continuous improvement of occupational safety performance.",
@@ -59,19 +59,19 @@ function QHSE() {
   ];
 
   const policiesList = [
-    { name: lang === "pt" ? "POLÍTICA DE ABUSO DE SUBSTÂNCIAS" : "SUBSTANCE ABUSE POLICY", file: "/documents/SON-MGT-PL-003_Substance_Abuse_Policy.pdf" },
-    { name: lang === "pt" ? "POLÍTICA DE CONTROLO DA MALÁRIA" : "MALARIA CONTROL POLICY", file: "/documents/SON-MGT-PL-004_Malaria_Control_Policy.pdf" },
-    { name: lang === "pt" ? "POLÍTICA DE NÃO FUMADORES" : "SMOKING POLICY", file: "/documents/SON-MGT-PL-005_Smoking_Policy.pdf" },
-    { name: lang === "pt" ? "POLÍTICA DE RESPONSABILIDADE SOCIAL" : "SOCIAL RESPONSIBILITY POLICY", file: "/documents/SON-MGT-PL-008_Social_Responsibility_Policy.pdf" },
-    { name: lang === "pt" ? "POLÍTICA DE APROVISIONAMENTO MINERAL" : "MINERAL SOURCING POLICY", file: "/documents/MINERAL_SOURCING_POLICY.pdf" },
-    { name: lang === "pt" ? "CÓDIGO DE CONDUTA EMPRESARIAL" : "CODE OF BUSINESS CONDUCT", file: "/documents/Sonamet_Code_of_Business_Conduct_2024.pdf" },
+    { name: lang === "pt" ? "Política de Abuso de Substâncias" : "Substance Abuse Policy", file: "/documents/SON-MGT-PL-003_Substance_Abuse_Policy.pdf" },
+    { name: lang === "pt" ? "Política de Controlo da Malária" : "Malaria Control Policy", file: "/documents/SON-MGT-PL-004_Malaria_Control_Policy.pdf" },
+    { name: lang === "pt" ? "Política de Não Fumadores" : "Smoking Policy", file: "/documents/SON-MGT-PL-005_Smoking_Policy.pdf" },
+    { name: lang === "pt" ? "Política de Responsabilidade Social" : "Social Responsibility Policy", file: "/documents/SON-MGT-PL-008_Social_Responsibility_Policy.pdf" },
+    { name: lang === "pt" ? "Política de Aprovisionamento Mineral" : "Mineral Sourcing Policy", file: "/documents/MINERAL_SOURCING_POLICY.pdf" },
+    { name: lang === "pt" ? "Código de Conduta Empresarial" : "Code of Business Conduct", file: "/documents/Sonamet_Code_of_Business_Conduct_2024.pdf" },
   ];
 
   return (
     <>
       <PageHero
         eyebrow={lang === "pt" ? "QHSE & SUSTENTABILIDADE" : "QHSE & SUSTAINABILITY"}
-        title={lang === "pt" ? "TRIPLA CERTIFICAÇÃO & MELHORIA CONTÍNUA" : "TRIPLE CERTIFICATION & CONTINUOUS IMPROVEMENT"}
+        title={lang === "pt" ? "Tripla Certificação & Melhoria Contínua" : "Triple Certification & Continuous Improvement"}
         description={lang === "pt"
           ? "A Sonamet opera sob um sistema de gestão integrado e totalmente certificado, cobrindo qualidade, ambiente e saúde e segurança ocupacional, auditado anualmente por entidades terceiras independentes."
           : "Sonamet operates under a fully certified Integrated Management System covering quality, environment, and occupational health & safety, audited annually by independent certification bodies."}
@@ -85,8 +85,8 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "CERTIFICAÇÕES INTERNACIONAIS" : "INTERNATIONAL CERTIFICATIONS"}
             </div>
-            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
-              {lang === "pt" ? "SISTEMA DE GESTÃO INTEGRADO" : "INTEGRATED MANAGEMENT SYSTEM"}
+            <h2 className="font-display text-2xl md:text-4xl font-bold">
+              {lang === "pt" ? "Sistema de Gestão Integrado" : "Integrated Management System"}
             </h2>
           </div>
 
@@ -97,13 +97,15 @@ function QHSE() {
                 className="bg-card border-2 border-border rounded-3xl p-8 hover:border-gold hover:shadow-elegant transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-display text-3xl font-extrabold text-navy">{iso.code}</span>
-                    <span className="text-[10px] font-bold text-gold uppercase tracking-wider bg-secondary px-3 py-1 rounded-full border border-border">
+                  <div className="flex items-center justify-between gap-2 mb-5">
+                    <span className="font-display text-2xl sm:text-3xl font-bold text-navy whitespace-nowrap shrink-0">
+                      {iso.code}
+                    </span>
+                    <span className="text-[9.5px] sm:text-[10px] font-bold text-gold uppercase tracking-wider bg-secondary px-2.5 py-1 rounded-full border border-border whitespace-nowrap">
                       {iso.certifiedSince}
                     </span>
                   </div>
-                  <h3 className="font-display text-lg font-bold uppercase text-foreground mb-3">{iso.title}</h3>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-3">{iso.title}</h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">{iso.desc}</p>
                 </div>
 
@@ -130,10 +132,10 @@ function QHSE() {
             <Reveal>
               <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-4 bg-white/10 px-4 py-1.5 rounded-full border border-white/10">
                 <ShieldCheck size={14} className="mr-2" />
-                HSE CULTURE
+                {lang === "pt" ? "CULTURA DE HSE" : "HSE CULTURE"}
               </div>
-              <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-6 leading-tight">
-                TRABALHE COM SEGURANÇA, VIVA COM CONFIANÇA
+              <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Viva com Segurança, Viva com Confiança
               </h2>
               <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-normal">
                 {lang === "pt"
@@ -165,8 +167,8 @@ function QHSE() {
                   <Award size={16} className="mr-2" />
                   {lang === "pt" ? "REGRAS DE SEGURANÇA" : "SAFETY RULES"}
                 </div>
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase text-navy mb-6">
-                  SONAMET HSE GOLDEN RULES
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-6">
+                  {lang === "pt" ? "Regras de Ouro de HSE da Sonamet" : "Sonamet HSE Golden Rules"}
                 </h2>
                 <p className="text-foreground/85 text-sm sm:text-base md:text-lg leading-relaxed mb-8">
                   {lang === "pt"
@@ -202,8 +204,8 @@ function QHSE() {
                   <Leaf size={16} className="mr-2" />
                   {lang === "pt" ? "AMBIENTAL" : "ENVIRONMENTAL"}
                 </div>
-                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase text-navy mb-4">
-                  CARE PROGRAM
+                <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4">
+                  {lang === "pt" ? "Programa C.A.R.E." : "C.A.R.E. Program"}
                 </h2>
                 <p className="text-foreground/85 text-sm sm:text-base leading-relaxed mb-6 font-medium">
                   {lang === "pt"
@@ -229,6 +231,17 @@ function QHSE() {
                     <span className="font-semibold">{lang === "pt" ? "Prevenção da poluição e mudança comportamental" : "Pollution prevention and behavioral change"}</span>
                   </li>
                 </ul>
+
+                <div className="mt-8 pt-6 border-t border-border">
+                  <a
+                    href="/documents/SONAMET_CARE_PROGRAM.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-xs sm:text-sm font-bold uppercase text-white hover:bg-navy-light transition-all shadow-sm hover:scale-[1.02]"
+                  >
+                    <Download size={15} /> {lang === "pt" ? "DESCARREGAR PROGRAMA C.A.R.E. (PDF)" : "DOWNLOAD C.A.R.E. PROGRAM (PDF)"}
+                  </a>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -242,8 +255,8 @@ function QHSE() {
             <div className="inline-flex items-center text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
               {lang === "pt" ? "CENTRO DE DOCUMENTAÇÃO" : "DOCUMENTATION CENTER"}
             </div>
-            <h2 className="font-display text-2xl md:text-4xl font-extrabold uppercase">
-              {lang === "pt" ? "POLÍTICAS CORPORATIVAS" : "CORPORATE POLICIES"}
+            <h2 className="font-display text-2xl md:text-4xl font-bold">
+              {lang === "pt" ? "Políticas Corporativas" : "Corporate Policies"}
             </h2>
           </div>
 

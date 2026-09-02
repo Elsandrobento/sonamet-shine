@@ -188,8 +188,8 @@ export function Yard() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("O NOSSO ESTALEIRO", "OUR YARD")}
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-tight leading-tight mb-6">
-                Lobito Bay A Strategic Atlantic Gateway
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
+                {t("Baía do Lobito, Uma Entrada Atlântica Estratégica", "Lobito Bay, A Strategic Atlantic Gateway")}
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium leading-relaxed max-w-3xl">
                 {t(
@@ -210,7 +210,7 @@ export function Yard() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("O NOSSO ESTALEIRO & PRINCIPAIS INSTALAÇÕES", "OUR YARD & MAIN FACILITIES")}
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-6 tracking-tight">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 tracking-tight">
                 {t("O Nosso Estaleiro", "Our Yard")}
               </h2>
               <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed">
@@ -232,7 +232,7 @@ export function Yard() {
                       <div className="h-12 w-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 shrink-0 shadow-sm">
                         <area.icon className="text-navy-deep" size={24} />
                       </div>
-                      <h3 className="text-xl font-bold mb-3 text-foreground uppercase tracking-wide">{area.title}</h3>
+                      <h3 className="text-xl font-bold mb-3 text-foreground tracking-wide">{area.title}</h3>
                       <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{area.desc}</p>
                     </div>
                   </div>
@@ -248,8 +248,8 @@ export function Yard() {
         <div className="container-x">
           <Reveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase tracking-tight">
-                {t("PRINCIPAIS INSTALAÇÕES", "MAIN FACILITIES")}
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-tight">
+                {t("Principais Instalações", "Main Facilities")}
               </h2>
             </div>
           </Reveal>
@@ -263,7 +263,7 @@ export function Yard() {
                       <div className="h-10 w-10 rounded-lg bg-navy/10 flex items-center justify-center text-navy mb-4 shrink-0">
                         <spec.icon size={22} />
                       </div>
-                      <h3 className="text-lg font-bold mb-3 text-foreground uppercase tracking-tight">{spec.title}</h3>
+                      <h3 className="text-lg font-bold mb-3 text-foreground tracking-tight">{spec.title}</h3>
                       <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{spec.desc}</p>
                     </div>
                   </div>
@@ -280,8 +280,8 @@ export function Yard() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <Reveal>
               <div>
-                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-6 tracking-tight">
-                  SONAMET SPOOL BASE
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight">
+                  {t("Spool Base da Sonamet", "Sonamet Spool Base")}
                 </h2>
                 <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed mb-4 text-justify">
                   {t(
@@ -329,8 +329,8 @@ export function Yard() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                 {t("SERVIÇOS DE APOIO", "SUPPORT SERVICES")}
               </div>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground uppercase mb-4 tracking-tight">
-                {t("SERVIÇOS AO CLIENTE", "CLIENT SERVICES")}
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 tracking-tight">
+                {t("Serviços ao Cliente", "Client Services")}
               </h2>
               <p className="text-base md:text-lg text-foreground/85 font-medium leading-relaxed">
                 {t("A Sonamet fornece todos os serviços de apoio ao cliente necessários:", "Sonamet provides all the required client services:")}
@@ -347,7 +347,7 @@ export function Yard() {
                       <div className="h-12 w-12 rounded-xl bg-gold/15 text-gold flex items-center justify-center mx-auto mb-4 shrink-0">
                         <service.icon size={24} />
                       </div>
-                      <h3 className="text-sm font-bold text-foreground uppercase mb-2 tracking-wide">{service.title}</h3>
+                      <h3 className="text-sm font-bold text-foreground mb-2 tracking-wide">{service.title}</h3>
                       <p className="text-xs text-muted-foreground leading-relaxed">{service.desc}</p>
                     </div>
                   </div>
@@ -366,7 +366,7 @@ export function Yard() {
               <div className="relative">
                 <img
                   src={medicalCenter}
-                  alt="Sonamet Medical Centre"
+                  alt="Sonamet Medical Center"
                   loading="lazy"
                   className="rounded-2xl shadow-elegant w-full object-cover border border-white/10"
                 />
@@ -384,8 +384,8 @@ export function Yard() {
                 <div className="text-xs font-bold uppercase tracking-[0.25em] text-gold mb-3">
                   {t("SAÚDE & SEGURANÇA", "HEALTH & SAFETY")}
                 </div>
-                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase mb-6 tracking-tight">
-                  {t("POSTO MÉDICO", "MEDICAL POST")}
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight">
+                  {t("Posto Médico", "Medical Post")}
                 </h2>
                 <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed text-justify mb-6">
                   {t(
@@ -419,7 +419,7 @@ export function Yard() {
             <div className="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
             <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
             <div className="relative z-10">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white text-balance max-w-3xl mx-auto uppercase tracking-tight mb-4">
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white text-balance max-w-3xl mx-auto tracking-tight mb-4">
                 {t("Agende uma Visita ao Estaleiro do Lobito", "Schedule a Visit to the Lobito Yard")}
               </h2>
               <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed mb-8">
