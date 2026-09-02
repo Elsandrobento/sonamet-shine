@@ -30,11 +30,23 @@ export function SectionHeader({
   );
 }
 
-export function PageHero({ eyebrow, title, description, image }: { eyebrow: string; title: string; description: string; image: string }) {
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+  image,
+  imagePosition = "bg-center",
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  imagePosition?: string;
+}) {
   return (
     <section className="relative min-h-[60vh] flex items-end pt-32 pb-20 overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className={`absolute inset-0 bg-cover ${imagePosition}`}
         style={{ backgroundImage: `url(${image})` }}
       />
       <div className="absolute inset-0 bg-gradient-hero" />

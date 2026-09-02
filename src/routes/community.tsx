@@ -18,6 +18,10 @@ import medicinesDonation1 from "@/assets/medicines-donation-1.png";
 import medicinesDonation2 from "@/assets/medicines-donation-2.jpg";
 import medicinesDonation3 from "@/assets/medicines-donation-3.jpg";
 import medicinesDonation4 from "@/assets/medicines-donation-4.jpg";
+import mcpCommunityTesting from "@/assets/mcp-community-testing.jpg";
+import mcpFumigation from "@/assets/mcp-fumigation.jpg";
+import mcpLarvaeSampling from "@/assets/mcp-larvae-sampling.jpg";
+import mcpLarvicideTreatment from "@/assets/mcp-larvicide-treatment.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Route = createFileRoute("/community")({
@@ -39,7 +43,7 @@ function Community() {
       icon: HeartPulse,
       title: t("Doações para a Saúde", "Healthcare Donations"),
       points: [
-        t("Doação de medicamentos a hospitais locais.", "Donation of medicines to local hospitals."),
+        t("Doação de medicamentos a hospitais locais.", "Donation of medicines in local hospitals."),
         t("Campanhas regulares de doação de sangue organizadas pelos colaboradores em apoio aos hospitais de Benguela.", "Regular blood donation campaigns organized by employees in support of Benguela hospitals."),
       ],
     },
@@ -94,6 +98,7 @@ function Community() {
           "Beyond the yard, Sonamet invests in the long-term health and wellbeing of its workers, their families and the communities of Benguela Province."
         )}
         image={communityHero}
+        imagePosition="bg-[center_35%]"
       />
 
       {/* Malaria Control Programme */}
@@ -105,12 +110,12 @@ function Community() {
                 {t("Ativo Desde 2002", "Active Since 2002")}
               </div>
               <h3 className="text-3xl font-bold mb-4">
-                {t("Programa de Controlo da Malária (MCP)", "Malaria Control Programme (MCP)")}
+                {t("Programa de Controlo da Malária (MCP)", "Malaria Control Program (MCP)")}
               </h3>
               <p className="text-foreground/85 leading-relaxed mb-6 text-sm md:text-base text-justify">
                 {t(
                   "Lançado em 2002 com especialistas de Angola, França e Camarões, o MCP protege a força de trabalho da Sonamet e as comunidades circundantes. A pedido do Ministério da Saúde, o programa foi estendido a nove aldeias em Balombo, combinando rastreio e tratamento com distribuição de mosquiteiros, campanhas de consciencialização e desinfestação.",
-                  "Launched in 2002 with experts from Angola, France and Cameroon, the MCP protects Sonamet's workforce and surrounding communities. At the request of the Ministry of Health, the programme has been extended to nine villages in Balombo, combining testing and treatment with mosquito-net distribution, awareness campaigns and fumigation."
+                  "Launched in 2002 with experts from Angola, France and Cameroon, the MCP protects Sonamet's workforce and surrounding communities. At the request of the Ministry of Health, the program has been extended to nine villages in Balombo, combining testing and treatment with mosquito-net distribution, awareness campaigns and fumigation."
                 )}
               </p>
               <div className="grid grid-cols-3 gap-4 border-t border-border pt-6 mt-6">
@@ -132,6 +137,45 @@ function Community() {
                     {t("Aldeias cobertas em Balombo", "Villages covered in Balombo")}
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* MCP Photos Grid - 4 images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 pt-8 border-t border-border items-stretch">
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpCommunityTesting}
+                  alt="Programa de Controlo da Malária — Rastreio e Testagem na Comunidade"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpFumigation}
+                  alt="Programa de Controlo da Malária — Fumigação e Controlo Vetorial"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpLarvaeSampling}
+                  alt="Programa de Controlo da Malária — Amostragem e Inspeção de Larvas"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[center_40%] transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpLarvicideTreatment}
+                  alt="Programa de Controlo da Malária — Tratamento Larvicida"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-105"
+                />
               </div>
             </div>
           </div>
@@ -208,7 +252,7 @@ function Community() {
                   src={bloodDonation3}
                   alt="Doação de Sangue Voluntária pelos Colaboradores"
                   loading="lazy"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -391,7 +435,7 @@ function Community() {
               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
                 {t(
                   "Doação de Medicamentos a Hospitais Locais",
-                  "Donation of Medicines to Local Hospitals"
+                  "Donation of Medicines in Local Hospitals"
                 )}
               </h3>
             </div>
