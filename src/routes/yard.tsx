@@ -443,7 +443,7 @@ export function Yard() {
                   className="inline-flex items-center gap-2.5 rounded-full bg-white/10 border border-white/20 px-8 py-3.5 text-sm font-semibold text-white hover:bg-white/20 transition-transform hover:scale-105 uppercase tracking-wide cursor-pointer shadow-md"
                 >
                   <Download size={18} className="text-gold" />
-                  {t("Baixar PDF do Estaleiro", "Download Yard PDF")}
+                  {t("Baixar Layout do Estaleiro", "Download Yard Layout")}
                 </a>
               </div>
             </div>
