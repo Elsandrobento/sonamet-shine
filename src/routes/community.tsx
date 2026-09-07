@@ -567,15 +567,6 @@ function Community() {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/20">
-                    {t(
-                      "Centro de Formação Profissional Dr. Paulo Teixeira Jorge",
-                      "Dr. Paulo Teixeira Jorge Vocational Training Center"
-                    )}
-                  </span>
-                </div>
               </div>
 
               {/* Photo 2: Welding Boxes */}
@@ -586,15 +577,6 @@ function Community() {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/20">
-                    {t(
-                      "Oficinas Técnicas com 80 Cabines de Soldadura",
-                      "Technical Workshops with 80 Welding Booths"
-                    )}
-                  </span>
-                </div>
               </div>
             </div>
           </div>
