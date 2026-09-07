@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeader } from "@/components/Section";
-import { HeartPulse, Droplet, Flame, Sprout, GraduationCap, Pill, Award, Wrench } from "lucide-react";
+import { HeartPulse, Droplet, Flame, Sprout, GraduationCap, Pill } from "lucide-react";
 import communityHero from "@/assets/community-hero.jpg";
 import bloodDonation1 from "@/assets/blood-donation-1.jpg";
 import bloodDonation2 from "@/assets/blood-donation-2.jpg";
@@ -138,7 +138,7 @@ function Community() {
         imagePosition="bg-[center_35%]"
       />
 
-      {/* 2. Social Responsibility Section (Moved First) */}
+      {/* 2. Built Into How We Operate (Social Responsibility Pillars) */}
       <section className="py-24 bg-secondary">
         <div className="container-x">
           <SectionHeader
@@ -170,278 +170,10 @@ function Community() {
               </div>
             ))}
           </div>
-
-          {/* Featured Social Action: Blood Donation Campaigns */}
-          <div className="mt-14 bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
-            <div className="max-w-3xl mb-8">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
-                <Droplet size={14} />
-                <span>{t("Ação de Solidariedade", "Solidarity Initiative")}</span>
-              </div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
-                {t(
-                  "Campanhas de Doação de Sangue em Apoio aos Hospitais de Benguela",
-                  "Blood Donation Campaigns in Support of Benguela Hospitals"
-                )}
-              </h3>
-            </div>
-
-            {/* Photos Grid - 4 images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={bloodDonation1}
-                  alt="Campanhas de Doação de Sangue — Sonamet"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={bloodDonation2}
-                  alt="Campanhas de Doação de Sangue — Apoio aos Hospitais"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={bloodDonation3}
-                  alt="Doação de Sangue Voluntária pelos Colaboradores"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={bloodDonation4}
-                  alt="Equipa Médica e Colaboradores em Ação Solidária"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Featured Social Action: Maternity Hospital Restinga */}
-          <div className="mt-14 bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
-            <div className="max-w-3xl mb-8">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
-                <HeartPulse size={14} />
-                <span>{t("Infraestrutura de Saúde", "Healthcare Infrastructure")}</span>
-              </div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
-                {t(
-                  "Financiamento de Dois Blocos Cirúrgicos na Maternidade da Restinga, Lobito",
-                  "Funding of Two Surgical Departments in Maternity Hospital in Restinga Lobito"
-                )}
-              </h3>
-            </div>
-
-            {/* Photos Grid - 4 images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={maternityRestinga1}
-                  alt="Restoration of Maternity Ruins — Sonamet & Hyundai Collaboration"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Início do Restauro", "Restoration Phase")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={maternityRestinga2}
-                  alt="Completed Modernized Maternity Building"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Instalações Concluídas", "Completed Facilities")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={maternityRestinga3}
-                  alt="Patient Recovery & Monitoring Unit"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Equipamentos e Recuperação", "Recovery & Monitoring")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={maternityRestinga4}
-                  alt="Modern Surgical Operating Theatre"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Bloco Operatório Moderno", "Surgical Operating Theatre")}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Featured Social Action: Polytechnic Pe. Martins Ferreira in Bela Vista */}
-          <div className="mt-14 bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
-            <div className="max-w-3xl mb-8">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
-                <GraduationCap size={14} />
-                <span>{t("Educação & Infraestrutura", "Education & Infrastructure")}</span>
-              </div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
-                {t(
-                  "Criação do Instituto Politécnico Pe. Martins Ferreira na Bela Vista",
-                  "Creation of a Polytechnic Pe. Martins Ferreira in Bela Vista"
-                )}
-              </h3>
-            </div>
-
-            {/* Photos Grid - 4 images (Chronological: Construction phase then Final Project) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={polytechnicBelavista3}
-                  alt="Campus Layout and Structural Development"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Implantação do Campus", "Campus Infrastructure")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={polytechnicBelavista2}
-                  alt="Construction and Scaffolding Phase"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Fase de Construção", "Construction Phase")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={polytechnicBelavista1}
-                  alt="Completed Polytechnic Pe. Martins Ferreira Building"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Edifício Principal Concluído", "Completed Main Building")}
-                  </span>
-                </div>
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={polytechnicBelavista4}
-                  alt="Classrooms Building"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
-                    {t("Salas de Aula", "Classrooms")}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Featured Social Action: Donation of Medicines to Local Hospitals */}
-          <div className="mt-14 bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
-            <div className="max-w-3xl mb-8">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
-                <Pill size={14} />
-                <span>{t("Apoio Hospitalar & Farmacêutico", "Healthcare & Medical Support")}</span>
-              </div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
-                {t(
-                  "Doação de Medicamentos a Hospitais Locais",
-                  "Donation of Medicines in Local Hospitals"
-                )}
-              </h3>
-            </div>
-
-            {/* Photos Grid - 4 images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={medicinesDonation1}
-                  alt="Doação de Medicamentos a Hospitais Locais"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={medicinesDonation2}
-                  alt="Entrega de Material Hospitalar e Fármacos"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={medicinesDonation3}
-                  alt="Doação de Fármacos e EPIs"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={medicinesDonation4}
-                  alt="Apoio Contínuo a Hospitais de Benguela"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* 3. Malaria Control Programme (MCP) (Moved Below Social Responsibility) */}
+      {/* 3. Malaria Control Programme (MCP) — Placed immediately after "Built Into How We Operate" */}
       <section className="py-24 bg-background">
         <div className="container-x">
           <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-elegant relative overflow-hidden">
@@ -522,8 +254,290 @@ function Community() {
         </div>
       </section>
 
-      {/* 4. Local Content & Training Centre (with 2 New Photos) */}
+      {/* 4. Featured Social Actions & Infrastructure Projects */}
       <section className="py-24 bg-secondary">
+        <div className="container-x space-y-14">
+          <SectionHeader
+            eyebrow={t("Iniciativas na Comunidade", "Community Initiatives")}
+            title={t("Ações e Projetos Sociais de Alto Impacto", "High-Impact Social Projects & Initiatives")}
+            description={t(
+              "Projetos estruturantes desenvolvidos e apoiados pela Sonamet para melhorar a qualidade de vida, a saúde e a educação em Benguela.",
+              "Structural projects developed and supported by Sonamet to improve quality of life, healthcare and education across Benguela."
+            )}
+          />
+
+          {/* Featured Social Action: Blood Donation Campaigns */}
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
+            <div className="max-w-3xl mb-8">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
+                <Droplet size={14} />
+                <span>{t("Ação de Solidariedade", "Solidarity Initiative")}</span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
+                {t(
+                  "Campanhas de Doação de Sangue em Apoio aos Hospitais de Benguela",
+                  "Blood Donation Campaigns in Support of Benguela Hospitals"
+                )}
+              </h3>
+            </div>
+
+            {/* Photos Grid - 4 images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={bloodDonation1}
+                  alt="Campanhas de Doação de Sangue — Sonamet"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={bloodDonation2}
+                  alt="Campanhas de Doação de Sangue — Apoio aos Hospitais"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={bloodDonation3}
+                  alt="Doação de Sangue Voluntária pelos Colaboradores"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={bloodDonation4}
+                  alt="Equipa Médica e Colaboradores em Ação Solidária"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Social Action: Maternity Hospital Restinga */}
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
+            <div className="max-w-3xl mb-8">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
+                <HeartPulse size={14} />
+                <span>{t("Infraestrutura de Saúde", "Healthcare Infrastructure")}</span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
+                {t(
+                  "Financiamento de Dois Blocos Cirúrgicos na Maternidade da Restinga, Lobito",
+                  "Funding of Two Surgical Departments in Maternity Hospital in Restinga Lobito"
+                )}
+              </h3>
+            </div>
+
+            {/* Photos Grid - 4 images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={maternityRestinga1}
+                  alt="Restoration of Maternity Ruins — Sonamet & Hyundai Collaboration"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Início do Restauro", "Restoration Phase")}
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={maternityRestinga2}
+                  alt="Completed Modernized Maternity Building"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Instalações Concluídas", "Completed Facilities")}
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={maternityRestinga3}
+                  alt="Patient Recovery & Monitoring Unit"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Equipamentos e Recuperação", "Recovery & Monitoring")}
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={maternityRestinga4}
+                  alt="Modern Surgical Operating Theatre"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Bloco Operatório Moderno", "Surgical Operating Theatre")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Social Action: Polytechnic Pe. Martins Ferreira in Bela Vista */}
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
+            <div className="max-w-3xl mb-8">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
+                <GraduationCap size={14} />
+                <span>{t("Educação & Infraestrutura", "Education & Infrastructure")}</span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
+                {t(
+                  "Criação do Instituto Politécnico Pe. Martins Ferreira na Bela Vista",
+                  "Creation of a Polytechnic Pe. Martins Ferreira in Bela Vista"
+                )}
+              </h3>
+            </div>
+
+            {/* Photos Grid - 4 images (Chronological: Construction phase then Final Project) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={polytechnicBelavista3}
+                  alt="Campus Layout and Structural Development"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Implantação do Campus", "Campus Infrastructure")}
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={polytechnicBelavista2}
+                  alt="Construction and Scaffolding Phase"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Fase de Construção", "Construction Phase")}
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={polytechnicBelavista1}
+                  alt="Completed Polytechnic Pe. Martins Ferreira Building"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Edifício Principal Concluído", "Completed Main Building")}
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={polytechnicBelavista4}
+                  alt="Classrooms Building"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-white/20">
+                    {t("Salas de Aula", "Classrooms")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Social Action: Donation of Medicines to Local Hospitals */}
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12 shadow-elegant">
+            <div className="max-w-3xl mb-8">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-3">
+                <Pill size={14} />
+                <span>{t("Apoio Hospitalar & Farmacêutico", "Healthcare & Medical Support")}</span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-2">
+                {t(
+                  "Doação de Medicamentos a Hospitais Locais",
+                  "Donation of Medicines in Local Hospitals"
+                )}
+              </h3>
+            </div>
+
+            {/* Photos Grid - 4 images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={medicinesDonation1}
+                  alt="Doação de Medicamentos a Hospitais Locais"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={medicinesDonation2}
+                  alt="Entrega de Material Hospitalar e Fármacos"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={medicinesDonation3}
+                  alt="Doação de Fármacos e EPIs"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={medicinesDonation4}
+                  alt="Apoio Contínuo a Hospitais de Benguela"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Local Content & Training Centre */}
+      <section className="py-24 bg-background">
         <div className="container-x">
           <SectionHeader
             eyebrow={t("Conteúdo Local & Pessoas", "Local Content & People")}
