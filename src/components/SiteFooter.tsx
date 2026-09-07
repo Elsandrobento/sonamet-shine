@@ -33,6 +33,7 @@ export function SiteFooter() {
             <li><Link to="/projects" className="hover:text-gold transition-colors">{t("Projetos", "Projects")}</Link></li>
             <li><Link to="/qhse" className="hover:text-gold transition-colors">QHSE</Link></li>
             <li><Link to="/community" className="hover:text-gold transition-colors">{t("Comunidade", "Community")}</Link></li>
+            <li><Link to="/blog" className="hover:text-gold transition-colors">{t("Blog & Eventos", "Blog & Events")}</Link></li>
             <li><Link to="/contact" className="hover:text-gold transition-colors">{t("Contacto", "Contact")}</Link></li>
           </ul>
         </div>

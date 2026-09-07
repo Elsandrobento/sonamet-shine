@@ -15,6 +15,7 @@ export function SiteHeader() {
     { to: "/projects", label: t("Projetos", "Projects") },
     { to: "/qhse", label: "QHSE" },
     { to: "/community", label: t("Comunidade", "Community") },
+    { to: "/blog", label: t("Blog & Eventos", "Blog & Events") },
     { to: "/contact", label: t("Contacto", "Contact") },
   ];
 
