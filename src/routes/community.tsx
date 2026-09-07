@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, SectionHeader } from "@/components/Section";
-import { HeartPulse, Droplet, Flame, Sprout, GraduationCap, Pill } from "lucide-react";
+import { HeartPulse, Droplet, Flame, Sprout, GraduationCap, Pill, Award, Wrench } from "lucide-react";
 import communityHero from "@/assets/community-hero.jpg";
 import bloodDonation1 from "@/assets/blood-donation-1.jpg";
 import bloodDonation2 from "@/assets/blood-donation-2.jpg";
@@ -22,13 +22,19 @@ import mcpCommunityTesting from "@/assets/mcp-community-testing.jpg";
 import mcpFumigation from "@/assets/mcp-fumigation.jpg";
 import mcpLarvaeSampling from "@/assets/mcp-larvae-sampling.jpg";
 import mcpLarvicideTreatment from "@/assets/mcp-larvicide-treatment.jpg";
+import trainingCenterFacade from "@/assets/training-center-facade.jpg";
+import trainingCenterWeldingBoxes from "@/assets/training-center-welding-boxes.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Route = createFileRoute("/community")({
   head: () => ({
     meta: [
       { title: "Comunidade — Sonamet Industrial S.A." },
-      { name: "description", content: "Community Impact — CARE ABOUT PEOPLE. Investimento contínuo em saúde, educação, conteúdo local e desenvolvimento sustentável em Benguela." },
+      {
+        name: "description",
+        content:
+          "Community Impact — CARE ABOUT PEOPLE. Investimento contínuo em saúde, educação, conteúdo local e desenvolvimento sustentável em Benguela.",
+      },
       { property: "og:title", content: "Comunidade — Sonamet Industrial S.A." },
     ],
   }),
@@ -44,7 +50,10 @@ function Community() {
       title: t("Doações para a Saúde", "Healthcare Donations"),
       points: [
         t("Doação de medicamentos a hospitais locais.", "Donation of medicines in local hospitals."),
-        t("Campanhas regulares de doação de sangue organizadas pelos colaboradores em apoio aos hospitais de Benguela.", "Regular blood donation campaigns organized by employees in support of Benguela hospitals."),
+        t(
+          "Campanhas regulares de doação de sangue organizadas pelos colaboradores em apoio aos hospitais de Benguela.",
+          "Regular blood donation campaigns organized by employees in support of Benguela hospitals."
+        ),
       ],
     },
     {
@@ -55,10 +64,7 @@ function Community() {
           "Financiamento de dois blocos cirúrgicos na maternidade da Restinga, Lobito.",
           "Funding of two surgical departments in maternity hospital in Restinga Lobito."
         ),
-        t(
-          "Criação de uma Escola Primária no Lobito.",
-          "Creation of a Primary School in Lobito."
-        ),
+        t("Criação de uma Escola Primária no Lobito.", "Creation of a Primary School in Lobito."),
         t(
           "Criação do Instituto Politécnico Pe. Martins Ferreira na Bela Vista.",
           "Creation of a Polytechnic Pe. Martins Ferreira in Bela Vista."
@@ -73,23 +79,54 @@ function Community() {
       icon: Sprout,
       title: t("Ação Ambiental", "Environmental Action"),
       points: [
-        t("Campanhas de plantação de árvores dentro e fora do estaleiro.", "Tree Planting Campaigns inside and outside of the yard."),
-        t("Identificação de focos de mosquitos, fumigações e distribuição de mosquiteiros.", "Identification of mosquitos breeding sites, Fumigations and Mosquitos nets distribution."),
-        t("Celebração do Dia Nacional do Ambiente com a comunidade local.", "National Environment Day celebration with Local community."),
-        t("Controlo do consumo de energia e água e emissões de CO2.", "Control the energy and water consumption and CO2 emissions."),
-        t("Reabilitação do mangal do Lobito para assegurar que espécies como o Flamingo Rosa permaneçam no seu habitat natural.", "Rehabilitation of the Lobito mangrove and ensure that species such as the Pink Flamingo remains in its natural habitat."),
+        t(
+          "Campanhas de plantação de árvores dentro e fora do estaleiro.",
+          "Tree Planting Campaigns inside and outside of the yard."
+        ),
+        t(
+          "Identificação de focos de mosquitos, fumigações e distribuição de mosquiteiros.",
+          "Identification of mosquitos breeding sites, Fumigations and Mosquitos nets distribution."
+        ),
+        t(
+          "Celebração do Dia Nacional do Ambiente com a comunidade local.",
+          "National Environment Day celebration with Local community."
+        ),
+        t(
+          "Controlo do consumo de energia e água e emissões de CO2.",
+          "Control the energy and water consumption and CO2 emissions."
+        ),
+        t(
+          "Reabilitação do mangal do Lobito para assegurar que espécies como o Flamingo Rosa permaneçam no seu habitat natural.",
+          "Rehabilitation of the Lobito mangrove and ensure that species such as the Pink Flamingo remains in its natural habitat."
+        ),
       ],
     },
   ];
 
   const trainingStats = [
-    { value: "168.479", label: t("Horas de Formação Profissional Desde 2010", "Professional Training Hours Since 2010") },
-    { value: "4.906", label: t("Tubistas e Soldadores Formados para Angola", "Pipefitters & Welders Trained for Angola") },
-    { value: "200", label: t("Formandos Simultâneos em Pico", "Trainees Simultaneously at Peak") },
+    {
+      value: "168.479",
+      label: t(
+        "Horas de Formação Profissional Desde 2010",
+        "Professional Training Hours Since 2010"
+      ),
+    },
+    {
+      value: "4.906",
+      label: t(
+        "Tubistas e Soldadores Formados para Angola",
+        "Pipefitters & Welders Trained for Angola"
+      ),
+    },
+    {
+      value: "200",
+      label: t("Formandos Simultâneos em Pico", "Trainees Simultaneously at Peak"),
+    },
   ];
 
   return (
     <>
+      {/* 1. Hero Section */}
       <PageHero
         eyebrow={t("Impacto na Comunidade", "Community Impact")}
         title={t("Envolvimento com a Comunidade", "Community Involvement")}
@@ -101,88 +138,7 @@ function Community() {
         imagePosition="bg-[center_35%]"
       />
 
-      {/* Malaria Control Programme */}
-      <section className="py-24">
-        <div className="container-x">
-          <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-elegant relative overflow-hidden">
-            <div className="max-w-3xl relative z-10">
-              <div className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4">
-                {t("Ativo Desde 2002", "Active Since 2002")}
-              </div>
-              <h3 className="text-3xl font-bold mb-4">
-                {t("Programa de Controlo da Malária (MCP)", "Malaria Control Program (MCP)")}
-              </h3>
-              <p className="text-foreground/85 leading-relaxed mb-6 text-sm md:text-base text-justify">
-                {t(
-                  "Lançado em 2002 com especialistas de Angola, França e Camarões, o MCP protege a força de trabalho da Sonamet e as comunidades circundantes. A pedido do Ministério da Saúde, o programa foi estendido a nove aldeias em Balombo, combinando rastreio e tratamento com distribuição de mosquiteiros, campanhas de consciencialização e desinfestação.",
-                  "Launched in 2002 with experts from Angola, France and Cameroon, the MCP protects Sonamet's workforce and surrounding communities. At the request of the Ministry of Health, the program has been extended to nine villages in Balombo, combining testing and treatment with mosquito-net distribution, awareness campaigns and fumigation."
-                )}
-              </p>
-              <div className="grid grid-cols-3 gap-4 border-t border-border pt-6 mt-6">
-                <div>
-                  <div className="font-display text-3xl font-bold text-gold">5.388</div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    {t("Testes efetuados (2022–2024)", "Tests carried out (2022–2024)")}
-                  </div>
-                </div>
-                <div>
-                  <div className="font-display text-3xl font-bold text-gold">3.103</div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    {t("Casos positivos tratados (2022–2024)", "Positive cases treated (2022–2024)")}
-                  </div>
-                </div>
-                <div>
-                  <div className="font-display text-3xl font-bold text-gold">9</div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    {t("Aldeias cobertas em Balombo", "Villages covered in Balombo")}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* MCP Photos Grid - 4 images */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 pt-8 border-t border-border items-stretch">
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={mcpCommunityTesting}
-                  alt="Programa de Controlo da Malária — Rastreio e Testagem na Comunidade"
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={mcpFumigation}
-                  alt="Programa de Controlo da Malária — Fumigação e Controlo Vetorial"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={mcpLarvaeSampling}
-                  alt="Programa de Controlo da Malária — Amostragem e Inspeção de Larvas"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-[center_40%] transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
-                <img
-                  src={mcpLarvicideTreatment}
-                  alt="Programa de Controlo da Malária — Tratamento Larvicida"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Responsibility */}
+      {/* 2. Social Responsibility Section (Moved First) */}
       <section className="py-24 bg-secondary">
         <div className="container-x">
           <SectionHeader
@@ -195,7 +151,10 @@ function Community() {
           />
           <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {socialActionPillars.map((p) => (
-              <div key={p.title} className="bg-card border border-border rounded-2xl p-8 hover:border-gold hover:shadow-elegant transition-all flex flex-col">
+              <div
+                key={p.title}
+                className="bg-card border border-border rounded-2xl p-8 hover:border-gold hover:shadow-elegant transition-all flex flex-col"
+              >
                 <div className="h-14 w-14 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 shrink-0">
                   <p.icon className="text-navy-deep" size={26} />
                 </div>
@@ -482,30 +441,160 @@ function Community() {
         </div>
       </section>
 
-      {/* Local Content & Training Centre */}
-      <section className="py-24">
+      {/* 3. Malaria Control Programme (MCP) (Moved Below Social Responsibility) */}
+      <section className="py-24 bg-background">
+        <div className="container-x">
+          <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-elegant relative overflow-hidden">
+            <div className="max-w-3xl relative z-10">
+              <div className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.25em] text-gold mb-4">
+                {t("Ativo Desde 2002", "Active Since 2002")}
+              </div>
+              <h3 className="font-display text-3xl font-bold mb-4">
+                {t("Programa de Controlo da Malária (MCP)", "Malaria Control Program (MCP)")}
+              </h3>
+              <p className="text-foreground/85 leading-relaxed mb-6 text-sm md:text-base text-justify">
+                {t(
+                  "Lançado em 2002 com especialistas de Angola, França e Camarões, o MCP protege a força de trabalho da Sonamet e as comunidades circundantes. A pedido do Ministério da Saúde, o programa foi estendido a nove aldeias em Balombo, combinando rastreio e tratamento com distribuição de mosquiteiros, campanhas de consciencialização e desinfestação.",
+                  "Launched in 2002 with experts from Angola, France and Cameroon, the MCP protects Sonamet's workforce and surrounding communities. At the request of the Ministry of Health, the program has been extended to nine villages in Balombo, combining testing and treatment with mosquito-net distribution, awareness campaigns and fumigation."
+                )}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-border pt-6 mt-6">
+                <div>
+                  <div className="font-display text-3xl font-bold text-gold">5.388</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {t("Testes efetuados (2022–2024)", "Tests carried out (2022–2024)")}
+                  </div>
+                </div>
+                <div>
+                  <div className="font-display text-3xl font-bold text-gold">3.103</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {t("Casos positivos tratados (2022–2024)", "Positive cases treated (2022–2024)")}
+                  </div>
+                </div>
+                <div>
+                  <div className="font-display text-3xl font-bold text-gold">9</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {t("Aldeias cobertas em Balombo", "Villages covered in Balombo")}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* MCP Photos Grid - 4 images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 pt-8 border-t border-border items-stretch">
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpCommunityTesting}
+                  alt="Programa de Controlo da Malária — Rastreio e Testagem na Comunidade"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpFumigation}
+                  alt="Programa de Controlo da Malária — Fumigação e Controlo Vetorial"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpLarvaeSampling}
+                  alt="Programa de Controlo da Malária — Amostragem e Inspeção de Larvas"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[center_40%] transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[4/3] bg-navy-deep">
+                <img
+                  src={mcpLarvicideTreatment}
+                  alt="Programa de Controlo da Malária — Tratamento Larvicida"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Local Content & Training Centre (with 2 New Photos) */}
+      <section className="py-24 bg-secondary">
         <div className="container-x">
           <SectionHeader
             eyebrow={t("Conteúdo Local & Pessoas", "Local Content & People")}
             title={t("Investir no Talento Angolano", "Investing in Angolan Talent")}
           />
-          <div className="bg-secondary rounded-3xl p-8 md:p-12 border border-border mb-12">
-            <h3 className="text-2xl font-bold mb-4">
-              {t("Centro de Formação", "Training Center")}
+          <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-elegant mb-12">
+            <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">
+              {t(
+                "Centro de Formação Profissional Dr. Paulo Teixeira Jorge",
+                "Dr. Paulo Teixeira Jorge Vocational Training Center"
+              )}
             </h3>
-            <p className="text-foreground/80 leading-relaxed max-w-3xl text-sm md:text-base text-justify">
+            <p className="text-foreground/80 leading-relaxed max-w-3xl text-sm md:text-base text-justify mb-8">
               {t(
                 "Instalação de classe mundial com 3.500 m² distribuídos por três oficinas especializadas com 80 cabines de soldadura. O Centro de Formação da Sonamet desenvolve profissionais angolanos altamente qualificados através de formação técnica prática, apoiando a excelência operacional e o crescimento sustentável da indústria de óleo e gás em Angola.",
                 "Best-in-class facility covering 3,500 m² across three specialized workshops with 80 welding boxes. Sonamet’s Training Center develops highly skilled Angolan professionals through hands-on technical training, supporting operational excellence and the sustainable growth of Angola’s oil and gas industry."
               )}
             </p>
+
+            {/* Training Center Photo Gallery - 2 new photos */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-border">
+              {/* Photo 1: Facade */}
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[16/10] bg-navy-deep">
+                <img
+                  src={trainingCenterFacade}
+                  alt="Centro de Formação Profissional Dr. Paulo Teixeira Jorge — Fachada e Instalações"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/20">
+                    {t(
+                      "Centro de Formação Profissional Dr. Paulo Teixeira Jorge",
+                      "Dr. Paulo Teixeira Jorge Vocational Training Center"
+                    )}
+                  </span>
+                </div>
+              </div>
+
+              {/* Photo 2: Welding Boxes */}
+              <div className="relative rounded-2xl overflow-hidden border border-border shadow-md group aspect-[16/10] bg-navy-deep">
+                <img
+                  src={trainingCenterWeldingBoxes}
+                  alt="Oficinas de Formação Prática com 80 Cabines de Soldadura"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="inline-block bg-navy-deep/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/20">
+                    {t(
+                      "Oficinas Técnicas com 80 Cabines de Soldadura",
+                      "Technical Workshops with 80 Welding Booths"
+                    )}
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {trainingStats.map((s) => (
-              <div key={s.label} className="bg-card border border-border rounded-2xl p-6 text-center hover:border-gold transition-all">
+              <div
+                key={s.label}
+                className="bg-card border border-border rounded-2xl p-6 text-center hover:border-gold hover:shadow-elegant transition-all"
+              >
                 <div className="font-display text-3xl font-bold text-gold mb-2">{s.value}</div>
-                <div className="text-xs text-muted-foreground font-medium leading-relaxed">{s.label}</div>
+                <div className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
