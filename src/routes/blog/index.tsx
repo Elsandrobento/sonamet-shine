@@ -10,13 +10,13 @@ import yardHero from "@/assets/yard-hero.jpg";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog & Eventos — Sonamet Industrial S.A." },
+      { title: "Latest News — Sonamet Industrial S.A." },
       {
         name: "description",
         content:
           "Arquivo visual e comunicação corporativa da SONAMET: acompanhe as principais atividades, marcos comemorativos, eventos corporativos e acontecimentos relevantes.",
       },
-      { property: "og:title", content: "Blog & Eventos — Sonamet Industrial S.A." },
+      { property: "og:title", content: "Latest News — Sonamet Industrial S.A." },
       { property: "og:image", content: yardHero },
     ],
   }),
@@ -49,7 +49,7 @@ export function BlogIndex() {
       {/* Hero Section */}
       <PageHero
         eyebrow={t("Arquivo Institucional & Atualidades", "Corporate Archive & News")}
-        title={t("Blog & Eventos", "Blog & Events")}
+        title={t("Últimas Notícias", "Latest News")}
         description={t(
           "Espaço de comunicação e memória visual da SONAMET. Acompanhe os nossos marcos, visitas institucionais, celebrações de equipa e iniciativas de segurança na Baía do Lobito.",
           "SONAMET's corporate communication and visual memory hub. Follow our milestones, official visits, team celebrations and safety initiatives at Lobito Yard."

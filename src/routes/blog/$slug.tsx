@@ -18,7 +18,7 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
     const event = getBlogEventBySlug(params.slug);
     const title = event
-      ? `${event.titlePt || event.title} — Blog & Eventos — Sonamet Industrial S.A.`
+      ? `${event.titlePt || event.title} — Latest News — Sonamet Industrial S.A.`
       : "Evento — Sonamet Industrial S.A.";
     const description = event
       ? `Galeria de fotografias do evento "${event.titlePt || event.title}" na Sonamet Industrial S.A. ${event.photoCount} fotografias disponíveis.`
@@ -68,7 +68,7 @@ export function BlogEventDetail() {
             className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-navy-deep shadow-gold transition-transform hover:scale-105"
           >
             <ArrowLeft size={16} />
-            <span>{t("Voltar a Blog & Eventos", "Back to Blog & Events")}</span>
+            <span>{t("Voltar a Últimas Notícias", "Back to Latest News")}</span>
           </Link>
         </div>
       </div>
@@ -105,7 +105,7 @@ export function BlogEventDetail() {
             </Link>
             <ChevronRight size={14} className="text-white/40" />
             <Link to="/blog" className="hover:text-gold transition-colors">
-              {t("Blog & Eventos", "Blog & Events")}
+              {t("Últimas Notícias", "Latest News")}
             </Link>
             <ChevronRight size={14} className="text-white/40" />
             <span className="text-gold font-medium truncate max-w-[200px] md:max-w-md">
@@ -216,7 +216,7 @@ export function BlogEventDetail() {
               className="inline-flex items-center gap-2 rounded-full bg-card hover:bg-gold hover:text-navy-deep border border-border px-6 py-3 text-sm font-semibold text-foreground transition-all shadow-sm hover:shadow-gold"
             >
               <ArrowLeft size={16} />
-              <span>{t("Voltar à lista de Blog & Eventos", "Back to Blog & Events list")}</span>
+              <span>{t("Voltar à lista de Notícias", "Back to Latest News list")}</span>
             </Link>
           </div>
         </div>
