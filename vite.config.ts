@@ -7,6 +7,35 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  cloudflare: false,
+  tanstackStart: {
+    prerender: {
+      routes: [
+        "/",
+        "/about",
+        "/services",
+        "/projects",
+        "/yard",
+        "/qhse",
+        "/hseq",
+        "/community",
+        "/contact",
+        "/blog",
+        "/blog/celebracao-dia-nacional-da-paz-e-reconciliacao",
+        "/blog/sonamet-marca-presenca-na-feira-da-baia-do-lobito",
+        "/blog/programa-de-doacao-de-sangue-reforca-compromisso-comunitario",
+        "/blog/entrega-de-donativo-de-medicamentos-ao-centro-medico-da-bela-vista",
+        "/blog/visita-da-escola-primaria-ao-estaleiro-da-sonamet",
+        "/blog/sonamet-doa-camas-e-colchoes-a-maternidade-da-restinga",
+        "/blog/visita-institucional-do-administrador-municipal-do-lobito-ao-estaleiro-da-sonamet",
+        "/blog/campanha-de-arborizacao-mobiliza-comunidade-na-bela-vista",
+        "/blog/formacao-e-capacitacao-de-jovens-no-instituto-politecnico-da-bela-vista",
+        "/blog/palestra-de-educacao-ambiental-e-seguranca-na-escola-da-catumbela",
+        "/blog/programa-de-controlo-da-malaria-atinge-novo-marco-de-prevencao",
+      ],
+      crawl: true,
+    },
+  },
   vite: {
     server: {
       allowedHosts: true,

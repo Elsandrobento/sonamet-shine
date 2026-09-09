@@ -1,0 +1,21 @@
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack
+.wrangler
+.git
+.netlify
+.vscode
+/cloudflared.exe
+/*.zip
+/*.avif
+/*.jpg
+/*.jpeg
+/*.png
+/*.webp
+/*.pdf
+/*.pptx
+/Blog
+/"logo Clients"
