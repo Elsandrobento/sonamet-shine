@@ -154,6 +154,12 @@ export function BlogIndex() {
                             <h3 className="font-display text-lg md:text-xl font-bold text-foreground group-hover:text-gold transition-colors line-clamp-2 leading-snug">
                               {displayTitle}
                             </h3>
+
+                            {((language === "pt" ? event.descriptionPt : event.descriptionEn) || event.descriptionEn) && (
+                              <p className="mt-2.5 text-xs text-muted-foreground line-clamp-2 leading-relaxed font-normal">
+                                {language === "pt" ? event.descriptionPt : event.descriptionEn}
+                              </p>
+                            )}
                           </div>
 
                           {/* Card CTA */}

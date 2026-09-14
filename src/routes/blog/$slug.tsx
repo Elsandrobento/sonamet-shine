@@ -10,6 +10,7 @@ import {
   Home,
   ImageIcon,
   Maximize2,
+  MapPin,
 } from "lucide-react";
 import { getBlogEventBySlug, getBlogEvents, getEventTitle } from "@/lib/blog";
 import { useLanguage } from "@/context/LanguageContext";
@@ -132,8 +133,17 @@ export function BlogEventDetail() {
             <div className="flex flex-wrap items-center gap-4 text-xs md:text-sm text-white/80 pt-2 border-t border-white/10">
               <span className="flex items-center gap-1.5">
                 <Calendar size={15} className="text-gold" />
-                <span>SONAMET</span>
+                <span>{event.date || "SONAMET"}</span>
               </span>
+              {event.location && (
+                <>
+                  <span className="text-white/30">•</span>
+                  <span className="flex items-center gap-1.5 text-gold font-medium">
+                    <MapPin size={15} />
+                    <span>{event.location}</span>
+                  </span>
+                </>
+              )}
               <span className="text-white/30">•</span>
               <span className="text-white/70">
                 {t(
@@ -142,6 +152,40 @@ export function BlogEventDetail() {
                 )}
               </span>
             </div>
+
+            {/* Event Description & Highlights */}
+            {(event.descriptionPt || event.descriptionEn) && (
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <div className="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/15 shadow-xl space-y-4">
+                  {(language === "pt"
+                    ? (event.descriptionPt || event.descriptionEn)
+                    : (event.descriptionEn || event.descriptionPt)
+                  )
+                    ?.split("\n\n")
+                    .map((paragraph, pIdx) => {
+                      const isHighlight =
+                        paragraph.includes("Made in Angola") ||
+                        paragraph.includes("Feito em Angola");
+                      if (isHighlight) {
+                        return (
+                          <div
+                            key={pIdx}
+                            className="pt-4 font-display text-lg md:text-xl font-bold text-gold tracking-wide border-t border-white/15 flex items-center gap-2.5"
+                          >
+                            <span className="inline-block w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
+                            <span>{paragraph}</span>
+                          </div>
+                        );
+                      }
+                      return (
+                        <p key={pIdx} className="text-white/90 text-sm md:text-base leading-relaxed font-normal">
+                          {paragraph}
+                        </p>
+                      );
+                    })}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

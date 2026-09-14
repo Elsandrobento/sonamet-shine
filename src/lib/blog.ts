@@ -1,4 +1,11 @@
 // Import all photos from Blog folder
+// Event: Angola Oil & Gas Conference 2026
+import aogTeam from "../../Blog/Sonamet at Angola Oil & Gas Conference 2026/aog-2026-team.jpg";
+import aogStandModel from "../../Blog/Sonamet at Angola Oil & Gas Conference 2026/aog-2026-stand-model.jpg";
+import aogVip1 from "../../Blog/Sonamet at Angola Oil & Gas Conference 2026/aog-2026-vip-visit-1.jpg";
+import aogVip2 from "../../Blog/Sonamet at Angola Oil & Gas Conference 2026/aog-2026-vip-visit-2.jpg";
+import aogContractorChoice from "../../Blog/Sonamet at Angola Oil & Gas Conference 2026/aog-2026-contractor-choice.jpg";
+
 // Event 1: Kaminho First Cut
 import kaminho1 from "../../Blog/First cut cerimony of Kaminho project/WhatsApp Image 2026-09-03 at 14.54.42.jpeg";
 import kaminho2 from "../../Blog/First cut cerimony of Kaminho project/WhatsApp Image 2026-09-03 at 14.54.50.jpeg";
@@ -47,6 +54,9 @@ export interface BlogEvent {
   photoCount: number;
   date?: string;
   location?: string;
+  descriptionPt?: string;
+  descriptionEn?: string;
+  highlight?: string;
 }
 
 export function slugify(text: string): string {
@@ -64,6 +74,53 @@ export function getEventTitle(event: BlogEvent, language: "pt" | "en"): string {
 }
 
 const STATIC_EVENTS: BlogEvent[] = [
+  {
+    title: "Sonamet participated in the Angola Oil & Gas Conference 2026",
+    titlePt: "Participação da Sonamet na Conferência Angola Oil & Gas 2026",
+    titleEn: "Sonamet at Angola Oil & Gas Conference 2026",
+    slug: "sonamet-angola-oil-and-gas-conference-2026",
+    coverImage: aogTeam,
+    date: "Setembro 2026",
+    location: "Centro de Convenções de Talatona (CCTA), Luanda",
+    descriptionPt:
+      "A Sonamet participou na Conferência Angola Oil & Gas 2026 no Centro de Convenções de Talatona, apresentando as suas capacidades industriais e o seu contributo contínuo para o setor de Petróleo & Gás em Angola.\n\nO stand da Sonamet acolheu calorosamente líderes da indústria, parceiros e visitantes, com a maquete detalhada do Estaleiro da Sonamet a despertar particular interesse e a proporcionar uma visão abrangente da infraestrutura e das capacidades operacionais da empresa.\n\nMade in Angola for the World.",
+    descriptionEn:
+      "Sonamet participated in the Angola Oil & Gas Conference 2026 at the Talatona Convention Centre, showcasing its capabilities and longstanding contribution to Angola’s Oil & Gas industry.\n\nThe Sonamet stand welcomed industry leaders, partners and visitors, with the Sonamet Yard scale model attracting particular interest and offering an overview of the company’s infrastructure and operational capabilities.\n\nMade in Angola for the World.",
+    highlight: "Made in Angola for the World.",
+    photos: [
+      {
+        url: aogTeam,
+        filename: "aog-2026-team.jpg",
+        alt: "Equipa da Sonamet no stand da Angola Oil & Gas 2026",
+        index: 0,
+      },
+      {
+        url: aogStandModel,
+        filename: "aog-2026-stand-model.jpg",
+        alt: "Stand da Sonamet com a maquete do Estaleiro e ecrãs SPS & SURF",
+        index: 1,
+      },
+      {
+        url: aogVip1,
+        filename: "aog-2026-vip-visit-1.jpg",
+        alt: "Visita de líderes e delegações ministeriais ao stand da Sonamet",
+        index: 2,
+      },
+      {
+        url: aogVip2,
+        filename: "aog-2026-vip-visit-2.jpg",
+        alt: "Apresentação técnica das capacidades de fabricação submarina",
+        index: 3,
+      },
+      {
+        url: aogContractorChoice,
+        filename: "aog-2026-contractor-choice.jpg",
+        alt: "Espaço Sonamet — Your Contractor of Choice",
+        index: 4,
+      },
+    ],
+    photoCount: 5,
+  },
   {
     title: "Visit of His Excellency, the Governor of Benguela Province, to the Sonamet Fabrication Yard",
     titlePt: "Visita de Sua Excelência o Governador da Província de Benguela ao Estaleiro da Sonamet",
