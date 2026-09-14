@@ -40,3 +40,6 @@ cloudflared.exe
 *.zip
 
 .env*
+
+# Temporary upload folder
+Novos Pdfs acyualizados/

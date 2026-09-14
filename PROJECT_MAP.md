@@ -104,9 +104,9 @@ Definida através de variáveis CSS em `src/styles.css`:
 | Ficheiro PDF | Nome da Política / Documento | Utilizado em |
 | :--- | :--- | :--- |
 | `SON-MGT-PL-001_QHSE_Policy.pdf` | Política de QHSE | `/qhse` |
-| `SON-MGT-PL-003_Substance_Abuse_Policy.pdf` | Política de Abuso de Substâncias | `/qhse` |
-| `SON-MGT-PL-004_Malaria_Control_Policy.pdf` | Política de Controlo da Malária | `/qhse` |
-| `SON-MGT-PL-005_Smoking_Policy.pdf` | Política de Não Fumadores | `/qhse` |
+| `SON-MGT-PL-003_Substance_Abuse_Policy.pdf` | Política de Abuso de Substâncias (Rev. 2.0 - Set 2026) | `/qhse` |
+| `SON-MGT-PL-004_Malaria_Control_Policy.pdf` | Política de Controlo da Malária (Rev. 2.0 - Set 2026) | `/qhse` |
+| `SON-MGT-PL-005_Smoking_Policy.pdf` | Política de Não Fumadores (Rev. 2.0 - Set 2026) | `/qhse` |
 | `SON-MGT-PL-008_Social_Responsibility_Policy.pdf` | Política de Responsabilidade Social | `/qhse` |
 | `MINERAL_SOURCING_POLICY.pdf` | Política de Aprovisionamento Mineral | `/qhse` |
 | `SONAMET_ISO_14001.pdf` | Certificado ISO 14001:2015 | `/qhse` |
