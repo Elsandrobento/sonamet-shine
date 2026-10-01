@@ -156,8 +156,8 @@ export function BlogIndex() {
                             </h3>
 
                             {((language === "pt" ? event.descriptionPt : event.descriptionEn) || event.descriptionEn) && (
-                              <p className="mt-2.5 text-xs text-muted-foreground line-clamp-2 leading-relaxed font-normal">
-                                {language === "pt" ? event.descriptionPt : event.descriptionEn}
+                              <p className="mt-2.5 text-xs md:text-sm text-muted-foreground line-clamp-3 leading-relaxed font-normal">
+                                {((language === "pt" ? event.descriptionPt : event.descriptionEn) || event.descriptionEn)?.split("\n\n")[0]}
                               </p>
                             )}
                           </div>

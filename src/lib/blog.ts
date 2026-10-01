@@ -129,6 +129,10 @@ const STATIC_EVENTS: BlogEvent[] = [
     coverImage: gov1,
     date: "Setembro 2026",
     location: "Estaleiro do Lobito",
+    descriptionPt:
+      "Tivemos a honra de receber o Governador da Província de Benguela, Manuel Nunes Júnior, na Sonamet Industrial no Lobito.\n\nDurante a visita, o Governador percorreu as nossas instalações e conheceu detalhadamente as nossas operações, capacidades e o papel contínuo que a Sonamet desempenha no apoio à indústria de petróleo e gás de Angola, reforçando simultaneamente a sua competitividade nos mercados regional e internacional.\n\nA visita constituiu igualmente uma oportunidade para abordar a importância da criação das condições necessárias para apoiar o desenvolvimento industrial, a competitividade e a expansão das empresas angolanas para novos mercados.",
+    descriptionEn:
+      "We were pleased to welcome the Governor of Benguela Province, Manuel Nunes Júnior, to Sonamet Industrial in Lobito.\n\nDuring the visit, the Governor toured our facilities and learned more about our operations, capabilities and the role Sonamet continues to play in supporting Angola’s oil and gas industry, while strengthening its competitiveness in regional and international markets.\n\nThe visit also provided an opportunity to discuss the importance of creating the conditions needed to support industrial development, competitiveness and the expansion of Angolan companies into new markets.",
     photos: [
       { url: gov1, filename: "gov-1.jpeg", alt: "Visita do Governador — Foto 1", index: 0 },
       { url: gov2, filename: "gov-2.jpeg", alt: "Visita do Governador — Foto 2", index: 1 },
