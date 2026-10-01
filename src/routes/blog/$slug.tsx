@@ -165,7 +165,9 @@ export function BlogEventDetail() {
                     .map((paragraph, pIdx) => {
                       const isHighlight =
                         paragraph.includes("Made in Angola") ||
-                        paragraph.includes("Feito em Angola");
+                        paragraph.includes("Feito em Angola") ||
+                        paragraph.includes("28 years of experience") ||
+                        paragraph.includes("28 anos de experiência");
                       if (isHighlight) {
                         return (
                           <div

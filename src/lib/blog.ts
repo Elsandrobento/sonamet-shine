@@ -189,6 +189,10 @@ const STATIC_EVENTS: BlogEvent[] = [
     coverImage: anniv1,
     date: "Setembro 2026",
     location: "Complexo Sonamet, Lobito",
+    descriptionPt:
+      "A Sonamet celebrou o seu 28.º aniversário com um almoço especial de confraternização, reunindo o nosso Diretor-Geral e os colaboradores.\n\nUm momento marcante para celebrar, fortalecer laços e reconhecer o contributo de todos ao longo desta nossa jornada de 28 anos.\n\n28 anos de experiência, confiança e excelência.",
+    descriptionEn:
+      "Sonamet celebrated its 28th anniversary with a special lunch gathering, bringing together our Managing Director and employees.\n\nA moment to celebrate, connect, and recognize everyone’s contribution throughout our 28-year journey.\n\n28 years of experience, trust and excellence.",
     photos: [
       { url: anniv1, filename: "anniv-1.jpeg", alt: "28.º Aniversário — Foto 1", index: 0 },
       { url: anniv2, filename: "anniv-2.jpeg", alt: "28.º Aniversário — Foto 2", index: 1 },
